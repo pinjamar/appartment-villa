@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { Calendar, Users, Send, Euro } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
-import { calculateStayTotal, formatPrice, getSeasonLabel } from '../utils/pricingUtils';
+import {
+  calculateStayTotal,
+  formatPrice,
+  getSeasonLabel,
+} from '../utils/pricingUtils';
 
 interface BookingProps {
   currentLanguage: 'hr' | 'en';
+  setPageSeo?: (seo: any) => void;
 }
 
-const Booking: React.FC<BookingProps> = ({ currentLanguage }) => {
+const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
   const [formData, setFormData] = useState({
     checkin: '',
     checkout: '',
@@ -15,11 +20,19 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage }) => {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
   });
   const [priceCalculation, setPriceCalculation] = useState<any>(null);
 
   const bookingContent = content.booking[currentLanguage];
+
+  // Allow Booking section to set contextual SEO when mounted or language changes
+  React.useEffect(() => {
+    if (typeof setPageSeo === 'function') {
+      const seo = (content as any).seoPages?.booking?.[currentLanguage];
+      if (seo) setPageSeo(seo);
+    }
+  }, [currentLanguage, setPageSeo]);
 
   // Calculate price when dates or guests change
   React.useEffect(() => {
@@ -28,7 +41,7 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage }) => {
         const calculation = calculateStayTotal(
           formData.checkin,
           formData.checkout,
-          parseInt(formData.guests)
+          parseInt(formData.guests),
         );
         setPriceCalculation(calculation);
       } catch (error) {
@@ -39,21 +52,25 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage }) => {
     }
   }, [formData.checkin, formData.checkout, formData.guests]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Build WhatsApp message
-    const priceText = priceCalculation 
+    const priceText = priceCalculation
       ? `\n\n💰 *${bookingContent.pricing.total}: ${formatPrice(priceCalculation.total)}*`
       : '';
-    
+
     const message = `${bookingContent.pricing.message}
 
 👤 *${bookingContent.form.name}:* ${formData.name}
@@ -71,7 +88,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
     const phoneNumber = siteConfig.contact.phone.replace(/[^\d]/g, '');
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    
+
     window.open(whatsappUrl, '_blank');
   };
 
@@ -99,11 +116,15 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                 <div className="space-y-3 text-gray-600">
                   <div className="flex justify-between items-center">
                     <span>{bookingContent.pricing.lowSeason}:</span>
-                    <span className="font-semibold">€180{bookingContent.pricing.pricePerNight}</span>
+                    <span className="font-semibold">
+                      €180{bookingContent.pricing.pricePerNight}
+                    </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span>{bookingContent.pricing.highSeason}:</span>
-                    <span className="font-semibold">€250{bookingContent.pricing.pricePerNight}</span>
+                    <span className="font-semibold">
+                      €250{bookingContent.pricing.pricePerNight}
+                    </span>
                   </div>
                   <hr className="my-4" />
                   <div className="flex justify-between items-center text-sm">
@@ -123,55 +144,66 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {bookingContent.pricing.priceCalculation}
                   </h3>
-                  
+
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700">
-                        {priceCalculation.nights} {currentLanguage === 'hr' ? 'noći' : 'nights'}
+                        {priceCalculation.nights}{' '}
+                        {currentLanguage === 'hr' ? 'noći' : 'nights'}
                       </span>
-                      <span className="font-semibold">{formatPrice(priceCalculation.accommodationTotal)}</span>
+                      <span className="font-semibold">
+                        {formatPrice(priceCalculation.accommodationTotal)}
+                      </span>
                     </div>
-                    
+
                     <div className="text-xs text-gray-600 ml-4 space-y-1">
-                      {priceCalculation.breakdown.map((night: any, index: number) => (
-                        <div key={index} className="flex justify-between">
-                          <span>{new Date(night.date).toLocaleDateString('it-IT')}</span>
-                          <span>
-                            {formatPrice(night.price)} 
-                            <span className="ml-1 text-xs">
-                              ({getSeasonLabel(night.season, currentLanguage)})
+                      {priceCalculation.breakdown.map(
+                        (night: any, index: number) => (
+                          <div key={index} className="flex justify-between">
+                            <span>
+                              {new Date(night.date).toLocaleDateString('it-IT')}
                             </span>
-                          </span>
-                        </div>
-                      ))}
+                            <span>
+                              {formatPrice(night.price)}
+                              <span className="ml-1 text-xs">
+                                ({getSeasonLabel(night.season, currentLanguage)}
+                                )
+                              </span>
+                            </span>
+                          </div>
+                        ),
+                      )}
                     </div>
-                    
+
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700">
                         {bookingContent.pricing.finalCleaning}
                       </span>
-                      <span className="font-semibold">{formatPrice(priceCalculation.cleaningFee)}</span>
+                      <span className="font-semibold">
+                        {formatPrice(priceCalculation.cleaningFee)}
+                      </span>
                     </div>
-                    
+
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700">
                         {bookingContent.pricing.touristTax}
                       </span>
-                      <span className="font-semibold">{formatPrice(priceCalculation.touristTax)}</span>
+                      <span className="font-semibold">
+                        {formatPrice(priceCalculation.touristTax)}
+                      </span>
                     </div>
-                    
+
                     <hr className="border-blue-200" />
-                    
+
                     <div className="flex justify-between items-center text-lg font-bold text-blue-900">
                       <span>{bookingContent.pricing.total}</span>
                       <span>{formatPrice(priceCalculation.total)}</span>
                     </div>
-                    
+
                     <div className="text-center text-sm text-gray-600 mt-2">
-                      {currentLanguage === 'hr' 
+                      {currentLanguage === 'hr'
                         ? `Prosječno: ${formatPrice(priceCalculation.averagePerNight)}/noć`
-                        : `Average: ${formatPrice(priceCalculation.averagePerNight)}/night`
-                      }
+                        : `Average: ${formatPrice(priceCalculation.averagePerNight)}/night`}
                     </div>
                   </div>
                 </div>
@@ -224,8 +256,10 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      {[1,2,3,4,5,6,7,8].map(num => (
-                        <option key={num} value={num}>{num}</option>
+                      {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                        <option key={num} value={num}>
+                          {num}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -288,7 +322,8 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
 
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                   <p className="text-sm text-blue-900">
-                    📱 {currentLanguage === 'hr' 
+                    📱{' '}
+                    {currentLanguage === 'hr'
                       ? 'Klikom na slanje, preusmjerit ćeš se na WhatsApp kako bi dovršio rezervaciju.'
                       : 'Clicking send will redirect you to WhatsApp to complete your booking.'}
                   </p>
@@ -299,7 +334,11 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   className="w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                 >
                   <Send size={20} />
-                  <span>{currentLanguage === 'hr' ? 'Pošalji via WhatsApp' : 'Send via WhatsApp'}</span>
+                  <span>
+                    {currentLanguage === 'hr'
+                      ? 'Pošalji via WhatsApp'
+                      : 'Send via WhatsApp'}
+                  </span>
                 </button>
               </form>
             </div>

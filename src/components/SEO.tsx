@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { siteConfig } from '../data/content';
+import { siteConfig, content } from '../data/content';
 
 type Props = {
   currentLanguage: 'hr' | 'en';
@@ -62,13 +62,10 @@ export default function SEO({ currentLanguage, pageSeo }: Props) {
     }
     linkCanonical.href = canonical;
 
-    // hreflang alternates for supported languages
+    // hreflang alternates for supported languages (hr -> /hr/, en -> root)
     const langs: Array<'hr' | 'en'> = ['hr', 'en'];
     langs.forEach((lang) => {
-      const href = `${siteUrl}/${lang === 'hr' ? 'hr' : ''}`.replace(
-        /([^:]?)\/\/$/,
-        '$1/',
-      );
+      const href = lang === 'hr' ? `${siteUrl}/hr/` : `${siteUrl}/`;
       const selector = `link[rel="alternate"][hreflang="${lang}"]`;
       let link = document.head.querySelector(
         selector,
@@ -82,11 +79,36 @@ export default function SEO({ currentLanguage, pageSeo }: Props) {
       link.href = href;
     });
 
+    // x-default alternate
+    let xdef = document.head.querySelector(
+      'link[rel="alternate"][hreflang="x-default"]',
+    ) as HTMLLinkElement | null;
+    if (!xdef) {
+      xdef = document.createElement('link');
+      xdef.rel = 'alternate';
+      xdef.hreflang = 'x-default';
+      document.head.appendChild(xdef);
+    }
+    xdef.href = `${siteUrl}/`;
+
+    // og:locale
+    upsertMeta(
+      'og:locale',
+      currentLanguage === 'hr' ? 'hr_HR' : 'en_US',
+      'property',
+    );
+
     // JSON-LD
     const ldId = 'seo-json-ld';
     let ld = document.head.querySelector(
       `#${ldId}`,
     ) as HTMLScriptElement | null;
+    const reviews = content.reviews[currentLanguage]?.items || [];
+    const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
+    const ratingAvg = reviews.length
+      ? +(ratingSum / reviews.length).toFixed(1)
+      : undefined;
+
     const jsonLd = pageSeo?.jsonLd || {
       '@context': 'https://schema.org',
       '@type': 'LodgingBusiness',
@@ -97,13 +119,24 @@ export default function SEO({ currentLanguage, pageSeo }: Props) {
       telephone: siteConfig.contact.phone,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: siteConfig.contact.address,
+        streetAddress: siteConfig.contact.address,
+        addressLocality: 'Korčula',
+        addressCountry: 'HR',
       },
       geo: {
         '@type': 'GeoCoordinates',
         latitude: siteConfig.contact.coordinates.lat,
         longitude: siteConfig.contact.coordinates.lng,
       },
+      ...(ratingAvg
+        ? {
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: ratingAvg,
+              reviewCount: reviews.length,
+            },
+          }
+        : {}),
     };
 
     if (!ld) {

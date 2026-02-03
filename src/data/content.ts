@@ -65,13 +65,13 @@ export const content = {
   },
   hero: {
     hr: {
-      title: 'Dobrodošli u Apartman Korčula',
+      title: 'Dobrodošli u Apartmane Markota',
       subtitle:
         'Predivan apartman sa oceanskim pogledom na otoku Korčuli, savršen za vašu sanjarsku godinu. Otkrij autentičan šarm Jadrana u modernom i komfortnom okruženju.',
       cta: 'Saznaj Više',
     },
     en: {
-      title: 'Welcome to Korčula Apartment',
+      title: 'Welcome to Markota Apartments',
       subtitle:
         'A beautiful apartment with ocean view on Korčula Island, perfect for your dream vacation. Discover the authentic charm of the Adriatic in a modern and comfortable environment.',
       cta: 'Learn More',
@@ -368,19 +368,19 @@ export const content = {
   footer: {
     hr: {
       description:
-        'Apartman Korčula nudi autentično iskustvo na lijepo Korčuli. Otkrij udobnost i eleganciju u jedinstvenom obalnom okruženju.',
+        'Apartmani Markota nude autentično iskustvo na lijepo Korčuli. Otkrij udobnost i eleganciju u jedinstvenom obalnom okruženju.',
       quickLinks: 'Brze Veze',
       followUs: 'Pratite Nas',
-      copyright: '© 2024 Apartman Korčula. Sva prava su zadržana.',
+      copyright: '© 2026 Apartmani Markota. Sva prava su zadržana.',
       privacy: 'Politika Privatnosti',
       cookies: 'Politika Kolačića',
     },
     en: {
       description:
-        'Korčula Apartment offers an authentic experience on beautiful Korčula Island. Discover comfort and elegance in a unique coastal environment.',
+        'Apartments Markota offer an authentic experience on beautiful Korčula Island. Discover comfort and elegance in a unique coastal environment.',
       quickLinks: 'Quick Links',
       followUs: 'Follow Us',
-      copyright: '© 2024 Korčula Apartment. All rights reserved.',
+      copyright: '© 2026 Markota Apartments. All rights reserved.',
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
     },
@@ -393,63 +393,125 @@ export const content = {
       decline: 'Odbij',
       moreInfo: 'Više informacija',
     },
-    seoPages: {
-      home: {
-        hr: {
-          title: `${siteConfig.siteName.hr} — Apartman uz more, Korčula`,
-          description:
-            'Apartman Korčula: moderno opremljen apartman uz more u srcu Korčule. Rezervirajte direktno za najbolje cijene.',
-          image: siteConfig.seo.defaultImage,
-          canonical: `${siteConfig.seo.siteUrl}/hr/`,
-          jsonLd: {
-            '@context': 'https://schema.org',
-            '@type': 'LodgingBusiness',
-            name: siteConfig.siteName.hr,
-            description:
-              'Apartman Korčula — moderno opremljen apartman sa pogledom na more. Idealno za parove i obitelji.',
-            image: [siteConfig.seo.defaultImage],
-            url: `${siteConfig.seo.siteUrl}/hr/`,
-            telephone: siteConfig.contact.phone,
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: siteConfig.contact.address,
-              addressCountry: 'HR',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: siteConfig.contact.coordinates.lat,
-              longitude: siteConfig.contact.coordinates.lng,
-            },
-          },
+  },
+};
+
+// Top-level SEO pages for use by the runtime SEO component and by sections
+export const seoPages = {
+  home: {
+    hr: {
+      title: `${siteConfig.siteName.hr} — Apartmani uz more, Korčula`,
+      description:
+        'Apartmani Markota: moderno opremljen apartman uz more u srcu Korčule. Rezervirajte direktno za najbolje cijene.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/hr/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'LodgingBusiness',
+        name: siteConfig.siteName.hr,
+        description:
+          'Apartmani Markota — moderno opremljen apartman sa pogledom na more. Idealno za parove i obitelji.',
+        image: [siteConfig.seo.defaultImage],
+        url: `${siteConfig.seo.siteUrl}/hr/`,
+        telephone: siteConfig.contact.phone,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: siteConfig.contact.address,
+          addressCountry: 'HR',
         },
-        en: {
-          title: `${siteConfig.siteName.en} — Seafront apartment, Korčula`,
-          description:
-            'Korčula Apartment: modern seafront apartment in Korčula town. Book direct for best rates.',
-          image: siteConfig.seo.defaultImage,
-          canonical: `${siteConfig.seo.siteUrl}/`,
-          jsonLd: {
-            '@context': 'https://schema.org',
-            '@type': 'LodgingBusiness',
-            name: siteConfig.siteName.en,
-            description:
-              'Korčula Apartment — modern seafront apartment with sea views. Perfect for couples and families.',
-            image: [siteConfig.seo.defaultImage],
-            url: `${siteConfig.seo.siteUrl}/`,
-            telephone: siteConfig.contact.phone,
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: siteConfig.contact.address,
-              addressCountry: 'HR',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: siteConfig.contact.coordinates.lat,
-              longitude: siteConfig.contact.coordinates.lng,
-            },
-          },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: siteConfig.contact.coordinates.lat,
+          longitude: siteConfig.contact.coordinates.lng,
+        },
+      },
+    },
+    en: {
+      title: `${siteConfig.siteName.en} — Seafront apartment, Korčula`,
+      description:
+        'Apartments Markota: modern seafront apartment in Korčula town. Book direct for best rates.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'LodgingBusiness',
+        name: siteConfig.siteName.en,
+        description:
+          'apartments Markota — modern seafront apartment with sea views. Perfect for couples and families.',
+        image: [siteConfig.seo.defaultImage],
+        url: `${siteConfig.seo.siteUrl}/`,
+        telephone: siteConfig.contact.phone,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: siteConfig.contact.address,
+          addressCountry: 'HR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: siteConfig.contact.coordinates.lat,
+          longitude: siteConfig.contact.coordinates.lng,
         },
       },
     },
   },
+
+  gallery: {
+    hr: {
+      title: `${siteConfig.siteName.hr} — Galerija fotografija`,
+      description:
+        'Pogledajte fotogaleriju Apartmana Korčula i doživite ambijent prije dolaska.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/hr/gallery/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'ImageGallery',
+        name: `${siteConfig.siteName.hr} — Galerija`,
+        description: 'Fotografije apartmana i okoline.',
+      },
+    },
+    en: {
+      title: `${siteConfig.siteName.en} — Photo Gallery`,
+      description:
+        'Browse the photo gallery of Korčula Apartment to preview the space.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/gallery/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'ImageGallery',
+        name: `${siteConfig.siteName.en} — Gallery`,
+        description: 'Photos of the apartment and surroundings.',
+      },
+    },
+  },
+
+  booking: {
+    hr: {
+      title: `${siteConfig.siteName.hr} — Rezervacije`,
+      description:
+        'Rezervirajte svoj boravak u Apartmanu Korčula direktno putem WhatsApp-a.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/hr/booking/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${siteConfig.siteName.hr} — Rezervacije`,
+        description: 'Stranica za rezervacije i kontakt putem WhatsApp-a.',
+      },
+    },
+    en: {
+      title: `${siteConfig.siteName.en} — Bookings`,
+      description: 'Request your stay at Korčula Apartment via WhatsApp.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/booking/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${siteConfig.siteName.en} — Bookings`,
+        description: 'Booking request page to contact via WhatsApp.',
+      },
+    },
+  },
 };
+
+// Backwards-compatibility: attach seoPages to the main `content` object
+(content as any).seoPages = seoPages;

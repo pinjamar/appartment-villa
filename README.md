@@ -1,4 +1,4 @@
-<h1 align="center">Apartmani Markota</h1>
+<h1 align="center">Markota Apartments</h1>
 <h3 align="center">Vacation Rental Website Template</h3>
 
 <p align="center">
@@ -45,8 +45,8 @@ A customizable, modern, and responsive website template for vacation rental prop
 ## Quick Start
 
 ```bash
-git clone https://github.com/fracabu/apartmani-markota.git
-cd apartmani-markota
+git clone https://github.com/pinjamar/appartment-villa
+cd appartment-villa
 npm install
 npm run dev
 ```
@@ -105,15 +105,3 @@ src/
 
 - **English (EN)** - Default secondary language
 - **Croatian (HR)** - Primary language with toggle in header
-
-## License
-
-MIT
-
----
-
-<p align="center">
-  <a href="https://github.com/fracabu">
-    <img src="https://img.shields.io/badge/Made_by-fracabu-8B5CF6?style=flat-square" alt="Made by fracabu" />
-  </a>
-</p>

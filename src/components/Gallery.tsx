@@ -4,45 +4,46 @@ import { content } from '../data/content';
 
 interface GalleryProps {
   currentLanguage: 'hr' | 'en';
+  setPageSeo?: (seo: any) => void;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
+const Gallery: React.FC<GalleryProps> = ({ currentLanguage, setPageSeo }) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const images = [
     {
-      src: "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Apartmani Markota Exterior"
+      src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Apartmani Markota Exterior',
     },
     {
-      src: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Living Room"
+      src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Living Room',
     },
     {
-      src: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Bedroom"
+      src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Bedroom',
     },
     {
-      src: "https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Kitchen"
+      src: 'https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Kitchen',
     },
     {
-      src: "https://images.pexels.com/photos/261181/pexels-photo-261181.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Swimming Pool"
+      src: 'https://images.pexels.com/photos/261181/pexels-photo-261181.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Swimming Pool',
     },
     {
-      src: "https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Garden View"
+      src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Garden View',
     },
     {
-      src: "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Terrace"
+      src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Terrace',
     },
     {
-      src: "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Bathroom"
-    }
+      src: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Bathroom',
+    },
   ];
 
   const openLightbox = (index: number) => {
@@ -64,6 +65,14 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
 
   const nav = content.navigation[currentLanguage];
 
+  // When this section mounts or language changes, allow it to set contextual SEO
+  React.useEffect(() => {
+    if (typeof setPageSeo === 'function') {
+      const seo = (content as any).seoPages?.gallery?.[currentLanguage];
+      if (seo) setPageSeo(seo);
+    }
+  }, [currentLanguage, setPageSeo]);
+
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -72,10 +81,9 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
             {nav.gallery}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {currentLanguage === 'hr' 
-                    ? "Otkrij elegantne i udobne prostore Apartmana Markota kroz ovu fototeku."
-                    : "Discover the elegant and comfortable spaces of Apartmani Markota through this photo gallery."
-                  }
+            {currentLanguage === 'hr'
+              ? 'Otkrij elegantne i udobne prostore Apartmana Markota kroz ovu fototeku.'
+              : 'Discover the elegant and comfortable spaces of Apartmani Markota through this photo gallery.'}
           </p>
         </div>
 
@@ -113,14 +121,14 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
             >
               <X size={32} />
             </button>
-            
+
             <button
               onClick={prevSlide}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
             >
               <ChevronLeft size={48} />
             </button>
-            
+
             <button
               onClick={nextSlide}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10"
