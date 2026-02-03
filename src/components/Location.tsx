@@ -17,10 +17,9 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
             {nav.location}
           </h2>
           <p className="text-lg text-gray-600">
-            {currentLanguage === 'hr' 
-              ? "Smještena u srcu Toskane, Villa Azzurra nudi jednostavan pristup glavnim atrakcijama regije."
-              : "Located in the heart of Tuscany, Villa Azzurra offers easy access to the region's main attractions."
-            }
+            {currentLanguage === 'hr'
+              ? 'Smješteni blizu mora, Apartmani Markota pružaju jednostavan pristup lokalnim atrakcijama i prekrasnim plažama.'
+              : 'Located near the sea, Apartmani Markota provide easy access to local attractions and beautiful beaches.'}
           </p>
         </div>
 
@@ -33,13 +32,14 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 <div className="text-center">
                   <MapPin size={48} className="text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-500">
-                    {currentLanguage === 'it' ? 'Mappa Interattiva' : 'Interactive Map'}
+                    {currentLanguage === 'it'
+                      ? 'Mappa Interattiva'
+                      : 'Interactive Map'}
                   </p>
                   <p className="text-sm text-gray-400 mt-2">
-                    {currentLanguage === 'it' 
+                    {currentLanguage === 'it'
                       ? 'Integrazione Google Maps qui'
-                      : 'Google Maps integration here'
-                    }
+                      : 'Google Maps integration here'}
                   </p>
                 </div>
               </div>
@@ -57,25 +57,33 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
               <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
                 <Navigation size={16} />
                 <span>
-                  {currentLanguage === 'it' ? 'Ottieni indicazioni' : 'Get directions'}
+                  {currentLanguage === 'it'
+                    ? 'Ottieni indicazioni'
+                    : 'Get directions'}
                 </span>
               </button>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {currentLanguage === 'it' ? 'Attrazioni Vicine' : 'Nearby Attractions'}
+                {currentLanguage === 'it'
+                  ? 'Attrazioni Vicine'
+                  : 'Nearby Attractions'}
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it' ? 'Centro di Firenze' : 'Florence Center'}
+                    {currentLanguage === 'it'
+                      ? 'Centro di Firenze'
+                      : 'Florence Center'}
                   </span>
                   <span className="text-sm text-gray-500">15 km</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it' ? 'Aeroporto di Firenze' : 'Florence Airport'}
+                    {currentLanguage === 'it'
+                      ? 'Aeroporto di Firenze'
+                      : 'Florence Airport'}
                   </span>
                   <span className="text-sm text-gray-500">12 km</span>
                 </div>
@@ -87,7 +95,9 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it' ? 'San Gimignano' : 'San Gimignano'}
+                    {currentLanguage === 'it'
+                      ? 'San Gimignano'
+                      : 'San Gimignano'}
                   </span>
                   <span className="text-sm text-gray-500">35 km</span>
                 </div>
@@ -108,29 +118,26 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 <p>
                   <strong>
                     {currentLanguage === 'it' ? 'In Auto:' : 'By Car:'}
-                  </strong> {' '}
-                  {currentLanguage === 'it' 
+                  </strong>{' '}
+                  {currentLanguage === 'it'
                     ? 'Uscita A1 Firenze Sud, seguire indicazioni per il centro'
-                    : 'A1 Florence South exit, follow signs to city center'
-                  }
+                    : 'A1 Florence South exit, follow signs to city center'}
                 </p>
                 <p>
                   <strong>
                     {currentLanguage === 'it' ? 'In Treno:' : 'By Train:'}
-                  </strong> {' '}
-                  {currentLanguage === 'it' 
+                  </strong>{' '}
+                  {currentLanguage === 'it'
                     ? 'Stazione di Firenze SMN + taxi (20 min)'
-                    : 'Florence SMN station + taxi (20 min)'
-                  }
+                    : 'Florence SMN station + taxi (20 min)'}
                 </p>
                 <p>
                   <strong>
                     {currentLanguage === 'it' ? 'In Aereo:' : 'By Plane:'}
-                  </strong> {' '}
-                  {currentLanguage === 'it' 
+                  </strong>{' '}
+                  {currentLanguage === 'it'
                     ? 'Aeroporto Amerigo Vespucci (12 km)'
-                    : 'Amerigo Vespucci Airport (12 km)'
-                  }
+                    : 'Amerigo Vespucci Airport (12 km)'}
                 </p>
               </div>
             </div>

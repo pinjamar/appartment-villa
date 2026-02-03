@@ -13,7 +13,7 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
   const images = [
     {
       src: "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800",
-      alt: "Villa Exterior"
+      alt: "Apartmani Markota Exterior"
     },
     {
       src: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -73,9 +73,9 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage }) => {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {currentLanguage === 'hr' 
-              ? "Otkrij elegantne i udobne prostore naše vile kroz ovu fototeku."
-              : "Discover the elegant and comfortable spaces of our villa through this photo gallery."
-            }
+                    ? "Otkrij elegantne i udobne prostore Apartmana Markota kroz ovu fototeku."
+                    : "Discover the elegant and comfortable spaces of Apartmani Markota through this photo gallery."
+                  }
           </p>
         </div>
 

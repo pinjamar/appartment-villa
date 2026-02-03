@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+import SEO from './components/SEO';
+import { content } from './data/content';
 import Hero from './components/Hero';
 import About from './components/About';
 import Gallery from './components/Gallery';
@@ -14,9 +16,15 @@ import CookieBanner from './components/CookieBanner';
 function App() {
   const [currentLanguage, setCurrentLanguage] = useState<'hr' | 'en'>('hr');
 
+  const pageSeo = content.seoPages?.home?.[currentLanguage];
+
   return (
     <div className="min-h-screen bg-white">
-      <Header currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
+      <SEO currentLanguage={currentLanguage} pageSeo={pageSeo} />
+      <Header
+        currentLanguage={currentLanguage}
+        setCurrentLanguage={setCurrentLanguage}
+      />
       <main>
         <Hero currentLanguage={currentLanguage} />
         <About currentLanguage={currentLanguage} />

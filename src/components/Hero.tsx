@@ -14,12 +14,15 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Villa Azzurra"
+          alt="Apartmani Markota"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40"></div>

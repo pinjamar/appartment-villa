@@ -11,7 +11,7 @@ const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -24,7 +24,7 @@ const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {
 
   const handleContactSubmission = (data: typeof formData) => {
     // Send email using mailto
-    const subject = encodeURIComponent(`Villa Azzurra - ${data.subject}`);
+    const subject = encodeURIComponent(`Apartmani Markota - ${data.subject}`);
     const body = encodeURIComponent(`
 Nome: ${data.name}
 Email: ${data.email}
@@ -32,9 +32,11 @@ Email: ${data.email}
 Messaggio:
 ${data.message}
     `);
-    
-    window.open(`mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`);
-    
+
+    window.open(
+      `mailto:${siteConfig.contact.email}?subject=${subject}&body=${body}`,
+    );
+
     // Show success message
     setIsSubmitted(true);
     setTimeout(() => {
@@ -43,10 +45,12 @@ ${data.message}
     }, 3000);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -75,7 +79,9 @@ ${data.message}
                     <Phone size={20} className="text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{contactContent.info.phone}</p>
+                    <p className="font-medium text-gray-900">
+                      {contactContent.info.phone}
+                    </p>
                     <p className="text-gray-600">{siteConfig.contact.phone}</p>
                   </div>
                 </div>
@@ -84,7 +90,9 @@ ${data.message}
                     <Mail size={20} className="text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{contactContent.info.email}</p>
+                    <p className="font-medium text-gray-900">
+                      {contactContent.info.email}
+                    </p>
                     <p className="text-gray-600">{siteConfig.contact.email}</p>
                   </div>
                 </div>
@@ -93,8 +101,12 @@ ${data.message}
                     <MapPin size={20} className="text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">{contactContent.info.address}</p>
-                    <p className="text-gray-600">{siteConfig.contact.address}</p>
+                    <p className="font-medium text-gray-900">
+                      {contactContent.info.address}
+                    </p>
+                    <p className="text-gray-600">
+                      {siteConfig.contact.address}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -118,16 +130,14 @@ ${data.message}
                   <Send size={24} className="text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {currentLanguage === 'it' 
+                  {currentLanguage === 'it'
                     ? 'Messaggio inviato con successo!'
-                    : 'Message sent successfully!'
-                  }
+                    : 'Message sent successfully!'}
                 </h3>
                 <p className="text-gray-600">
-                  {currentLanguage === 'it' 
+                  {currentLanguage === 'it'
                     ? 'Ti contatteremo presto.'
-                    : 'We will contact you soon.'
-                  }
+                    : 'We will contact you soon.'}
                 </p>
               </div>
             ) : (

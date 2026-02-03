@@ -23,9 +23,9 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">VA</span>
+                <span className="text-white font-bold text-lg">AM</span>
               </div>
-              <h3 className="text-xl font-bold">Villa Azzurra</h3>
+              <h3 className="text-xl font-bold">Apartmani Markota</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {footerContent.description}
@@ -39,10 +39,12 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{footerContent.quickLinks}</h4>
+            <h4 className="text-lg font-semibold mb-4">
+              {footerContent.quickLinks}
+            </h4>
             <ul className="space-y-2">
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('about')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -50,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('gallery')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -58,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('services')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -66,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('booking')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -74,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -82,7 +84,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 </button>
               </li>
               <li>
-                <a 
+                <a
                   href="/admin"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
@@ -94,9 +96,11 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
           {/* Social & Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{footerContent.followUs}</h4>
+            <h4 className="text-lg font-semibold mb-4">
+              {footerContent.followUs}
+            </h4>
             <div className="flex space-x-4 mb-6">
-              <a 
+              <a
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -104,7 +108,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
               >
                 <Facebook size={20} />
               </a>
-              <a 
+              <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -112,7 +116,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
               >
                 <Instagram size={20} />
               </a>
-              <a 
+              <a
                 href={siteConfig.social.airbnb}
                 target="_blank"
                 rel="noopener noreferrer"

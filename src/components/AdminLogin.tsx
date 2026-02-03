@@ -6,14 +6,20 @@ interface AdminLoginProps {
 }
 
 const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
-  const [credentials, setCredentials] = useState({ username: '', password: '' });
+  const [credentials, setCredentials] = useState({
+    username: '',
+    password: '',
+  });
   const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Credenziali demo - in produzione usare autenticazione Firebase
-    if (credentials.username === 'admin' && credentials.password === 'villa2024') {
+    if (
+      credentials.username === 'admin' &&
+      credentials.password === 'villa2024'
+    ) {
       localStorage.setItem('adminLoggedIn', 'true');
       onLogin(true);
     } else {
@@ -29,7 +35,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
             <Lock size={24} className="text-white" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
-          <p className="text-gray-600">Villa Azzurra</p>
+          <p className="text-gray-600">Apartmani Markota</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -41,7 +47,9 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
             <input
               type="text"
               value={credentials.username}
-              onChange={(e) => setCredentials({...credentials, username: e.target.value})}
+              onChange={(e) =>
+                setCredentials({ ...credentials, username: e.target.value })
+              }
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="admin"
             />
@@ -55,7 +63,9 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
             <input
               type="password"
               value={credentials.password}
-              onChange={(e) => setCredentials({...credentials, password: e.target.value})}
+              onChange={(e) =>
+                setCredentials({ ...credentials, password: e.target.value })
+              }
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="villa2024"
             />

@@ -51,21 +51,21 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage }) => {
     
     // Build WhatsApp message
     const priceText = priceCalculation 
-      ? `\n\n💰 *${currentLanguage === 'it' ? 'Prezzo totale' : 'Total price'}: ${formatPrice(priceCalculation.total)}*`
+      ? `\n\n💰 *${bookingContent.pricing.total}: ${formatPrice(priceCalculation.total)}*`
       : '';
     
-    const message = `${currentLanguage === 'hr' ? 'Zahtjev za Rezervaciju Villa Azzurra' : 'Villa Azzurra Booking Request'}
+    const message = `${bookingContent.pricing.message}
 
-👤 *${currentLanguage === 'hr' ? 'Ime' : 'Name'}:* ${formData.name}
+👤 *${bookingContent.form.name}:* ${formData.name}
 📧 *Email:* ${formData.email}
-📱 *${currentLanguage === 'hr' ? 'Telefon' : 'Phone'}:* ${formData.phone}
+📱 *${bookingContent.form.phone}:* ${formData.phone}
 
-📅 *${currentLanguage === 'hr' ? 'Dohodak' : 'Check-in'}:* ${formData.checkin}
-📅 *${currentLanguage === 'hr' ? 'Odlazak' : 'Check-out'}:* ${formData.checkout}
-👥 *${currentLanguage === 'hr' ? 'Gosti' : 'Guests'}:* ${formData.guests}
+📅 *${bookingContent.form.checkin}:* ${formData.checkin}
+📅 *${bookingContent.form.checkout}:* ${formData.checkout}
+👥 *${bookingContent.form.guests}:* ${formData.guests}
 ${priceText}
 
-${formData.message ? `\n💬 *${currentLanguage === 'hr' ? 'Poruka' : 'Message'}:*\n${formData.message}` : ''}`;
+${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.message}` : ''}`;
 
     // Extract phone number without + and spaces for WhatsApp
     const phoneNumber = siteConfig.contact.phone.replace(/[^\d]/g, '');
@@ -98,21 +98,21 @@ ${formData.message ? `\n💬 *${currentLanguage === 'hr' ? 'Poruka' : 'Message'}
                 </h3>
                 <div className="space-y-3 text-gray-600">
                   <div className="flex justify-between items-center">
-                    <span>{currentLanguage === 'it' ? 'Bassa stagione:' : 'Low season:'}</span>
-                    <span className="font-semibold">€180/notte</span>
+                    <span>{bookingContent.pricing.lowSeason}:</span>
+                    <span className="font-semibold">€180{bookingContent.pricing.pricePerNight}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span>{currentLanguage === 'it' ? 'Alta stagione:' : 'High season:'}</span>
-                    <span className="font-semibold">€250/notte</span>
+                    <span>{bookingContent.pricing.highSeason}:</span>
+                    <span className="font-semibold">€250{bookingContent.pricing.pricePerNight}</span>
                   </div>
                   <hr className="my-4" />
                   <div className="flex justify-between items-center text-sm">
-                    <span>{currentLanguage === 'it' ? 'Pulizia finale:' : 'Final cleaning:'}</span>
+                    <span>{bookingContent.pricing.finalCleaning}:</span>
                     <span>€80</span>
                   </div>
                   <div className="flex justify-between items-center text-sm">
-                    <span>{currentLanguage === 'it' ? 'Tassa soggiorno:' : 'Tourist tax:'}</span>
-                    <span>€2.50/persona/notte</span>
+                    <span>{bookingContent.pricing.touristTax}:</span>
+                    <span>€2.50/persona/noć</span>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@ ${formData.message ? `\n💬 *${currentLanguage === 'hr' ? 'Poruka' : 'Message'}
               {priceCalculation && (
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-6 border border-blue-100">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {currentLanguage === 'it' ? 'Calcolo Prezzo' : 'Price Calculation'}
+                    {bookingContent.pricing.priceCalculation}
                   </h3>
                   
                   <div className="space-y-3">
@@ -148,14 +148,14 @@ ${formData.message ? `\n💬 *${currentLanguage === 'hr' ? 'Poruka' : 'Message'}
                     
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700">
-                        {currentLanguage === 'it' ? 'Pulizia finale' : 'Final cleaning'}
+                        {bookingContent.pricing.finalCleaning}
                       </span>
                       <span className="font-semibold">{formatPrice(priceCalculation.cleaningFee)}</span>
                     </div>
                     
                     <div className="flex justify-between items-center">
                       <span className="text-gray-700">
-                        {currentLanguage === 'it' ? 'Tassa soggiorno' : 'Tourist tax'}
+                        {bookingContent.pricing.touristTax}
                       </span>
                       <span className="font-semibold">{formatPrice(priceCalculation.touristTax)}</span>
                     </div>
@@ -163,13 +163,13 @@ ${formData.message ? `\n💬 *${currentLanguage === 'hr' ? 'Poruka' : 'Message'}
                     <hr className="border-blue-200" />
                     
                     <div className="flex justify-between items-center text-lg font-bold text-blue-900">
-                      <span>{currentLanguage === 'it' ? 'Totale' : 'Total'}</span>
+                      <span>{bookingContent.pricing.total}</span>
                       <span>{formatPrice(priceCalculation.total)}</span>
                     </div>
                     
                     <div className="text-center text-sm text-gray-600 mt-2">
-                      {currentLanguage === 'it' 
-                        ? `Media: ${formatPrice(priceCalculation.averagePerNight)}/notte`
+                      {currentLanguage === 'hr' 
+                        ? `Prosječno: ${formatPrice(priceCalculation.averagePerNight)}/noć`
                         : `Average: ${formatPrice(priceCalculation.averagePerNight)}/night`
                       }
                     </div>

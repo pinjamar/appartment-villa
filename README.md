@@ -1,4 +1,4 @@
-<h1 align="center">Villa Azzurra</h1>
+<h1 align="center">Apartmani Markota</h1>
 <h3 align="center">Vacation Rental Website Template</h3>
 
 <p align="center">
@@ -45,8 +45,8 @@ A customizable, modern, and responsive website template for vacation rental prop
 ## Quick Start
 
 ```bash
-git clone https://github.com/fracabu/villa-azzurra.git
-cd villa-azzurra
+git clone https://github.com/fracabu/apartmani-markota.git
+cd apartmani-markota
 npm install
 npm run dev
 ```
@@ -65,22 +65,28 @@ npm run lint     # Run ESLint
 ## Customization
 
 ### Change Language Default
+
 Edit [src/App.tsx](src/App.tsx):
+
 ```tsx
 const [currentLanguage, setCurrentLanguage] = useState<'hr' | 'en'>('hr'); // Change 'hr' to 'en'
 ```
 
 ### Update Content
+
 All content is centralized in [src/data/content.ts](src/data/content.ts). Simply edit the text strings in Croatian (hr) or English (en) sections.
 
 ### Pricing Configuration
+
 Modify pricing in [src/utils/pricingUtils.ts](src/utils/pricingUtils.ts):
+
 - Low season: €180/night (July-August)
 - High season: €250/night (rest of year)
 - Cleaning fee: €80
 - Tourist tax: €2.50/person/night
 
 ### Contact Information
+
 Update site details in [src/data/content.ts](src/data/content.ts) under `siteConfig.contact`
 
 ## Project Structure
