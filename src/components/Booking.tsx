@@ -1,11 +1,90 @@
 import React, { useState } from 'react';
 import { Calendar, Users, Send, Euro } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
-import {
-  calculateStayTotal,
-  formatPrice,
-  getSeasonLabel,
-} from '../utils/pricingUtils';
+
+// Inline pricing config and utilities
+const PRICING = {
+  lowSeason: 180,
+  highSeason: 250,
+  cleaningFee: 80,
+  touristTax: 2.5,
+};
+
+const getSeasonType = (date: Date): 'high' | 'low' => {
+  const month = date.getMonth() + 1;
+  // High season: April 15 - June 30, September - March
+  if ((month === 4 && date.getDate() >= 15) || (month >= 5 && month <= 6))
+    return 'high';
+  if (month >= 9 || month <= 3) return 'high';
+  return 'low'; // July-August
+};
+
+const calculateStayTotal = (
+  checkinDate: string,
+  checkoutDate: string,
+  guests: number,
+) => {
+  const checkin = new Date(checkinDate);
+  const checkout = new Date(checkoutDate);
+  if (checkin >= checkout) throw new Error('Invalid dates');
+
+  let nights = 0,
+    accommodationTotal = 0;
+  const breakdown: Array<{
+    date: string;
+    price: number;
+    season: 'high' | 'low';
+  }> = [];
+  const currentDate = new Date(checkin);
+
+  while (currentDate < checkout) {
+    const season = getSeasonType(currentDate);
+    const price = season === 'high' ? PRICING.highSeason : PRICING.lowSeason;
+    accommodationTotal += price;
+    nights++;
+    breakdown.push({
+      date: currentDate.toISOString().split('T')[0],
+      price,
+      season,
+    });
+    currentDate.setDate(currentDate.getDate() + 1);
+  }
+
+  const touristTax = guests * nights * PRICING.touristTax;
+  const subtotal = accommodationTotal + PRICING.cleaningFee;
+  const total = subtotal + touristTax;
+
+  return {
+    nights,
+    accommodationTotal,
+    cleaningFee: PRICING.cleaningFee,
+    touristTax,
+    subtotal,
+    total,
+    breakdown,
+    averagePerNight: Math.round(accommodationTotal / nights),
+  };
+};
+
+const formatPrice = (amount: number): string =>
+  new Intl.NumberFormat('hr-HR', {
+    style: 'currency',
+    currency: 'EUR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(amount);
+
+const getSeasonLabel = (
+  season: 'high' | 'low',
+  language: 'hr' | 'en' = 'hr',
+): string =>
+  language === 'en'
+    ? season === 'high'
+      ? 'High Season'
+      : 'Low Season'
+    : season === 'high'
+      ? 'Visoka Sezona'
+      : 'Niska Sezona';
 
 interface BookingProps {
   currentLanguage: 'hr' | 'en';
