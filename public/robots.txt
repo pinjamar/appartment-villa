@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pinjamar.github.io/appartment-villa/sitemap.xml

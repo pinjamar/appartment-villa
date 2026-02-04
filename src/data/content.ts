@@ -393,6 +393,13 @@ export const content = {
       decline: 'Odbij',
       moreInfo: 'Više informacija',
     },
+    en: {
+      message:
+        'This site uses cookies to improve your browsing experience and for statistical purposes.',
+      accept: 'Accept',
+      decline: 'Decline',
+      moreInfo: 'More Information',
+    },
   },
 };
 

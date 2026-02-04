@@ -32,12 +32,12 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 <div className="text-center">
                   <MapPin size={48} className="text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-500">
-                    {currentLanguage === 'it'
+                    {currentLanguage === 'hr'
                       ? 'Mappa Interattiva'
                       : 'Interactive Map'}
                   </p>
                   <p className="text-sm text-gray-400 mt-2">
-                    {currentLanguage === 'it'
+                    {currentLanguage === 'hr'
                       ? 'Integrazione Google Maps qui'
                       : 'Google Maps integration here'}
                   </p>
@@ -51,13 +51,13 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <MapPin size={24} className="text-blue-600 mr-2" />
-                {currentLanguage === 'it' ? 'Indirizzo' : 'Address'}
+                {currentLanguage === 'hr' ? 'Indirizzo' : 'Address'}
               </h3>
               <p className="text-gray-600 mb-4">{siteConfig.contact.address}</p>
               <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
                 <Navigation size={16} />
                 <span>
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Ottieni indicazioni'
                     : 'Get directions'}
                 </span>
@@ -66,14 +66,14 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
 
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {currentLanguage === 'it'
+                {currentLanguage === 'hr'
                   ? 'Attrazioni Vicine'
                   : 'Nearby Attractions'}
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it'
+                    {currentLanguage === 'hr'
                       ? 'Centro di Firenze'
                       : 'Florence Center'}
                   </span>
@@ -81,7 +81,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it'
+                    {currentLanguage === 'hr'
                       ? 'Aeroporto di Firenze'
                       : 'Florence Airport'}
                   </span>
@@ -89,13 +89,13 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it' ? 'Siena' : 'Siena'}
+                    {currentLanguage === 'hr' ? 'Siena' : 'Siena'}
                   </span>
                   <span className="text-sm text-gray-500">45 km</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it'
+                    {currentLanguage === 'hr'
                       ? 'San Gimignano'
                       : 'San Gimignano'}
                   </span>
@@ -103,7 +103,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'it' ? 'Pisa' : 'Pisa'}
+                    {currentLanguage === 'hr' ? 'Pisa' : 'Pisa'}
                   </span>
                   <span className="text-sm text-gray-500">80 km</span>
                 </div>
@@ -112,30 +112,30 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
 
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {currentLanguage === 'it' ? 'Come Arrivare' : 'How to Get Here'}
+                {currentLanguage === 'hr' ? 'Come Arrivare' : 'How to Get Here'}
               </h3>
               <div className="space-y-3 text-gray-600">
                 <p>
                   <strong>
-                    {currentLanguage === 'it' ? 'In Auto:' : 'By Car:'}
+                    {currentLanguage === 'hr' ? 'In Auto:' : 'By Car:'}
                   </strong>{' '}
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Uscita A1 Firenze Sud, seguire indicazioni per il centro'
                     : 'A1 Florence South exit, follow signs to city center'}
                 </p>
                 <p>
                   <strong>
-                    {currentLanguage === 'it' ? 'In Treno:' : 'By Train:'}
+                    {currentLanguage === 'hr' ? 'In Treno:' : 'By Train:'}
                   </strong>{' '}
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Stazione di Firenze SMN + taxi (20 min)'
                     : 'Florence SMN station + taxi (20 min)'}
                 </p>
                 <p>
                   <strong>
-                    {currentLanguage === 'it' ? 'In Aereo:' : 'By Plane:'}
+                    {currentLanguage === 'hr' ? 'In Aereo:' : 'By Plane:'}
                   </strong>{' '}
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Aeroporto Amerigo Vespucci (12 km)'
                     : 'Amerigo Vespucci Airport (12 km)'}
                 </p>

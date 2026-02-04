@@ -130,12 +130,12 @@ ${data.message}
                   <Send size={24} className="text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Messaggio inviato con successo!'
                     : 'Message sent successfully!'}
                 </h3>
                 <p className="text-gray-600">
-                  {currentLanguage === 'it'
+                  {currentLanguage === 'hr'
                     ? 'Ti contatteremo presto.'
                     : 'We will contact you soon.'}
                 </p>

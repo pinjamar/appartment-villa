@@ -1,0 +1,106 @@
+---
+import '../styles.css';
+import { siteConfig, seoPages, content } from '../data/content';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Gallery from '../components/Gallery';
+import Services from '../components/Services';
+import Booking from '../components/Booking';
+import Reviews from '../components/Reviews';
+import Location from '../components/Location';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+import CookieBanner from '../components/CookieBanner';
+
+const homeHr = seoPages.home.hr;
+const reviews = content.reviews.hr.items || [];
+const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
+const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LodgingBusiness',
+  name: siteConfig.siteName.hr,
+  description: homeHr.description,
+  image: [siteConfig.seo.defaultImage],
+  url: `${siteConfig.seo.siteUrl}/hr/`,
+  telephone: siteConfig.contact.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.contact.address,
+    addressLocality: 'Korčula',
+    addressCountry: 'HR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: siteConfig.contact.coordinates.lat,
+    longitude: siteConfig.contact.coordinates.lng,
+  },
+  ...(ratingAvg
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: ratingAvg,
+          reviewCount: reviews.length,
+        },
+      }
+    : {}),
+};
+---
+
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/appartment-villa/favicon.png" />
+    
+    <title>{homeHr.title}</title>
+    <meta name="description" content={homeHr.description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={siteConfig.siteName.hr} />
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={siteConfig.siteName.hr} />
+    <meta property="og:title" content={homeHr.title} />
+    <meta property="og:description" content={homeHr.description} />
+    <meta property="og:image" content={siteConfig.seo.defaultImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={homeHr.canonical} />
+    <meta property="og:locale" content="hr_HR" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
+    <meta name="twitter:title" content={homeHr.title} />
+    <meta name="twitter:description" content={homeHr.description} />
+    <meta name="twitter:image" content={siteConfig.seo.defaultImage} />
+    
+    <link rel="canonical" href={homeHr.canonical} />
+    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
+    <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
+    
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <div class="min-h-screen bg-white">
+      <Header client:load currentLanguage="hr" setCurrentLanguage={(lang: 'hr' | 'en') => {}} />
+      <main>
+        <Hero client:visible currentLanguage="hr" />
+        <About client:visible currentLanguage="hr" />
+        <Gallery client:visible currentLanguage="hr" />
+        <Services client:visible currentLanguage="hr" />
+        <Booking client:visible currentLanguage="hr" />
+        <Reviews client:visible currentLanguage="hr" />
+        <Location client:visible currentLanguage="hr" />
+        <Contact client:visible currentLanguage="hr" />
+      </main>
+      <Footer client:visible currentLanguage="hr" />
+      <CookieBanner client:load currentLanguage="hr" />
+    </div>
+  </body>
+</html>
