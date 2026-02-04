@@ -1,8 +1,8 @@
 // Easily modifiable content for customization
 export const siteConfig = {
   siteName: {
-    hr: 'Apartman Korčula',
-    en: 'Korčula Apartment',
+    hr: 'Apartmani Markota',
+    en: 'Markota Apartments',
   },
   tagline: {
     hr: 'Vaš san o kućici za odmor na Korčuli',
@@ -46,7 +46,7 @@ export const content = {
       gallery: 'Galerija',
       services: 'Usluge',
       availability: 'Dostupnost',
-      booking: 'Rezerviraj',
+      booking: 'Rezerviraj boravak',
       reviews: 'Recenzije',
       location: 'Lokacija',
       contact: 'Kontakt',
@@ -79,7 +79,7 @@ export const content = {
   },
   about: {
     hr: {
-      title: 'Apartman',
+      title: 'Apartman Marko',
       description:
         'Apartman Korčula je moderan i luksuzno opremljen apartman sa impozantnim pogledom na Jadransko more. Smješten u srcu grada Korčule, idealan je za parove ili male obitelji koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
       features: [
@@ -94,7 +94,7 @@ export const content = {
       ],
     },
     en: {
-      title: 'The Apartment',
+      title: 'Marko Apartment',
       description:
         "Korčula Apartment is a modern and luxuriously equipped apartment with impressive views of the Adriatic Sea. Located in the heart of Korčula town, it's ideal for couples or small families wanting to enjoy the peace and natural beauty of this unique island.",
       features: [
@@ -107,6 +107,44 @@ export const content = {
         'Free Wi-Fi internet',
         'Parking on property',
       ],
+    },
+  },
+  aboutSecond: {
+    hr: {
+      title: 'Apartman Sara',
+      description:
+        'Drugi apartman nudi udoban boravak s posebnim sadržajima i privatnošću. Idealno za parove ili manje obitelji koje žele miran odmor uz more.',
+      features: [
+        '1 spavaća soba s bračnim krevetom',
+        '1 moderna kupaonica',
+        'Dnevni boravak s kaučem na razvlačenje',
+        'Kuhinja s blagovaonicom',
+        'Terasa s pogledom na more',
+        'Klimatizacija u svim prostorijama',
+        'Brzi Wi-Fi',
+        'Besplatan parking',
+      ],
+      image:
+        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageAlt: 'Apartman 2 Interijer',
+    },
+    en: {
+      title: 'Sara Apartment',
+      description:
+        'The second apartment offers a comfortable stay with distinct amenities and added privacy. Ideal for couples or small families looking for a peaceful seaside getaway.',
+      features: [
+        '1 bedroom with a double bed',
+        '1 modern bathroom',
+        'Living room with a sofa bed',
+        'Kitchen with dining area',
+        'Terrace with sea view',
+        'Air conditioning throughout',
+        'Fast Wi-Fi',
+        'Free parking',
+      ],
+      image:
+        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageAlt: 'Apartment 2 Interior',
     },
   },
   services: {
@@ -374,6 +412,8 @@ export const content = {
       copyright: '© 2026 Apartmani Markota. Sva prava su zadržana.',
       privacy: 'Politika Privatnosti',
       cookies: 'Politika Kolačića',
+      privacyText:
+        'Apartmani Markota poštuju vašu privatnost. Ne prikupljamo, ne pohranjujemo niti obrađujemo nikakve osobne podatke na ovoj web stranici. Sve informacije koje unesete u obrazac za rezervaciju šaljete izravno putem WhatsAppa. Mi ne pohranjujemo niti pristupamo tim informacijama na našim serverima. Ne koristimo kolačiće, analitiku niti bilo kakve tehnologije praćenja. Ako imate pitanja o privatnosti, kontaktirajte nas na info@apartmanimarkota.com.',
     },
     en: {
       description:
@@ -383,6 +423,8 @@ export const content = {
       copyright: '© 2026 Markota Apartments. All rights reserved.',
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
+      privacyText:
+        'Your personal data is protected and used solely for processing reservations and communication. We do not share data with third parties without your consent.',
     },
   },
   cookieBanner: {
@@ -407,9 +449,9 @@ export const content = {
 export const seoPages = {
   home: {
     hr: {
-      title: `${siteConfig.siteName.hr} — Apartmani uz more, Korčula`,
+      title: `${siteConfig.siteName.hr} - Prižba, Korčula`,
       description:
-        'Apartmani Markota: moderno opremljen apartman uz more u srcu Korčule. Rezervirajte direktno za najbolje cijene.',
+        'Apartmani Markota: moderno opremljeni apartmani, prvi red do mora u Prižbi. Rezervirajte direktno za najbolje cijene.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/hr/`,
       jsonLd: {
@@ -489,6 +531,84 @@ export const seoPages = {
         description: 'Photos of the apartment and surroundings.',
       },
     },
+  },
+
+  gallery2: {
+    hr: {
+      title: `${siteConfig.siteName.hr} — Apartman 2 Galerija`,
+      description: 'Pogledajte fotogaleriju Apartmana 2 i doživite ambijent.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/hr/gallery2/`,
+    },
+    en: {
+      title: `${siteConfig.siteName.en} — Apartment 2 Gallery`,
+      description: 'Browse the gallery of Apartment 2 to preview the space.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/gallery2/`,
+    },
+  },
+
+  galleryImages: {
+    1: [
+      {
+        src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Apartmani Markota Exterior',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Living Room',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Bedroom',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Kitchen',
+      },
+      {
+        src: 'https://images.pexels.com/photos/261181/pexels-photo-261181.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Swimming Pool',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Garden View',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Terrace',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Bathroom',
+      },
+    ],
+    2: [
+      {
+        src: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Apartment 2 Living Area',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Cozy Bedroom',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Terrace',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Modern Bedroom',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Garden Area',
+      },
+      {
+        src: 'https://images.pexels.com/photos/1398857/pexels-photo-1398857.jpeg?auto=compress&cs=tinysrgb&w=800',
+        alt: 'Kitchen Area',
+      },
+    ],
   },
 
   booking: {

@@ -9,8 +9,8 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
   const heroContent = content.hero[currentLanguage];
 
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToBooking = () => {
+    document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -38,17 +38,17 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
             {heroContent.subtitle}
           </p>
           <button
-            onClick={scrollToAbout}
+            onClick={scrollToBooking}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500"
           >
-            {heroContent.cta}
+            {currentLanguage === 'hr' ? 'Rezerviraj Boravak' : 'Book a Stay'}
           </button>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <button
-        onClick={scrollToAbout}
+        onClick={scrollToBooking}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-10"
       >
         <ChevronDown size={32} />

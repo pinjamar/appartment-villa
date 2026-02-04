@@ -22,9 +22,11 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">AM</span>
-              </div>
+              <img
+                src="/appartment-villa/Markota-crop.jpg"
+                alt="Markota Logo"
+                className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300 cursor-pointer"
+              />
               <h3 className="text-xl font-bold">Apartmani Markota</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
@@ -134,16 +136,22 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
         <hr className="border-gray-800 my-8" />
 
+        <div className="bg-gray-800 rounded-lg p-6 mb-8">
+          <h4 className="text-sm font-semibold text-white mb-3">
+            {footerContent.privacy}
+          </h4>
+          <p className="text-xs text-gray-300">
+            {(footerContent as any).privacyText}
+          </p>
+        </div>
+
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
           <p>{footerContent.copyright}</p>
-          <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">
-              {footerContent.privacy}
-            </a>
+          {/* <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">
               {footerContent.cookies}
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

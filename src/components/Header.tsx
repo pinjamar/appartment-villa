@@ -40,9 +40,11 @@ const Header: React.FC<HeaderProps> = ({
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AM</span>
-            </div>
+            <img
+              src="/appartment-villa/Markota-crop.jpg"
+              alt="Markota Logo"
+              className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300 cursor-pointer"
+            />
             <h1 className="text-xl font-bold text-gray-900">
               Apartmani Markota
             </h1>
@@ -74,23 +76,23 @@ const Header: React.FC<HeaderProps> = ({
             >
               {nav.services}
             </button>
-            <button
+            {/* <button
               onClick={() => scrollToSection('availability')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               {nav.availability}
+            </button> */}
+            <button
+              onClick={() => scrollToSection('location')}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              {nav.location}
             </button>
             <button
               onClick={() => scrollToSection('booking')}
               className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               {nav.booking}
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              {nav.contact}
             </button>
           </nav>
 
@@ -154,16 +156,16 @@ const Header: React.FC<HeaderProps> = ({
                 {nav.availability}
               </button>
               <button
+                onClick={() => scrollToSection('location')}
+                className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+              >
+                {nav.location}
+              </button>
+              <button
                 onClick={() => scrollToSection('booking')}
                 className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
               >
                 {nav.booking}
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
-              >
-                {nav.contact}
               </button>
             </div>
           </nav>

@@ -403,7 +403,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   <p className="text-sm text-blue-900">
                     📱{' '}
                     {currentLanguage === 'hr'
-                      ? 'Klikom na slanje, preusmjerit ćeš se na WhatsApp kako bi dovršio rezervaciju.'
+                      ? 'Klikom na slanje, ovaj obrazac otvorit će WhatsApp s vašim podacima o rezervaciji. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.'
                       : 'Clicking send will redirect you to WhatsApp to complete your booking.'}
                   </p>
                 </div>

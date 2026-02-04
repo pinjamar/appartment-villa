@@ -4,14 +4,27 @@ import { content } from '../data/content';
 
 interface GalleryProps {
   currentLanguage: 'hr' | 'en';
+  apartmentId?: number;
   setPageSeo?: (seo: any) => void;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ currentLanguage, setPageSeo }) => {
+const Gallery: React.FC<GalleryProps> = ({
+  currentLanguage,
+  apartmentId = 1,
+  setPageSeo,
+}) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [
+  const nav = content.navigation[currentLanguage];
+
+  // Get gallery data based on apartmentId
+  const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
+  const galleryContent = (content as any)[galleryKey]?.[currentLanguage] || {};
+
+  const images = (content as any)[`${galleryKey}Images`]?.[
+    apartmentId === 2 ? '2' : '1'
+  ] || [
     {
       src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Apartmani Markota Exterior',
@@ -63,18 +76,20 @@ const Gallery: React.FC<GalleryProps> = ({ currentLanguage, setPageSeo }) => {
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const nav = content.navigation[currentLanguage];
-
-  // When this section mounts or language changes, allow it to set contextual SEO
+  // When this section mounts or language/apartmentId changes, allow it to set contextual SEO
   React.useEffect(() => {
     if (typeof setPageSeo === 'function') {
-      const seo = (content as any).seoPages?.gallery?.[currentLanguage];
+      const seoKey = apartmentId === 2 ? 'gallery2' : 'gallery';
+      const seo = (content as any).seoPages?.[seoKey]?.[currentLanguage];
       if (seo) setPageSeo(seo);
     }
-  }, [currentLanguage, setPageSeo]);
+  }, [currentLanguage, apartmentId, setPageSeo]);
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section
+      id={apartmentId === 2 ? 'gallery2' : 'gallery'}
+      className="py-20 bg-white"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -131,12 +131,12 @@ ${data.message}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {currentLanguage === 'hr'
-                    ? 'Messaggio inviato con successo!'
+                    ? 'Poruka uspješno poslana!'
                     : 'Message sent successfully!'}
                 </h3>
                 <p className="text-gray-600">
                   {currentLanguage === 'hr'
-                    ? 'Ti contatteremo presto.'
+                    ? 'Uskoro ćemo vas kontaktirati.'
                     : 'We will contact you soon.'}
                 </p>
               </div>
