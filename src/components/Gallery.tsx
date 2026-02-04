@@ -103,7 +103,7 @@ const Gallery: React.FC<GalleryProps> = ({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {images.map((image, index) => (
+          {images.map((image: any, index: number) => (
             <div
               key={index}
               className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
