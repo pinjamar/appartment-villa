@@ -29,6 +29,7 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 20px;
 }
 
 /* Custom theme variables - easily customizable */
@@ -77,7 +78,9 @@ html {
 }
 
 /* Form focus styles */
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   ring: 2px;
   ring-color: var(--primary-color);
@@ -135,7 +138,7 @@ input:focus, textarea:focus, select:focus {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   html {
     scroll-behavior: auto;
   }
@@ -146,15 +149,15 @@ input:focus, textarea:focus, select:focus {
   .text-gray-600 {
     color: #000000;
   }
-  
+
   .text-gray-700 {
     color: #000000;
   }
-  
+
   .bg-gray-50 {
     background-color: #ffffff;
   }
-  
+
   .bg-gray-100 {
     background-color: #ffffff;
   }
@@ -165,18 +168,19 @@ input:focus, textarea:focus, select:focus {
   .no-print {
     display: none !important;
   }
-  
+
   * {
     background: transparent !important;
     color: black !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
-  a, a:visited {
+
+  a,
+  a:visited {
     text-decoration: underline;
   }
-  
+
   .container {
     max-width: none !important;
     padding: 0;

@@ -14,7 +14,8 @@ import Booking from '../components/Booking';
 // import CookieBanner from '../components/CookieBanner';
 import Footer from '../components/Footer';
 
-const homeHr = seoPages.home.hr;
+const currentLanguage = 'hr';
+const homeSeo = seoPages.home.hr;
 const reviews = content.reviews.hr.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
@@ -23,7 +24,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
   name: siteConfig.siteName.hr,
-  description: homeHr.description,
+  description: homeSeo.description,
   image: [siteConfig.seo.defaultImage],
   url: `${siteConfig.seo.siteUrl}/hr/`,
   telephone: siteConfig.contact.phone,
@@ -57,52 +58,52 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/appartment-villa/favicon.png" />
     
-    <title>{homeHr.title}</title>
-    <meta name="description" content={homeHr.description} />
+    <title>{homeSeo.title}</title>
+    <meta name="description" content={homeSeo.description} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content={siteConfig.siteName.hr} />
     
     <!-- Open Graph -->
     <meta property="og:site_name" content={siteConfig.siteName.hr} />
-    <meta property="og:title" content={homeHr.title} />
-    <meta property="og:description" content={homeHr.description} />
+    <meta property="og:title" content={homeSeo.title} />
+    <meta property="og:description" content={homeSeo.description} />
     <meta property="og:image" content={siteConfig.seo.defaultImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content={homeHr.canonical} />
+    <meta property="og:url" content={homeSeo.canonical} />
     <meta property="og:locale" content="hr_HR" />
     <meta property="og:type" content="website" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
-    <meta name="twitter:title" content={homeHr.title} />
-    <meta name="twitter:description" content={homeHr.description} />
+    <meta name="twitter:title" content={homeSeo.title} />
+    <meta name="twitter:description" content={homeSeo.description} />
     <meta name="twitter:image" content={siteConfig.seo.defaultImage} />
     
-    <link rel="canonical" href={homeHr.canonical} />
+    <link rel="canonical" href={homeSeo.canonical} />
     <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
-    <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/`} />
-    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
+    <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/hr/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage="hr" setCurrentLanguage={(lang: 'hr' | 'en') => {}} />
+      <Header client:load currentLanguage={currentLanguage} setCurrentLanguage={(lang: 'hr' | 'en') => {}} />
       <main>
-        <Hero client:visible currentLanguage="hr" />
-        <About client:visible currentLanguage="hr" />
-        <Gallery client:visible currentLanguage="hr" apartmentId={1} />
-        <AboutSecond client:visible currentLanguage="hr" />
-        <Gallery client:visible currentLanguage="hr" apartmentId={2} />
-        <Services client:visible currentLanguage="hr" />
-        <Location client:visible currentLanguage="hr" />
-        <Booking client:visible currentLanguage="hr" />
+        <Hero client:visible currentLanguage={currentLanguage} />
+        <About client:visible currentLanguage={currentLanguage} />
+        <Gallery client:visible currentLanguage={currentLanguage} apartmentId={1} />
+        <AboutSecond client:visible currentLanguage={currentLanguage} />
+        <Gallery client:visible currentLanguage={currentLanguage} apartmentId={2} />
+        <Services client:visible currentLanguage={currentLanguage} />
+        <Location client:visible currentLanguage={currentLanguage} />
+        <Booking client:visible currentLanguage={currentLanguage} />
         <!-- <Reviews client:visible currentLanguage="hr" /> -->
         <!-- <Contact client:visible currentLanguage="hr" /> -->
       </main>
-      <Footer client:visible currentLanguage="hr" />
+      <Footer client:visible currentLanguage={currentLanguage} />
       <!-- <CookieBanner client:load currentLanguage="hr" /> -->
     </div>
   </body>

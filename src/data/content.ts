@@ -42,8 +42,8 @@ export const content = {
   navigation: {
     hr: {
       home: 'Početna',
-      about: 'Apartman',
-      gallery: 'Galerija',
+      about: 'Apartman Marko',
+      gallery: 'Apartman Sara',
       services: 'Usluge',
       availability: 'Dostupnost',
       booking: 'Rezerviraj boravak',
@@ -53,8 +53,8 @@ export const content = {
     },
     en: {
       home: 'Home',
-      about: 'The Apartment',
-      gallery: 'Gallery',
+      about: 'Apartment Marko',
+      gallery: 'Apartment Sara',
       services: 'Services',
       availability: 'Availability',
       booking: 'Book Now',
@@ -81,16 +81,16 @@ export const content = {
     hr: {
       title: 'Apartman Marko',
       description:
-        'Apartman Korčula je moderan i luksuzno opremljen apartman sa impozantnim pogledom na Jadransko more. Smješten u srcu grada Korčule, idealan je za parove ili male obitelji koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
+        'Apartman Marko je moderan i luksuzno opremljen apartman sa impozantnim pogledom na Jadransko more. Smješten u srcu grada Korčule, idealan je za parove ili male obitelji koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
       features: [
         '2 prostrane spavaće sobe',
-        '2 moderne kupaone',
-        'Dnevni boravak sa gledanjem na more',
+        '3 moderne kupaone',
+        'Dnevni boravak s pogledom na more',
+        'Velika terasa od preko 30m2',
         'Potpuno opremljena kuhinja',
-        'Balkon sa pogledom na Jadran',
-        'Primijenjeno klimatizaciji',
+        'Klimatizirane sobe',
         'Besplatan Wi-Fi internet',
-        'Parking na kućnom području',
+        'Besplatan parking',
       ],
     },
     en: {
@@ -177,9 +177,9 @@ export const content = {
           description: 'Moderna kuhinja sa svim aparatima',
         },
         {
-          name: 'Blizu Plaža',
-          icon: 'Sun',
-          description: 'Blizu najljepših plaža na otoku',
+          name: 'Perilica Rublja',
+          icon: 'WashingMachine',
+          description: 'Perilica rublja dostupna tijekom boravka',
         },
         {
           name: 'TV i Zabava',
@@ -222,9 +222,9 @@ export const content = {
           description: 'Modern kitchen with all appliances',
         },
         {
-          name: 'Beach Access',
-          icon: 'Sun',
-          description: "Close to the island's most beautiful beaches",
+          name: 'Washing Machine',
+          icon: 'WashingMachine',
+          description: 'On-site washing machine available during your stay',
         },
         {
           name: 'TV & Entertainment',
@@ -257,7 +257,7 @@ export const content = {
   },
   booking: {
     hr: {
-      title: 'Rezerviraj Svoj Boravak',
+      title: 'Rezerviraj Boravak',
       subtitle:
         'Ispuni obrazac da bi tražio rezervaciju. Kontaktirat ćemo te u roku od 24 sata.',
       form: {

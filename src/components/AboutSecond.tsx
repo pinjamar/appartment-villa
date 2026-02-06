@@ -10,7 +10,7 @@ const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
   const aboutContent = content.aboutSecond[currentLanguage];
 
   return (
-    <section id="about-2" className="py-20 bg-white">
+    <section id="about-2" className="pt-12 pb-8 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">

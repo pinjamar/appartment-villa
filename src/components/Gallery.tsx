@@ -16,7 +16,10 @@ const Gallery: React.FC<GalleryProps> = ({
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nav = content.navigation[currentLanguage];
+  const apartmentTitle =
+    apartmentId === 2
+      ? content.aboutSecond[currentLanguage].title
+      : content.about[currentLanguage].title;
 
   // Get gallery data based on apartmentId
   const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
@@ -88,17 +91,17 @@ const Gallery: React.FC<GalleryProps> = ({
   return (
     <section
       id={apartmentId === 2 ? 'gallery2' : 'gallery'}
-      className="py-20 bg-white"
+      className="pt-8 pb-12 bg-gray-50"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {nav.gallery}
+            {apartmentTitle}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {currentLanguage === 'hr'
-              ? 'Otkrij elegantne i udobne prostore Apartmana Markota kroz ovu fototeku.'
-              : 'Discover the elegant and comfortable spaces of Apartmani Markota through this photo gallery.'}
+              ? `Otkrij elegantne i udobne prostore ${apartmentTitle} kroz ovu fototeku.`
+              : `Discover the elegant and comfortable spaces of ${apartmentTitle} through this photo gallery.`}
           </p>
         </div>
 

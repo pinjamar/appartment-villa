@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('gallery')}
+                  onClick={() => scrollToSection('about-2')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {nav.gallery}

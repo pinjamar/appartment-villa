@@ -1,0 +1,104 @@
+---
+import '../../styles.css';
+import { siteConfig, seoPages, content } from '../../data/content';
+import Header from '../../components/Header';
+import Hero from '../../components/Hero';
+import About from '../../components/About';
+import AboutSecond from '../../components/AboutSecond';
+import Gallery from '../../components/Gallery';
+import Services from '../../components/Services';
+import Location from '../../components/Location';
+import Booking from '../../components/Booking';
+import Footer from '../../components/Footer';
+
+const homeEn = seoPages.home.en;
+const reviews = content.reviews.en.items || [];
+const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
+const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
+const canonical = `${siteConfig.seo.siteUrl}/en/`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LodgingBusiness',
+  name: siteConfig.siteName.en,
+  description: homeEn.description,
+  image: [siteConfig.seo.defaultImage],
+  url: canonical,
+  telephone: siteConfig.contact.phone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.contact.address,
+    addressLocality: 'Korčula',
+    addressCountry: 'HR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: siteConfig.contact.coordinates.lat,
+    longitude: siteConfig.contact.coordinates.lng,
+  },
+  ...(ratingAvg
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: ratingAvg,
+          reviewCount: reviews.length,
+        },
+      }
+    : {}),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/appartment-villa/favicon.png" />
+    
+    <title>{homeEn.title}</title>
+    <meta name="description" content={homeEn.description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={siteConfig.siteName.en} />
+    
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={siteConfig.siteName.en} />
+    <meta property="og:title" content={homeEn.title} />
+    <meta property="og:description" content={homeEn.description} />
+    <meta property="og:image" content={siteConfig.seo.defaultImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
+    <meta name="twitter:title" content={homeEn.title} />
+    <meta name="twitter:description" content={homeEn.description} />
+    <meta name="twitter:image" content={siteConfig.seo.defaultImage} />
+    
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+    
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <div class="min-h-screen bg-white">
+      <Header client:load currentLanguage="en" setCurrentLanguage={(lang: 'hr' | 'en') => {}} />
+      <main>
+        <Hero client:visible currentLanguage="en" />
+        <About client:visible currentLanguage="en" />
+        <Gallery client:visible currentLanguage="en" apartmentId={1} />
+        <AboutSecond client:visible currentLanguage="en" />
+        <Gallery client:visible currentLanguage="en" apartmentId={2} />
+        <Services client:visible currentLanguage="en" />
+        <Location client:visible currentLanguage="en" />
+        <Booking client:visible currentLanguage="en" />
+      </main>
+      <Footer client:visible currentLanguage="en" />
+    </div>
+  </body>
+</html>
