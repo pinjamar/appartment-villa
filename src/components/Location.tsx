@@ -3,11 +3,13 @@ import { MapPin, Navigation } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
 
 interface LocationProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
   const nav = content.navigation[currentLanguage];
+  const isItalian = currentLanguage === 'it';
+  const isCroatian = currentLanguage === 'hr';
 
   return (
     <section id="location" className="py-12 bg-gray-50">
@@ -17,9 +19,11 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
             {nav.location}
           </h2>
           <p className="text-lg text-gray-600">
-            {currentLanguage === 'hr'
+            {isCroatian
               ? 'Smješteni blizu mora, Apartmani Markota pružaju jednostavan pristup lokalnim atrakcijama i prekrasnim plažama.'
-              : 'Located near the sea, Apartmani Markota provide easy access to local attractions and beautiful beaches.'}
+              : isItalian
+                ? 'Situati vicino al mare, gli Appartamenti Markota offrono un facile accesso alle attrazioni locali e alle splendide spiagge.'
+                : 'Located near the sea, Apartmani Markota provide easy access to local attractions and beautiful beaches.'}
           </p>
         </div>
 
@@ -32,14 +36,18 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 <div className="text-center">
                   <MapPin size={48} className="text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-500">
-                    {currentLanguage === 'hr'
+                    {isCroatian
                       ? 'Mappa Interattiva'
-                      : 'Interactive Map'}
+                      : isItalian
+                        ? 'Mappa interattiva'
+                        : 'Interactive Map'}
                   </p>
                   <p className="text-sm text-gray-400 mt-2">
-                    {currentLanguage === 'hr'
+                    {isCroatian
                       ? 'Integrazione Google Maps qui'
-                      : 'Google Maps integration here'}
+                      : isItalian
+                        ? 'Integrazione Google Maps qui'
+                        : 'Google Maps integration here'}
                   </p>
                 </div>
               </div>
@@ -51,39 +59,47 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                 <MapPin size={24} className="text-blue-600 mr-2" />
-                {currentLanguage === 'hr' ? 'Indirizzo' : 'Address'}
+                {isCroatian ? 'Indirizzo' : isItalian ? 'Indirizzo' : 'Address'}
               </h3>
               <p className="text-gray-600 mb-4">{siteConfig.contact.address}</p>
               <button className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors">
                 <Navigation size={16} />
                 <span>
-                  {currentLanguage === 'hr'
+                  {isCroatian
                     ? 'Ottieni indicazioni'
-                    : 'Get directions'}
+                    : isItalian
+                      ? 'Ottieni indicazioni'
+                      : 'Get directions'}
                 </span>
               </button>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {currentLanguage === 'hr'
+                {isCroatian
                   ? 'Attrazioni Vicine'
-                  : 'Nearby Attractions'}
+                  : isItalian
+                    ? 'Attrazioni vicine'
+                    : 'Nearby Attractions'}
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'hr'
+                    {isCroatian
                       ? 'Centro di Firenze'
-                      : 'Florence Center'}
+                      : isItalian
+                        ? 'Centro di Firenze'
+                        : 'Florence Center'}
                   </span>
                   <span className="text-sm text-gray-500">15 km</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-700">
-                    {currentLanguage === 'hr'
+                    {isCroatian
                       ? 'Aeroporto di Firenze'
-                      : 'Florence Airport'}
+                      : isItalian
+                        ? 'Aeroporto di Firenze'
+                        : 'Florence Airport'}
                   </span>
                   <span className="text-sm text-gray-500">12 km</span>
                 </div>
@@ -112,32 +128,54 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
 
             <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {currentLanguage === 'hr' ? 'Come Arrivare' : 'How to Get Here'}
+                {isCroatian
+                  ? 'Come Arrivare'
+                  : isItalian
+                    ? 'Come arrivare'
+                    : 'How to Get Here'}
               </h3>
               <div className="space-y-3 text-gray-600">
                 <p>
                   <strong>
-                    {currentLanguage === 'hr' ? 'In Auto:' : 'By Car:'}
+                    {isCroatian
+                      ? 'In Auto:'
+                      : isItalian
+                        ? 'In auto:'
+                        : 'By Car:'}
                   </strong>{' '}
-                  {currentLanguage === 'hr'
+                  {isCroatian
                     ? 'Uscita A1 Firenze Sud, seguire indicazioni per il centro'
-                    : 'A1 Florence South exit, follow signs to city center'}
+                    : isItalian
+                      ? 'Uscita A1 Firenze Sud, seguire indicazioni per il centro'
+                      : 'A1 Florence South exit, follow signs to city center'}
                 </p>
                 <p>
                   <strong>
-                    {currentLanguage === 'hr' ? 'In Treno:' : 'By Train:'}
+                    {isCroatian
+                      ? 'In Treno:'
+                      : isItalian
+                        ? 'In treno:'
+                        : 'By Train:'}
                   </strong>{' '}
-                  {currentLanguage === 'hr'
+                  {isCroatian
                     ? 'Stazione di Firenze SMN + taxi (20 min)'
-                    : 'Florence SMN station + taxi (20 min)'}
+                    : isItalian
+                      ? 'Stazione di Firenze SMN + taxi (20 min)'
+                      : 'Florence SMN station + taxi (20 min)'}
                 </p>
                 <p>
                   <strong>
-                    {currentLanguage === 'hr' ? 'In Aereo:' : 'By Plane:'}
+                    {isCroatian
+                      ? 'In Aereo:'
+                      : isItalian
+                        ? 'In aereo:'
+                        : 'By Plane:'}
                   </strong>{' '}
-                  {currentLanguage === 'hr'
+                  {isCroatian
                     ? 'Aeroporto Amerigo Vespucci (12 km)'
-                    : 'Amerigo Vespucci Airport (12 km)'}
+                    : isItalian
+                      ? 'Aeroporto Amerigo Vespucci (12 km)'
+                      : 'Amerigo Vespucci Airport (12 km)'}
                 </p>
               </div>
             </div>

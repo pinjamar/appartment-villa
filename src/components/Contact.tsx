@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
 
 interface ContactProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {

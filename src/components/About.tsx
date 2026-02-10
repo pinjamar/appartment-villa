@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 import { content } from '../data/content';
 
 interface AboutProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const About: React.FC<AboutProps> = ({ currentLanguage }) => {

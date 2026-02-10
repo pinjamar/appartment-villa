@@ -3,7 +3,7 @@ import { X, Info } from 'lucide-react';
 import { content } from '../data/content';
 
 interface CookieBannerProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const CookieBanner: React.FC<CookieBannerProps> = ({ currentLanguage }) => {
@@ -41,15 +41,15 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ currentLanguage }) => {
               <p className="text-sm text-gray-700 leading-relaxed">
                 {cookieContent.message}
               </p>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-blue-600 hover:text-blue-700 text-sm underline"
               >
                 {cookieContent.moreInfo}
               </a>
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-3 flex-shrink-0">
             <button
               onClick={handleDecline}

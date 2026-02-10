@@ -1,9 +1,9 @@
 import React from 'react';
-import { Facebook, Instagram, Home } from 'lucide-react';
+import { Facebook, Instagram, Home, Phone, Mail, MapPin } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
 
 interface FooterProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer id="contact" className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -71,12 +71,21 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
               </li>
               <li>
                 <button
+                  onClick={() => scrollToSection('location')}
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  {nav.location}
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollToSection('booking')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {nav.booking}
                 </button>
               </li>
+              {/*
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
@@ -93,6 +102,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                   Admin
                 </a>
               </li>
+              */}
             </ul>
           </div>
 
@@ -127,9 +137,42 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 <Home size={20} />
               </a>
             </div>
-            <div className="space-y-2 text-sm">
-              <p className="text-gray-300">{siteConfig.contact.phone}</p>
-              <p className="text-gray-300">{siteConfig.contact.email}</p>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600/20 text-blue-300">
+                  <Phone size={16} />
+                </span>
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                  className="truncate hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.phone}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-600/20 text-emerald-300">
+                  <MapPin size={16} />
+                </span>
+                <a
+                  href="https://www.google.com/maps/place/Pri%C5%BEba+54,+20271,+Blato/@42.9060756,16.8002064,207m/data=!3m1!1e3!4m6!3m5!1s0x134a6c1368849825:0xfe0fced819adf75d!8m2!3d42.906447!4d16.8009027!16s%2Fg%2F11pzx9jlq6!5m1!1e1?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.address}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-600/20 text-purple-300">
+                  <Mail size={16} />
+                </span>
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="truncate hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </div>
             </div>
           </div>
         </div>

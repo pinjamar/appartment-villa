@@ -84,13 +84,14 @@ const jsonLd = {
     <link rel="canonical" href={homeSeo.canonical} />
     <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
     <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
+    <link rel="alternate" hreflang="it" href={`${siteConfig.seo.siteUrl}/it/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/hr/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage={currentLanguage} setCurrentLanguage={(lang: 'hr' | 'en') => {}} />
+      <Header client:load currentLanguage={currentLanguage} setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
       <main>
         <Hero client:visible currentLanguage={currentLanguage} />
         <About client:visible currentLanguage={currentLanguage} />

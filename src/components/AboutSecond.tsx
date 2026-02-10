@@ -3,11 +3,14 @@ import { Check } from 'lucide-react';
 import { content } from '../data/content';
 
 interface AboutSecondProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
   const aboutContent = content.aboutSecond[currentLanguage];
+  const renovationNotice = (aboutContent as any)?.renovation?.active
+    ? (aboutContent as any)?.renovation?.notice
+    : null;
 
   return (
     <section id="about-2" className="pt-12 pb-8 bg-gray-50">
@@ -27,6 +30,11 @@ const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
             <p className="text-lg text-gray-600 leading-relaxed">
               {aboutContent.description}
             </p>
+            {renovationNotice && (
+              <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                {renovationNotice}
+              </div>
+            )}
             <div className="grid sm:grid-cols-2 gap-4">
               {aboutContent.features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">

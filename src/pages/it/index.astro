@@ -11,17 +11,17 @@ import Location from '../../components/Location';
 import Booking from '../../components/Booking';
 import Footer from '../../components/Footer';
 
-const homeEn = seoPages.home.en;
-const reviews = content.reviews.en.items || [];
+const homeIt = seoPages.home.it;
+const reviews = content.reviews.it.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
-const canonical = `${siteConfig.seo.siteUrl}/en/`;
+const canonical = `${siteConfig.seo.siteUrl}/it/`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
-  name: siteConfig.siteName.en,
-  description: homeEn.description,
+  name: siteConfig.siteName.it,
+  description: homeIt.description,
   image: [siteConfig.seo.defaultImage],
   url: canonical,
   telephone: siteConfig.contact.phone,
@@ -49,57 +49,57 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/appartment-villa/favicon.png" />
     
-    <title>{homeEn.title}</title>
-    <meta name="description" content={homeEn.description} />
+    <title>{homeIt.title}</title>
+    <meta name="description" content={homeIt.description} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content={siteConfig.siteName.en} />
+    <meta name="author" content={siteConfig.siteName.it} />
     
     <!-- Open Graph -->
-    <meta property="og:site_name" content={siteConfig.siteName.en} />
-    <meta property="og:title" content={homeEn.title} />
-    <meta property="og:description" content={homeEn.description} />
+    <meta property="og:site_name" content={siteConfig.siteName.it} />
+    <meta property="og:title" content={homeIt.title} />
+    <meta property="og:description" content={homeIt.description} />
     <meta property="og:image" content={siteConfig.seo.defaultImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="it_IT" />
     <meta property="og:type" content="website" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
-    <meta name="twitter:title" content={homeEn.title} />
-    <meta name="twitter:description" content={homeEn.description} />
+    <meta name="twitter:title" content={homeIt.title} />
+    <meta name="twitter:description" content={homeIt.description} />
     <meta name="twitter:image" content={siteConfig.seo.defaultImage} />
     
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
-    <link rel="alternate" hreflang="en" href={canonical} />
-    <link rel="alternate" hreflang="it" href={`${siteConfig.seo.siteUrl}/it/`} />
-    <link rel="alternate" hreflang="x-default" href={canonical} />
+    <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
+    <link rel="alternate" hreflang="it" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/hr/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage="en" setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
+      <Header client:load currentLanguage="it" setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
       <main>
-        <Hero client:visible currentLanguage="en" />
-        <About client:visible currentLanguage="en" />
-        <Gallery client:visible currentLanguage="en" apartmentId={1} />
-        <AboutSecond client:visible currentLanguage="en" />
-        <Gallery client:visible currentLanguage="en" apartmentId={2} />
-        <Services client:visible currentLanguage="en" />
-        <Location client:visible currentLanguage="en" />
-        <Booking client:visible currentLanguage="en" />
+        <Hero client:visible currentLanguage="it" />
+        <About client:visible currentLanguage="it" />
+        <Gallery client:visible currentLanguage="it" apartmentId={1} />
+        <AboutSecond client:visible currentLanguage="it" />
+        <Gallery client:visible currentLanguage="it" apartmentId={2} />
+        <Services client:visible currentLanguage="it" />
+        <Location client:visible currentLanguage="it" />
+        <Booking client:visible currentLanguage="it" />
       </main>
-      <Footer client:visible currentLanguage="en" />
+      <Footer client:visible currentLanguage="it" />
     </div>
   </body>
 </html>

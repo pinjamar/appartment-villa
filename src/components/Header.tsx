@@ -3,8 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { content } from '../data/content';
 
 interface HeaderProps {
-  currentLanguage: 'hr' | 'en';
-  setCurrentLanguage: (lang: 'hr' | 'en') => void;
+  currentLanguage: 'hr' | 'en' | 'it';
+  setCurrentLanguage: (lang: 'hr' | 'en' | 'it') => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
@@ -27,11 +27,29 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
   };
   const rawBase = import.meta.env.BASE_URL || '/';
   const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-  const langHref = currentLanguage === 'hr' ? `${baseUrl}en/` : baseUrl;
-  const flagSrc =
-    currentLanguage === 'hr'
-      ? `${baseUrl}flags/hr.svg`
-      : `${baseUrl}flags/en.svg`;
+  const languageLinks = [
+    {
+      code: 'hr',
+      label: 'HR',
+      href: baseUrl,
+      flag: `${baseUrl}flags/hr.svg`,
+      ariaLabel: 'Prebaci na hrvatski',
+    },
+    {
+      code: 'en',
+      label: 'EN',
+      href: `${baseUrl}en/`,
+      flag: `${baseUrl}flags/en.svg`,
+      ariaLabel: 'Switch to English',
+    },
+    {
+      code: 'it',
+      label: 'IT',
+      href: `${baseUrl}it/`,
+      flag: `${baseUrl}flags/it.svg`,
+      ariaLabel: "Passa all'italiano",
+    },
+  ];
 
   return (
     <header
@@ -54,12 +72,6 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="relative text-gray-700 font-semibold hover:text-blue-600 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
-            >
-              {nav.home}
-            </button>
             <button
               onClick={() => scrollToSection('about')}
               className="relative text-gray-700 font-semibold hover:text-blue-600 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
@@ -96,30 +108,39 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
             >
               {nav.booking}
             </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="relative text-gray-700 font-semibold hover:text-blue-600 transition-colors after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+            >
+              {nav.contact}
+            </button>
           </nav>
 
           {/* Language Switcher & Mobile Menu */}
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <a
-                href={langHref}
-                className="flex items-center space-x-2 px-3 py-1.5 rounded-full border border-gray-200 text-gray-700 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50 transition-colors"
-                aria-label={
-                  currentLanguage === 'hr'
-                    ? 'Switch to English'
-                    : 'Prebaci na hrvatski'
-                }
-              >
-                <img
-                  src={flagSrc}
-                  alt=""
-                  className="w-5 h-3 rounded-sm"
-                  aria-hidden="true"
-                />
-                <span className="text-sm font-semibold">
-                  {currentLanguage === 'hr' ? 'HR' : 'EN'}
-                </span>
-              </a>
+              <div className="flex items-center space-x-2">
+                {languageLinks.map((lang) => (
+                  <a
+                    key={lang.code}
+                    href={lang.href}
+                    aria-label={lang.ariaLabel}
+                    className={`flex items-center space-x-2 px-3 py-1.5 rounded-full border text-sm font-semibold transition-colors ${
+                      currentLanguage === lang.code
+                        ? 'border-blue-300 bg-blue-50 text-blue-700'
+                        : 'border-gray-200 text-gray-700 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50'
+                    }`}
+                  >
+                    <img
+                      src={lang.flag}
+                      alt=""
+                      className="w-5 h-3 rounded-sm"
+                      aria-hidden="true"
+                    />
+                    <span>{lang.label}</span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             <button
@@ -135,12 +156,6 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
         {isMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-3">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="relative text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors py-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {nav.home}
-              </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="relative text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors py-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
@@ -176,6 +191,12 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
                 className="relative text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors py-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {nav.booking}
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="relative text-left text-gray-700 font-semibold hover:text-blue-600 transition-colors py-2 after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-600 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {nav.contact}
               </button>
             </div>
           </nav>

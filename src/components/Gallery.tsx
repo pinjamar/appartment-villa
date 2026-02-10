@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { content } from '../data/content';
 
 interface GalleryProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
   apartmentId?: number;
   setPageSeo?: (seo: any) => void;
 }
@@ -20,6 +20,10 @@ const Gallery: React.FC<GalleryProps> = ({
     apartmentId === 2
       ? content.aboutSecond[currentLanguage].title
       : content.about[currentLanguage].title;
+
+  const isRenovatingSecond =
+    apartmentId === 2 &&
+    (content.aboutSecond[currentLanguage] as any)?.renovation?.active;
 
   // Get gallery data based on apartmentId
   const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
@@ -87,6 +91,8 @@ const Gallery: React.FC<GalleryProps> = ({
       if (seo) setPageSeo(seo);
     }
   }, [currentLanguage, apartmentId, setPageSeo]);
+
+  if (isRenovatingSecond) return null;
 
   return (
     <section

@@ -3,7 +3,7 @@ import * as Lucide from 'lucide-react';
 import { content } from '../data/content';
 
 interface ServicesProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 // dynamic lookup will be used at render time; keep fallback if icon not found

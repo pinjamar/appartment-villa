@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import { content } from '../data/content';
 
 interface HeroProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
 }
 
 const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
@@ -41,7 +41,11 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
             onClick={scrollToBooking}
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500"
           >
-            {currentLanguage === 'hr' ? 'Rezerviraj Boravak' : 'Book a Stay'}
+            {currentLanguage === 'hr'
+              ? 'Rezerviraj Boravak'
+              : currentLanguage === 'it'
+                ? 'Prenota il soggiorno'
+                : 'Book a Stay'}
           </button>
         </div>
       </div>

@@ -76,18 +76,19 @@ const formatPrice = (amount: number): string =>
 
 const getSeasonLabel = (
   season: 'high' | 'low',
-  language: 'hr' | 'en' = 'hr',
-): string =>
-  language === 'en'
-    ? season === 'high'
-      ? 'High Season'
-      : 'Low Season'
-    : season === 'high'
-      ? 'Visoka Sezona'
-      : 'Niska Sezona';
+  language: 'hr' | 'en' | 'it' = 'hr',
+): string => {
+  if (language === 'en') {
+    return season === 'high' ? 'High Season' : 'Low Season';
+  }
+  if (language === 'it') {
+    return season === 'high' ? 'Alta stagione' : 'Bassa stagione';
+  }
+  return season === 'high' ? 'Visoka Sezona' : 'Niska Sezona';
+};
 
 interface BookingProps {
-  currentLanguage: 'hr' | 'en';
+  currentLanguage: 'hr' | 'en' | 'it';
   setPageSeo?: (seo: any) => void;
 }
 
@@ -163,8 +164,8 @@ ${priceText}
 
 ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.message}` : ''}`;
 
-    // Extract phone number without + and spaces for WhatsApp
-    const phoneNumber = siteConfig.contact.phone.replace(/[^\d]/g, '');
+    // WhatsApp destination number (no + or spaces)
+    const phoneNumber = '385921066913';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

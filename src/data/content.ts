@@ -3,10 +3,12 @@ export const siteConfig = {
   siteName: {
     hr: 'Apartmani Markota',
     en: 'Markota Apartments',
+    it: 'Appartamenti Markota',
   },
   tagline: {
     hr: 'Vaš san o kućici za odmor na Korčuli',
     en: 'Your dream vacation home on Korčula Island',
+    it: "La tua casa vacanza da sogno sull'isola di Korčula",
   },
   seo: {
     siteUrl: 'https://www.yoursite.com',
@@ -16,13 +18,14 @@ export const siteConfig = {
   contact: {
     phone: '+385 20 123 4567',
     email: 'info@apartmankorcula.com',
-    address: 'Ul. Obala 42, 20260 Korčula, Hrvatska',
+    address: 'Prižba 54, 20271, Blato',
     coordinates: { lat: 42.9639, lng: 17.12 }, // Korčula
   },
   social: {
     facebook: 'https://facebook.com/apartmankorcula',
     instagram: 'https://instagram.com/apartmankorcula',
-    airbnb: 'https://airbnb.com/h/apartmankorcula',
+    airbnb:
+      'https://hr.airbnb.com/rooms/809272886038951396?search_mode=regular_search&adults=1&check_in=2026-05-01&check_out=2026-05-06&children=0&infants=0&pets=0&source_impression_id=p3_1770733188_P3U-bicRRiEpNqpr&previous_page_section_name=1000&federated_search_id=db522bce-3144-4394-8b9d-b7aef14b8790',
   },
   businessInfo: {
     hr: {
@@ -34,6 +37,11 @@ export const siteConfig = {
       companyName: 'Korčula Apartment LLC',
       vatNumber: 'VAT: 87654321098',
       registration: 'Registration code: 040261-HR-54321',
+    },
+    it: {
+      companyName: 'Appartamenti Korčula S.r.l.',
+      vatNumber: 'P.IVA: 87654321098',
+      registration: 'Codice di registrazione: 040261-HR-54321',
     },
   },
 };
@@ -62,6 +70,17 @@ export const content = {
       location: 'Location',
       contact: 'Contact',
     },
+    it: {
+      home: 'Home',
+      about: 'Appartamento Marko',
+      gallery: 'Appartamento Sara',
+      services: 'Servizi',
+      availability: 'Disponibilità',
+      booking: 'Prenota il soggiorno',
+      reviews: 'Recensioni',
+      location: 'Posizione',
+      contact: 'Contatto',
+    },
   },
   hero: {
     hr: {
@@ -75,6 +94,12 @@ export const content = {
       subtitle:
         'A beautiful apartment with ocean view on Korčula Island, perfect for your dream vacation. Discover the authentic charm of the Adriatic in a modern and comfortable environment.',
       cta: 'Learn More',
+    },
+    it: {
+      title: 'Benvenuti agli Appartamenti Markota',
+      subtitle:
+        "Un bellissimo appartamento con vista mare sull'isola di Korčula, perfetto per la tua vacanza da sogno. Scopri il fascino autentico dell'Adriatico in un ambiente moderno e confortevole.",
+      cta: 'Scopri di più',
     },
   },
   about: {
@@ -108,12 +133,27 @@ export const content = {
         'Parking on property',
       ],
     },
+    it: {
+      title: 'Appartamento Marko',
+      description:
+        "L'appartamento Marko è moderno e lussuosamente arredato con splendida vista sul Mare Adriatico. Situato nel cuore di Korčula, è ideale per coppie o piccole famiglie che desiderano pace e bellezza naturale.",
+      features: [
+        '2 camere da letto spaziose',
+        '2 bagni moderni',
+        'Soggiorno con vista mare',
+        'Cucina completamente attrezzata',
+        "Balcone con vista sull'Adriatico",
+        'Aria condizionata',
+        'Wi-Fi gratuito',
+        'Parcheggio in struttura',
+      ],
+    },
   },
   aboutSecond: {
     hr: {
       title: 'Apartman Sara',
       description:
-        'Drugi apartman nudi udoban boravak s posebnim sadržajima i privatnošću. Idealno za parove ili manje obitelji koje žele miran odmor uz more.',
+        'Mali apartman s privatnim dvorištem. Idealno za parove ili manje obitelji koje žele miran odmor neposredno uz more.',
       features: [
         '1 spavaća soba s bračnim krevetom',
         '1 moderna kupaonica',
@@ -127,11 +167,16 @@ export const content = {
       image:
         'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
       imageAlt: 'Apartman 2 Interijer',
+      renovation: {
+        active: true,
+        notice:
+          'Napomena: Apartman Sara je trenutno u renovaciji. Fotografije i dostupnost bit će ažurirane uskoro.',
+      },
     },
     en: {
       title: 'Sara Apartment',
       description:
-        'The second apartment offers a comfortable stay with distinct amenities and added privacy. Ideal for couples or small families looking for a peaceful seaside getaway.',
+        'Small apartment with a private yard. Ideal for couples or small families looking for a peaceful seaside getaway.',
       features: [
         '1 bedroom with a double bed',
         '1 modern bathroom',
@@ -145,6 +190,34 @@ export const content = {
       image:
         'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
       imageAlt: 'Apartment 2 Interior',
+      renovation: {
+        active: true,
+        notice:
+          'Notice: Apartment Sara is currently under renovation. Photos and availability will be updated soon.',
+      },
+    },
+    it: {
+      title: 'Appartamento Sara',
+      description:
+        'Piccolo appartamento con un cortile privato. Ideale per coppie o piccole famiglie in cerca di tranquillità sul mare.',
+      features: [
+        '1 camera da letto con letto matrimoniale',
+        '1 bagno moderno',
+        'Soggiorno con divano letto',
+        'Cucina con zona pranzo',
+        'Terrazza con vista mare',
+        'Aria condizionata in tutte le stanze',
+        'Wi-Fi veloce',
+        'Parcheggio gratuito',
+      ],
+      image:
+        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      imageAlt: 'Interni appartamento 2',
+      renovation: {
+        active: true,
+        notice:
+          "Avviso: l'Appartamento Sara è attualmente in ristrutturazione. Foto e disponibilità verranno aggiornate a breve.",
+      },
     },
   },
   services: {
@@ -238,6 +311,51 @@ export const content = {
         },
       ],
     },
+    it: {
+      title: 'Servizi e Comfort',
+      items: [
+        {
+          name: 'Wi-Fi gratuito',
+          icon: 'Wifi',
+          description: "Internet ad alta velocità in tutto l'appartamento",
+        },
+        {
+          name: 'Aria condizionata',
+          icon: 'Snowflake',
+          description: 'Climatizzazione in tutte le stanze',
+        },
+        {
+          name: 'Vista mare',
+          icon: 'Waves',
+          description: "Balcone con splendida vista sull'Adriatico",
+        },
+        {
+          name: 'Parcheggio',
+          icon: 'Car',
+          description: 'Posti auto privati e sicuri',
+        },
+        {
+          name: 'Cucina attrezzata',
+          icon: 'ChefHat',
+          description: 'Cucina moderna con tutti gli elettrodomestici',
+        },
+        {
+          name: 'Lavatrice',
+          icon: 'WashingMachine',
+          description: 'Lavatrice disponibile durante il soggiorno',
+        },
+        {
+          name: 'TV e intrattenimento',
+          icon: 'Tv2',
+          description: 'TV satellitare e servizi streaming',
+        },
+        {
+          name: 'Animali ammessi',
+          icon: 'Heart',
+          description: 'I tuoi animali domestici sono i benvenuti',
+        },
+      ],
+    },
   },
   calendar: {
     hr: {
@@ -253,6 +371,13 @@ export const content = {
       available: 'Available',
       booked: 'Booked',
       legend: 'Legend',
+    },
+    it: {
+      title: 'Disponibilità',
+      subtitle: 'Controlla le date disponibili e prenota il tuo soggiorno',
+      available: 'Disponibile',
+      booked: 'Occupato',
+      legend: 'Legenda',
     },
   },
   booking: {
@@ -312,6 +437,34 @@ export const content = {
         message: 'Booking Request',
       },
     },
+    it: {
+      title: 'Prenota il soggiorno',
+      subtitle:
+        'Compila il modulo per richiedere una prenotazione. Ti contatteremo entro 24 ore.',
+      form: {
+        checkin: 'Data di arrivo',
+        checkout: 'Data di partenza',
+        guests: 'Numero di ospiti',
+        name: 'Nome e cognome',
+        email: 'Email',
+        phone: 'Telefono',
+        message: 'Richieste speciali',
+        submit: 'Invia richiesta',
+        required: 'Campo obbligatorio',
+      },
+      success: 'Richiesta inviata con successo! Ti contatteremo presto.',
+      pricing: {
+        title: 'Tariffe',
+        lowSeason: 'Bassa stagione',
+        highSeason: 'Alta stagione',
+        finalCleaning: 'Pulizia finale',
+        touristTax: 'Tassa di soggiorno',
+        pricePerNight: '/notte',
+        priceCalculation: 'Calcolo del prezzo',
+        total: 'Totale',
+        message: 'Richiesta di prenotazione',
+      },
+    },
   },
   reviews: {
     hr: {
@@ -360,6 +513,29 @@ export const content = {
         },
       ],
     },
+    it: {
+      title: 'Recensioni degli ospiti',
+      items: [
+        {
+          name: 'Marco & Elena',
+          rating: 5,
+          text: 'Appartamento meraviglioso con vista mare spettacolare! Tutto perfetto, dalla pulizia ai servizi. Proprietari gentilissimi. Torneremo sicuramente!',
+          date: 'Settembre 2024',
+        },
+        {
+          name: 'Famiglia Schmidt',
+          rating: 5,
+          text: "Perfetto per una vacanza in famiglia. I bambini hanno adorato la spiaggia vicina e noi adulti la tranquillità e la bellezza naturale dell'isola. Consigliatissimo!",
+          date: 'Agosto 2024',
+        },
+        {
+          name: 'Sarah & James',
+          rating: 5,
+          text: "Un'autentica esperienza adriatica! L'appartamento ha superato le nostre aspettative. Posizione splendida, servizi eccellenti e un host fantastico.",
+          date: 'Luglio 2024',
+        },
+      ],
+    },
   },
   contact: {
     hr: {
@@ -402,6 +578,26 @@ export const content = {
           'We respond to all inquiries within 24 hours. For urgent matters, please call us directly.',
       },
     },
+    it: {
+      title: 'Contattaci',
+      subtitle: 'Siamo qui per aiutarti a pianificare la vacanza perfetta',
+      form: {
+        name: 'Nome',
+        email: 'Email',
+        subject: 'Oggetto',
+        message: 'Messaggio',
+        submit: 'Invia messaggio',
+      },
+      info: {
+        title: 'Informazioni di contatto',
+        phone: 'Telefono',
+        email: 'Email',
+        address: 'Indirizzo',
+        responseTimes: 'Tempi di risposta',
+        responseTimesText:
+          'Rispondiamo a tutte le richieste entro 24 ore. Per urgenze, chiamaci direttamente.',
+      },
+    },
   },
   footer: {
     hr: {
@@ -426,6 +622,17 @@ export const content = {
       privacyText:
         'Your personal data is protected and used solely for processing reservations and communication. We do not share data with third parties without your consent.',
     },
+    it: {
+      description:
+        "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida isola di Korčula. Scopri comfort ed eleganza in un ambiente costiero unico.",
+      quickLinks: 'Link rapidi',
+      followUs: 'Seguici',
+      copyright: '© 2026 Appartamenti Markota. Tutti i diritti riservati.',
+      privacy: 'Informativa sulla privacy',
+      cookies: 'Informativa sui cookie',
+      privacyText:
+        'La tua privacy è importante per noi. Non raccogliamo né memorizziamo dati personali su questo sito. Le informazioni inserite nel modulo di prenotazione vengono inviate direttamente via WhatsApp e non vengono archiviate nei nostri server.',
+    },
   },
   cookieBanner: {
     hr: {
@@ -441,6 +648,13 @@ export const content = {
       accept: 'Accept',
       decline: 'Decline',
       moreInfo: 'More Information',
+    },
+    it: {
+      message:
+        'Questo sito utilizza i cookie per migliorare la tua esperienza di navigazione e per fini statistici.',
+      accept: 'Accetta',
+      decline: 'Rifiuta',
+      moreInfo: 'Maggiori informazioni',
     },
   },
 };
@@ -502,6 +716,33 @@ export const seoPages = {
         },
       },
     },
+    it: {
+      title: `${siteConfig.siteName.it} — Appartamento fronte mare, Korčula`,
+      description:
+        'Appartamenti Markota: moderno appartamento fronte mare a Korčula. Prenota direttamente per le migliori tariffe.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/it/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'LodgingBusiness',
+        name: siteConfig.siteName.it,
+        description:
+          'Appartamenti Markota — moderno appartamento fronte mare con vista sul mare. Perfetto per coppie e famiglie.',
+        image: [siteConfig.seo.defaultImage],
+        url: `${siteConfig.seo.siteUrl}/it/`,
+        telephone: siteConfig.contact.phone,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: siteConfig.contact.address,
+          addressCountry: 'HR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: siteConfig.contact.coordinates.lat,
+          longitude: siteConfig.contact.coordinates.lng,
+        },
+      },
+    },
   },
 
   gallery: {
@@ -531,6 +772,19 @@ export const seoPages = {
         description: 'Photos of the apartment and surroundings.',
       },
     },
+    it: {
+      title: `${siteConfig.siteName.it} — Galleria fotografica`,
+      description:
+        "Sfoglia la galleria fotografica per vedere gli appartamenti e l'ambiente.",
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/it/gallery/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'ImageGallery',
+        name: `${siteConfig.siteName.it} — Galleria`,
+        description: 'Foto degli appartamenti e dei dintorni.',
+      },
+    },
   },
 
   gallery2: {
@@ -545,6 +799,13 @@ export const seoPages = {
       description: 'Browse the gallery of Apartment 2 to preview the space.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/gallery2/`,
+    },
+    it: {
+      title: `${siteConfig.siteName.it} — Galleria Appartamento 2`,
+      description:
+        "Sfoglia la galleria dell'Appartamento 2 per vedere lo spazio.",
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/it/gallery2/`,
     },
   },
 
@@ -635,6 +896,19 @@ export const seoPages = {
         '@type': 'WebPage',
         name: `${siteConfig.siteName.en} — Bookings`,
         description: 'Booking request page to contact via WhatsApp.',
+      },
+    },
+    it: {
+      title: `${siteConfig.siteName.it} — Prenotazioni`,
+      description:
+        'Richiedi il tuo soggiorno negli Appartamenti Markota via WhatsApp.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/it/booking/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${siteConfig.siteName.it} — Prenotazioni`,
+        description: 'Pagina di prenotazione e contatto via WhatsApp.',
       },
     },
   },
