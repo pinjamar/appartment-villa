@@ -41,7 +41,9 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-500/30 text-red-200">
                 <Home size={16} />
               </span>
-              <span className="font-semibold">Our Airbnb listing</span>
+              <span className="font-semibold">
+                {footerContent.airbnbListing}
+              </span>
             </a>
             {/* <div className="space-y-1 text-sm text-gray-400">
               <p className="text-xs">{businessInfo.registration}</p>
@@ -179,7 +181,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 pt-4">
           <p className="mb-2 md:mb-0">{footerContent.copyright}</p>
-          <p className="text-xs text-gray-500">Made with ❤️ on Korčula</p>
+          <p className="text-xs text-gray-500">{footerContent.tagline}</p>
         </div>
       </div>
     </footer>

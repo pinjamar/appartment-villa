@@ -384,7 +384,7 @@ export const content = {
     hr: {
       title: 'Rezerviraj Boravak',
       subtitle:
-        'Ispuni obrazac da bi tražio rezervaciju. Kontaktirat ćemo te u roku od 24 sata.',
+        'Ispuni obrazac da bi zatražio rezervaciju. Kontaktirat ćemo te u roku od 24 sata.',
       form: {
         checkin: 'Datum dolaska',
         checkout: 'Datum odlaska',
@@ -409,6 +409,9 @@ export const content = {
         priceCalculation: 'Izračun Cijene',
         total: 'Ukupno',
         message: 'Zahtjev za Rezervaciju',
+        whatsappRedirect:
+          'Klikom na slanje, ovaj obrazac otvorit će WhatsApp s vašim podacima o rezervaciji. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.',
+        submitButton: 'Pošalji putem WhatsApp-a',
       },
     },
     en: {
@@ -439,6 +442,9 @@ export const content = {
         priceCalculation: 'Price Calculation',
         total: 'Total',
         message: 'Booking Request',
+        whatsappRedirect:
+          'Clicking send will redirect you to WhatsApp to complete your booking.',
+        submitButton: 'Send via WhatsApp',
       },
     },
     it: {
@@ -469,6 +475,9 @@ export const content = {
         priceCalculation: 'Calcolo del prezzo',
         total: 'Totale',
         message: 'Richiesta di prenotazione',
+        whatsappRedirect:
+          'Facendo clic su invia, questo modulo ti reindirizzerà a WhatsApp per completare la prenotazione.',
+        submitButton: 'Invia tramite WhatsApp',
       },
     },
   },
@@ -611,6 +620,8 @@ export const content = {
         'Apartmani Markota nude autentično iskustvo na lijepo Korčuli, u mjestu Prižba. Prvi red do mora, s prekrasnim pogledom. Blizu plaže, dućana i svih ostalih sadržaja.',
       quickLinks: 'Brze Veze',
       followUs: 'Kontakt informacije',
+      airbnbListing: 'Naš Airbnb listing',
+      tagline: 'Napravljeno s ❤️ na Korčuli',
       copyright: '© 2026 Apartmani Markota. Sva prava su zadržana.',
       privacy: 'Politika Privatnosti',
       cookies: 'Politika Kolačića',
@@ -622,6 +633,8 @@ export const content = {
         'Apartments Markota offer an authentic experience on beautiful Korčula Island. Discover comfort and elegance in a unique coastal environment.',
       quickLinks: 'Quick Links',
       followUs: 'Follow Us',
+      airbnbListing: 'Our Airbnb listing',
+      tagline: 'Made with ❤️ on Korčula',
       copyright: '© 2026 Markota Apartments. All rights reserved.',
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
@@ -633,6 +646,8 @@ export const content = {
         "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida isola di Korčula. Scopri comfort ed eleganza in un ambiente costiero unico.",
       quickLinks: 'Link rapidi',
       followUs: 'Seguici',
+      airbnbListing: 'Il nostro annuncio Airbnb',
+      tagline: 'Fatto con ❤️ a Korčula',
       copyright: '© 2026 Appartamenti Markota. Tutti i diritti riservati.',
       privacy: 'Informativa sulla privacy',
       cookies: 'Informativa sui cookie',

@@ -448,10 +448,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                 <p className="text-sm text-blue-900">
-                  📱{' '}
-                  {currentLanguage === 'hr'
-                    ? 'Klikom na slanje, ovaj obrazac otvorit će WhatsApp s vašim podacima o rezervaciji. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.'
-                    : 'Clicking send will redirect you to WhatsApp to complete your booking.'}
+                  📱 {bookingContent.pricing.whatsappRedirect}
                 </p>
               </div>
 
@@ -460,11 +457,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                 className="w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
                 <Send size={20} />
-                <span>
-                  {currentLanguage === 'hr'
-                    ? 'Pošalji putem WhatsApp-a'
-                    : 'Send via WhatsApp'}
-                </span>
+                <span>{bookingContent.pricing.submitButton}</span>
               </button>
             </form>
           </div>
