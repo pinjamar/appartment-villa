@@ -16,8 +16,8 @@ export const siteConfig = {
     twitterHandle: '@yourhandle',
   },
   contact: {
-    phone: '+385 20 123 4567',
-    email: 'info@apartmankorcula.com',
+    phone: '+385 92 106 6913',
+    email: 'sara.separovic@hotmail.com',
     address: 'Prižba 54, 20271, Blato',
     coordinates: { lat: 42.9639, lng: 17.12 }, // Korčula
   },
@@ -389,7 +389,9 @@ export const content = {
         checkin: 'Datum dolaska',
         checkout: 'Datum odlaska',
         guests: 'Broj gostiju',
-        name: 'Puno ime',
+        firstName: 'Ime',
+        lastName: 'Prezime',
+        name: 'Ime i prezime',
         email: 'E-mail',
         phone: 'Telefon',
         message: 'Posebni zahtjevi',
@@ -417,6 +419,8 @@ export const content = {
         checkin: 'Check-in date',
         checkout: 'Check-out date',
         guests: 'Number of guests',
+        firstName: 'First name',
+        lastName: 'Last name',
         name: 'Full name',
         email: 'Email',
         phone: 'Phone',
@@ -445,6 +449,8 @@ export const content = {
         checkin: 'Data di arrivo',
         checkout: 'Data di partenza',
         guests: 'Numero di ospiti',
+        firstName: 'Nome',
+        lastName: 'Cognome',
         name: 'Nome e cognome',
         email: 'Email',
         phone: 'Telefono',
@@ -602,9 +608,9 @@ export const content = {
   footer: {
     hr: {
       description:
-        'Apartmani Markota nude autentično iskustvo na lijepo Korčuli. Otkrij udobnost i eleganciju u jedinstvenom obalnom okruženju.',
+        'Apartmani Markota nude autentično iskustvo na lijepo Korčuli, u mjestu Prižba. Prvi red do mora, s prekrasnim pogledom. Blizu plaže, dućana i svih ostalih sadržaja.',
       quickLinks: 'Brze Veze',
-      followUs: 'Pratite Nas',
+      followUs: 'Kontakt informacije',
       copyright: '© 2026 Apartmani Markota. Sva prava su zadržana.',
       privacy: 'Politika Privatnosti',
       cookies: 'Politika Kolačića',

@@ -97,7 +97,8 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
     checkin: '',
     checkout: '',
     guests: '2',
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     message: '',
@@ -147,20 +148,28 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
     e.preventDefault();
 
     // Build WhatsApp message
-    const priceText = priceCalculation
-      ? `\n\n💰 *${bookingContent.pricing.total}: ${formatPrice(priceCalculation.total)}*`
-      : '';
+    const formatDateEuropean = (dateString: string) => {
+      if (!dateString) return '';
+      const date = new Date(dateString);
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}.${month}.${year}`;
+    };
+
+    // const priceText = priceCalculation
+    //   ? `\n\n💰 *${bookingContent.pricing.total}: ${formatPrice(priceCalculation.total)}*`
+    //   : '';
 
     const message = `${bookingContent.pricing.message}
 
-👤 *${bookingContent.form.name}:* ${formData.name}
+👤 *Name:* ${formData.firstName} ${formData.lastName}
 📧 *Email:* ${formData.email}
-📱 *${bookingContent.form.phone}:* ${formData.phone}
+📱 *Phone:* ${formData.phone}
 
-📅 *${bookingContent.form.checkin}:* ${formData.checkin}
-📅 *${bookingContent.form.checkout}:* ${formData.checkout}
+🗓️ *${bookingContent.form.checkin}:* ${formatDateEuropean(formData.checkin)}
+🗓️ *${bookingContent.form.checkout}:* ${formatDateEuropean(formData.checkout)}
 👥 *${bookingContent.form.guests}:* ${formData.guests}
-${priceText}
 
 ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.message}` : ''}`;
 
@@ -348,43 +357,73 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {bookingContent.form.name} *
+                    {bookingContent.form.firstName} *
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="firstName"
+                    value={formData.firstName}
                     onChange={handleInputChange}
+                    placeholder={
+                      currentLanguage === 'hr'
+                        ? 'Marko'
+                        : currentLanguage === 'it'
+                          ? 'Marco'
+                          : 'John'
+                    }
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    {bookingContent.form.email} *
+                    {bookingContent.form.lastName} *
                   </label>
                   <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
                     onChange={handleInputChange}
+                    placeholder={
+                      currentLanguage === 'hr'
+                        ? 'Horvat'
+                        : currentLanguage === 'it'
+                          ? 'Rossi'
+                          : 'Smith'
+                    }
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {bookingContent.form.phone}
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {bookingContent.form.email}
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="your.email@example.com"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {bookingContent.form.phone}
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="+385 91 234 5678"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
               </div>
 
               <div>
@@ -395,6 +434,13 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
+                  placeholder={
+                    currentLanguage === 'hr'
+                      ? 'Imate li posebne zahtjeve ili pitanja?'
+                      : currentLanguage === 'it'
+                        ? 'Hai richieste o domande speciali?'
+                        : 'Do you have any special requests or questions?'
+                  }
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />

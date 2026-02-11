@@ -32,11 +32,20 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
             <p className="text-gray-300 mb-6 max-w-md">
               {footerContent.description}
             </p>
-            <div className="space-y-2 text-sm text-gray-400">
-              <p>{businessInfo.companyName}</p>
-              <p>{businessInfo.vatNumber}</p>
-              <p>{businessInfo.registration}</p>
-            </div>
+            <a
+              href={siteConfig.social.airbnb}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-lg bg-red-500/10 border-2 border-red-500/50 px-4 py-3 text-white hover:bg-red-500/20 hover:border-red-500 transition-all mb-6 shadow-lg shadow-red-500/20"
+            >
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-red-500/30 text-red-200">
+                <Home size={16} />
+              </span>
+              <span className="font-semibold">Our Airbnb listing</span>
+            </a>
+            {/* <div className="space-y-1 text-sm text-gray-400">
+              <p className="text-xs">{businessInfo.registration}</p>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -85,24 +94,6 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                   {nav.booking}
                 </button>
               </li>
-              {/*
-              <li>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  {nav.contact}
-                </button>
-              </li>
-              <li>
-                <a
-                  href="/admin"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Admin
-                </a>
-              </li>
-              */}
             </ul>
           </div>
 
@@ -111,31 +102,29 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
             <h4 className="text-lg font-semibold mb-4">
               {footerContent.followUs}
             </h4>
-            <div className="flex space-x-4 mb-6">
-              <a
+            <div className="space-y-3 mb-6">
+              {/* <a
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200 hover:bg-blue-600/20 transition-colors"
               >
-                <Facebook size={20} />
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600/20 text-blue-300">
+                  <Facebook size={16} />
+                </span>
+                <span>Facebook</span>
               </a>
               <a
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-colors"
+                className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200 hover:bg-pink-600/20 transition-colors"
               >
-                <Instagram size={20} />
-              </a>
-              <a
-                href={siteConfig.social.airbnb}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-red-500 transition-colors"
-              >
-                <Home size={20} />
-              </a>
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-pink-600/20 text-pink-300">
+                  <Instagram size={16} />
+                </span>
+                <span>Instagram</span>
+              </a> */}
             </div>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200">
@@ -179,22 +168,18 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
         <hr className="border-gray-800 my-8" />
 
-        <div className="bg-gray-800 rounded-lg p-6 mb-8">
+        <div className="bg-gradient-to-r from-gray-800 to-gray-800/50 rounded-lg p-6 mb-8 border border-gray-700/50">
           <h4 className="text-sm font-semibold text-white mb-3">
             {footerContent.privacy}
           </h4>
-          <p className="text-xs text-gray-300">
+          <p className="text-xs text-gray-300 leading-relaxed">
             {(footerContent as any).privacyText}
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>{footerContent.copyright}</p>
-          {/* <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">
-              {footerContent.cookies}
-            </a>
-          </div> */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 pt-4">
+          <p className="mb-2 md:mb-0">{footerContent.copyright}</p>
+          <p className="text-xs text-gray-500">Made with ❤️ on Korčula</p>
         </div>
       </div>
     </footer>
