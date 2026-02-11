@@ -15,6 +15,7 @@ const Gallery: React.FC<GalleryProps> = ({
 }) => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
   const apartmentTitle =
     apartmentId === 2
@@ -83,6 +84,14 @@ const Gallery: React.FC<GalleryProps> = ({
     setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  const nextCarousel = () => {
+    setCarouselIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevCarousel = () => {
+    setCarouselIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   // When this section mounts or language/apartmentId changes, allow it to set contextual SEO
   React.useEffect(() => {
     if (typeof setPageSeo === 'function') {
@@ -97,12 +106,17 @@ const Gallery: React.FC<GalleryProps> = ({
   return (
     <section
       id={apartmentId === 2 ? 'gallery2' : 'gallery'}
-      className="pt-8 pb-12 bg-gray-50"
+      className="py-8 md:py-12 bg-gray-50"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 hidden md:block">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {apartmentTitle}
+            {apartmentTitle}{' '}
+            {currentLanguage === 'hr'
+              ? 'Galerija'
+              : currentLanguage === 'it'
+                ? 'Galleria'
+                : 'Gallery'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {currentLanguage === 'hr'
@@ -111,7 +125,65 @@ const Gallery: React.FC<GalleryProps> = ({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        {/* Mobile Carousel */}
+        <div className="md:hidden mb-6 md:mb-8">
+          <div className="relative w-full">
+            <div className="overflow-hidden rounded-lg aspect-square bg-gray-200">
+              <img
+                src={images[carouselIndex].src}
+                alt={images[carouselIndex].alt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Carousel Controls */}
+            <button
+              onClick={prevCarousel}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all z-10"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button
+              onClick={nextCarousel}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all z-10"
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            {/* Carousel Dots */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1 bg-black/50 px-3 py-1 rounded-full">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCarouselIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === carouselIndex ? 'bg-white w-6' : 'bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Carousel Counter */}
+            <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
+              {carouselIndex + 1} / {images.length}
+            </div>
+          </div>
+
+          {/* Mobile Tap to Enlarge */}
+          <button
+            onClick={() => openLightbox(carouselIndex)}
+            className="mt-3 w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-lg text-sm transition-colors"
+          >
+            {currentLanguage === 'hr'
+              ? 'Prikaži veću sliku'
+              : currentLanguage === 'it'
+                ? 'Visualizza immagine grande'
+                : 'View larger'}
+          </button>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {images.map((image: any, index: number) => (
             <div
               key={index}
@@ -136,7 +208,7 @@ const Gallery: React.FC<GalleryProps> = ({
           ))}
         </div>
 
-        {/* Lightbox */}
+        {/* Lightbox Modal */}
         {selectedImage !== null && (
           <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
             <button

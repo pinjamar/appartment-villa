@@ -12,9 +12,9 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
   const isCroatian = currentLanguage === 'hr';
 
   return (
-    <section id="location" className="py-12 bg-gray-50">
+    <section id="location" className="py-8 md:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {nav.location}
           </h2>
@@ -27,9 +27,9 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="grid gap-4 md:gap-6 lg:grid-cols-2 lg:gap-8">
           {/* Left Column: Map and Address */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {/* Map */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <iframe
@@ -69,7 +69,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
           </div>
 
           {/* Right Column: Attractions and How to Get Here */}
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             {/* <div className="bg-white rounded-xl shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 {isCroatian

@@ -13,18 +13,18 @@ const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
     : null;
 
   return (
-    <section id="about-2" className="pt-12 pb-8 bg-gray-50">
+    <section id="about-2" className="py-4 md:py-8 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+          <div className="relative hidden md:block">
             <img
               src={aboutContent.image}
               alt={aboutContent.imageAlt}
               className="rounded-lg shadow-xl w-full h-96 object-cover"
             />
           </div>
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <div className="space-y-4 md:space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
               {aboutContent.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">

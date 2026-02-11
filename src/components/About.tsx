@@ -10,11 +10,11 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
   const aboutContent = content.about[currentLanguage];
 
   return (
-    <section id="about" className="pt-12 pb-8 bg-gray-50">
+    <section id="about" className="py-4 md:py-8 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
               {aboutContent.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
@@ -31,7 +31,7 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative hidden md:block">
             <img
               src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Apartmani Markota Interior"

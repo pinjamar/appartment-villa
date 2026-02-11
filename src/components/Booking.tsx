@@ -182,9 +182,9 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
   };
 
   return (
-    <section id="booking" className="py-12 bg-gray-50">
+    <section id="booking" className="py-8 md:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {bookingContent.title}
           </h2>
@@ -196,8 +196,8 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
         {/* <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8"> */}
         {/* Pricing Info */}
         {/* <div className="lg:col-span-1">
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+            <div className="space-y-4 md:space-y-6">
+              <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 sticky top-24">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <Euro size={20} className="mr-2 text-blue-600" />
                   {bookingContent.pricing.title}
@@ -303,7 +303,10 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
         {/* Booking Form */}
         <div className="w-full lg:w-1/2 mx-auto rounded-2xl p-4">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <form onSubmit={handleWhatsAppSubmit} className="space-y-6">
+            <form
+              onSubmit={handleWhatsAppSubmit}
+              className="space-y-4 md:space-y-6"
+            >
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">

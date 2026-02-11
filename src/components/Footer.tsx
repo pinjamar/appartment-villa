@@ -17,8 +17,8 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
 
   return (
     <footer id="contact" className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -168,9 +168,9 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
           </div>
         </div>
 
-        <hr className="border-gray-800 my-8" />
+        <hr className="border-gray-800 my-6 md:my-8" />
 
-        <div className="bg-gradient-to-r from-gray-800 to-gray-800/50 rounded-lg p-6 mb-8 border border-gray-700/50">
+        <div className="bg-gradient-to-r from-gray-800 to-gray-800/50 rounded-lg p-4 md:p-6 mb-6 md:mb-8 border border-gray-700/50">
           <h4 className="text-sm font-semibold text-white mb-3">
             {footerContent.privacy}
           </h4>

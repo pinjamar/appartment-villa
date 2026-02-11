@@ -206,7 +206,7 @@ const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
   const days = getDaysInMonth(currentDate);
 
   return (
-    <section id="availability" className="py-20 bg-white">
+    <section id="availability" className="py-8 md:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -216,7 +216,7 @@ const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-6">
+          <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
             {/* Calendar Header */}
             <div className="flex items-center justify-between mb-6">
               <button

@@ -12,15 +12,15 @@ const Services: React.FC<ServicesProps> = ({ currentLanguage }) => {
   const servicesContent = content.services[currentLanguage];
 
   return (
-    <section id="services" className="py-12 bg-gray-50">
+    <section id="services" className="py-8 md:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {servicesContent.title}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {servicesContent.items.map((service, index) => {
             const IconComponent = (Lucide as any)[service.icon] as
               | React.ComponentType<any>
@@ -29,7 +29,7 @@ const Services: React.FC<ServicesProps> = ({ currentLanguage }) => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                className="bg-white rounded-xl p-4 md:p-6 text-center shadow-sm hover:shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   {IconComponent ? (
