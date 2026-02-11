@@ -59,16 +59,21 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <button
+            type="button"
+            onClick={() => scrollToSection('home')}
+            className="flex items-center space-x-2"
+            aria-label="Go to top"
+          >
             <img
               src="/appartment-villa/Markota-crop.jpg"
               alt="Markota Logo"
-              className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300 cursor-pointer"
+              className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300"
             />
             <h1 className="text-xl font-bold text-gray-900">
               Apartmani Markota
             </h1>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">

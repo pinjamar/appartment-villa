@@ -5,7 +5,19 @@ import { content } from '../data/content';
 interface GalleryProps {
   currentLanguage: 'hr' | 'en' | 'it';
   apartmentId?: number;
-  setPageSeo?: (seo: any) => void;
+  setPageSeo?: (seo: SeoData) => void;
+}
+
+interface Image {
+  src: string;
+  alt: string;
+}
+
+interface SeoData {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  [key: string]: unknown;
 }
 
 const Gallery: React.FC<GalleryProps> = ({
@@ -17,22 +29,24 @@ const Gallery: React.FC<GalleryProps> = ({
   const [currentSlide, setCurrentSlide] = useState(0);
   const [carouselIndex, setCarouselIndex] = useState(0);
 
+  const aboutMain = content.about[currentLanguage] as { title: string };
+  const aboutSecond = content.aboutSecond[currentLanguage] as {
+    title: string;
+    renovation?: { active?: boolean };
+  };
+
   const apartmentTitle =
-    apartmentId === 2
-      ? content.aboutSecond[currentLanguage].title
-      : content.about[currentLanguage].title;
+    apartmentId === 2 ? aboutSecond.title : aboutMain.title;
 
   const isRenovatingSecond =
-    apartmentId === 2 &&
-    (content.aboutSecond[currentLanguage] as any)?.renovation?.active;
+    apartmentId === 2 && Boolean(aboutSecond.renovation?.active);
 
   // Get gallery data based on apartmentId
   const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
-  const galleryContent = (content as any)[galleryKey]?.[currentLanguage] || {};
-
-  const images = (content as any)[`${galleryKey}Images`]?.[
-    apartmentId === 2 ? '2' : '1'
-  ] || [
+  const galleryImages = (content as unknown as Record<string, unknown>)[
+    `${galleryKey}Images`
+  ] as Record<string, Image[]> | undefined;
+  const images: Image[] = galleryImages?.[apartmentId === 2 ? '2' : '1'] || [
     {
       src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Apartmani Markota Exterior',
@@ -96,7 +110,12 @@ const Gallery: React.FC<GalleryProps> = ({
   React.useEffect(() => {
     if (typeof setPageSeo === 'function') {
       const seoKey = apartmentId === 2 ? 'gallery2' : 'gallery';
-      const seo = (content as any).seoPages?.[seoKey]?.[currentLanguage];
+      const seoPages = (
+        content as unknown as {
+          seoPages?: Record<string, Record<string, SeoData>>;
+        }
+      ).seoPages;
+      const seo = seoPages?.[seoKey]?.[currentLanguage];
       if (seo) setPageSeo(seo);
     }
   }, [currentLanguage, apartmentId, setPageSeo]);
@@ -152,7 +171,7 @@ const Gallery: React.FC<GalleryProps> = ({
 
             {/* Carousel Dots */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-1 bg-black/50 px-3 py-1 rounded-full">
-              {images.map((_, index) => (
+              {images.map((_image: Image, index: number) => (
                 <button
                   key={index}
                   onClick={() => setCarouselIndex(index)}
@@ -184,7 +203,7 @@ const Gallery: React.FC<GalleryProps> = ({
 
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {images.map((image: any, index: number) => (
+          {images.map((image: Image, index: number) => (
             <div
               key={index}
               className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
