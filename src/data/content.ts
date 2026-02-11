@@ -86,19 +86,19 @@ export const content = {
     hr: {
       title: 'Dobrodošli u Apartmane Markota',
       subtitle:
-        'Predivan apartman sa oceanskim pogledom na otoku Korčuli, savršen za vašu sanjarsku godinu. Otkrij autentičan šarm Jadrana u modernom i komfortnom okruženju.',
+        'Predivni apartmani prvi red do mora na otoku Korčuli u mjestu Prižba, savršeni za miran odmor daleko od grada. Otkrij autentičan šarm Jadrana u modernom i komfornom okruženju.',
       cta: 'Saznaj Više',
     },
     en: {
       title: 'Welcome to Markota Apartments',
       subtitle:
-        'A beautiful apartment with ocean view on Korčula Island, perfect for your dream vacation. Discover the authentic charm of the Adriatic in a modern and comfortable environment.',
+        'Beautiful apartments on the first row by the sea on Korčula Island in the village of Prižba, perfect for a peaceful getaway far from the city. Discover the authentic charm of the Adriatic in a modern and comfortable setting.',
       cta: 'Learn More',
     },
     it: {
       title: 'Benvenuti agli Appartamenti Markota',
       subtitle:
-        "Un bellissimo appartamento con vista mare sull'isola di Korčula, perfetto per la tua vacanza da sogno. Scopri il fascino autentico dell'Adriatico in un ambiente moderno e confortevole.",
+        "Bellissimi appartamenti in prima fila sul mare sull'isola di Korčula, nel villaggio di Prižba, perfetti per una vacanza tranquilla lontano dalla città. Scopri il fascino autentico dell'Adriatico in un ambiente moderno e confortevole.",
       cta: 'Scopri di più',
     },
   },
@@ -121,31 +121,31 @@ export const content = {
     en: {
       title: 'Marko Apartment',
       description:
-        "Korčula Apartment is a modern and luxuriously equipped apartment with impressive views of the Adriatic Sea. Located in the heart of Korčula town, it's ideal for couples or small families wanting to enjoy the peace and natural beauty of this unique island.",
+        'Marko Apartment is a modern and luxuriously equipped apartment with impressive views of the Adriatic Sea. Located in the heart of the town of Korčula, it is ideal for couples or small families who want to enjoy the peace and natural beauty of this unique island.',
       features: [
         '2 spacious bedrooms',
-        '2 modern bathrooms',
+        '3 modern bathrooms',
         'Living room with sea view',
+        'Large terrace over 30 m²',
         'Fully equipped kitchen',
-        'Balcony overlooking the Adriatic',
-        'Air conditioning',
-        'Free Wi-Fi internet',
-        'Parking on property',
+        'Air-conditioned rooms',
+        'Free Wi‑Fi',
+        'Free parking',
       ],
     },
     it: {
       title: 'Appartamento Marko',
       description:
-        "L'appartamento Marko è moderno e lussuosamente arredato con splendida vista sul Mare Adriatico. Situato nel cuore di Korčula, è ideale per coppie o piccole famiglie che desiderano pace e bellezza naturale.",
+        "L'appartamento Marko è moderno e lussuosamente arredato con un'imponente vista sul Mare Adriatico. Situato nel cuore della città di Korčula, è ideale per coppie o piccole famiglie che desiderano godersi la tranquillità e la bellezza naturale di questa isola unica.",
       features: [
         '2 camere da letto spaziose',
-        '2 bagni moderni',
+        '3 bagni moderni',
         'Soggiorno con vista mare',
+        'Grande terrazza di oltre 30 m²',
         'Cucina completamente attrezzata',
-        "Balcone con vista sull'Adriatico",
-        'Aria condizionata',
-        'Wi-Fi gratuito',
-        'Parcheggio in struttura',
+        'Camere climatizzate',
+        'Wi‑Fi gratuito',
+        'Parcheggio gratuito',
       ],
     },
   },
@@ -443,7 +443,7 @@ export const content = {
         total: 'Total',
         message: 'Booking Request',
         whatsappRedirect:
-          'Clicking send will redirect you to WhatsApp to complete your booking.',
+          'By clicking send, this form will open WhatsApp with your booking details. We will reply as soon as possible with availability confirmation and booking information.',
         submitButton: 'Send via WhatsApp',
       },
     },
@@ -476,7 +476,7 @@ export const content = {
         total: 'Totale',
         message: 'Richiesta di prenotazione',
         whatsappRedirect:
-          'Facendo clic su invia, questo modulo ti reindirizzerà a WhatsApp per completare la prenotazione.',
+          'Facendo clic su invia, questo modulo aprirà WhatsApp con i dettagli della prenotazione. Risponderemo al più presto con la conferma di disponibilità e le informazioni sulla prenotazione.',
         submitButton: 'Invia tramite WhatsApp',
       },
     },
@@ -630,7 +630,7 @@ export const content = {
     },
     en: {
       description:
-        'Apartments Markota offer an authentic experience on beautiful Korčula Island. Discover comfort and elegance in a unique coastal environment.',
+        'Markota Apartments offer an authentic experience on beautiful Korčula, in the village of Prižba. First row by the sea with a stunning view. Close to the beach, shops, and all other amenities.',
       quickLinks: 'Quick Links',
       followUs: 'Follow Us',
       airbnbListing: 'Our Airbnb listing',
@@ -639,11 +639,11 @@ export const content = {
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
       privacyText:
-        'Your personal data is protected and used solely for processing reservations and communication. We do not share data with third parties without your consent.',
+        'Markota Apartments respect your privacy. We do not collect, store, or process any personal data on this website. Any information you enter in the booking form is sent directly via WhatsApp. We do not store or access that information on our servers. We do not use cookies, analytics, or any tracking technologies. If you have any privacy questions, contact us at info@apartmanimarkota.com.',
     },
     it: {
       description:
-        "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida isola di Korčula. Scopri comfort ed eleganza in un ambiente costiero unico.",
+        "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida Korčula, nel villaggio di Prižba. In prima fila sul mare, con una vista meravigliosa. Vicini alla spiaggia, ai negozi e a tutti gli altri servizi.",
       quickLinks: 'Link rapidi',
       followUs: 'Seguici',
       airbnbListing: 'Il nostro annuncio Airbnb',
@@ -652,7 +652,7 @@ export const content = {
       privacy: 'Informativa sulla privacy',
       cookies: 'Informativa sui cookie',
       privacyText:
-        'La tua privacy è importante per noi. Non raccogliamo né memorizziamo dati personali su questo sito. Le informazioni inserite nel modulo di prenotazione vengono inviate direttamente via WhatsApp e non vengono archiviate nei nostri server.',
+        'Gli Appartamenti Markota rispettano la tua privacy. Non raccogliamo, memorizziamo né trattiamo alcun dato personale su questo sito. Le informazioni inserite nel modulo di prenotazione vengono inviate direttamente tramite WhatsApp. Non archiviamo né accediamo a tali informazioni sui nostri server. Non utilizziamo cookie, analisi né tecnologie di tracciamento. Per qualsiasi domanda sulla privacy, contattaci a info@apartmanimarkota.com.',
     },
   },
   cookieBanner: {
