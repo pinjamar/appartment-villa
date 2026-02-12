@@ -12,8 +12,8 @@ export const siteConfig = {
   },
   seo: {
     siteUrl: 'https://www.yoursite.com',
-    defaultImage: 'https://www.yoursite.com/og-image.jpg',
-    twitterHandle: '@yourhandle',
+    defaultImage: '/appartment-villa/og-image.jpg',
+    twitterHandle: '@apartmanimarkota',
   },
   contact: {
     phone: '+385 92 106 6913',
@@ -65,7 +65,7 @@ export const content = {
       gallery: 'Apartment Sara',
       services: 'Services',
       availability: 'Availability',
-      booking: 'Book Now',
+      booking: 'Book Your Stay',
       reviews: 'Reviews',
       location: 'Location',
       contact: 'Contact',
@@ -76,7 +76,7 @@ export const content = {
       gallery: 'Appartamento Sara',
       services: 'Servizi',
       availability: 'Disponibilità',
-      booking: 'Prenota il soggiorno',
+      booking: 'Prenota il tuo soggiorno',
       reviews: 'Recensioni',
       location: 'Posizione',
       contact: 'Contatto',
@@ -106,10 +106,10 @@ export const content = {
     hr: {
       title: 'Apartman Marko',
       description:
-        'Apartman Marko je moderan i luksuzno opremljen apartman sa impozantnim pogledom na Jadransko more. Smješten u srcu grada Korčule, idealan je za parove ili male obitelji koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
+        'Apartman Marko je moderan i potpuno opremljen dvosobni apartman s velikom terasom i pogledom na more i otoke. Idealan je za parove ili male obitelji (do 5 osoba) koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
       features: [
         '2 prostrane spavaće sobe',
-        '3 moderne kupaone',
+        '2 moderne kupaone + 1 WC',
         'Dnevni boravak s pogledom na more',
         'Velika terasa od preko 30m2',
         'Potpuno opremljena kuhinja',
@@ -121,10 +121,10 @@ export const content = {
     en: {
       title: 'Marko Apartment',
       description:
-        'Marko Apartment is a modern and luxuriously equipped apartment with impressive views of the Adriatic Sea. Located in the heart of the town of Korčula, it is ideal for couples or small families who want to enjoy the peace and natural beauty of this unique island.',
+        'Marko Apartment is a modern and fully equipped two-bedroom apartment with a large terrace and impressive views of the Adriatic Sea. It is ideal for couples or small families who want to enjoy the peace and natural beauty of this unique island.',
       features: [
         '2 spacious bedrooms',
-        '3 modern bathrooms',
+        '2 modern bathrooms + 1 WC',
         'Living room with sea view',
         'Large terrace over 30 m²',
         'Fully equipped kitchen',
@@ -136,10 +136,10 @@ export const content = {
     it: {
       title: 'Appartamento Marko',
       description:
-        "L'appartamento Marko è moderno e lussuosamente arredato con un'imponente vista sul Mare Adriatico. Situato nel cuore della città di Korčula, è ideale per coppie o piccole famiglie che desiderano godersi la tranquillità e la bellezza naturale di questa isola unica.",
+        "L'appartamento Marko è moderno e completamente arredato con due camere da letto e un'imponente vista sul Mare Adriatico. Situato nel cuore della città di Korčula, è ideale per coppie o piccole famiglie che desiderano godersi la tranquillità e la bellezza naturale di questa isola unica.",
       features: [
         '2 camere da letto spaziose',
-        '3 bagni moderni',
+        '2 bagni moderni + 1 WC',
         'Soggiorno con vista mare',
         'Grande terrazza di oltre 30 m²',
         'Cucina completamente attrezzata',
@@ -153,19 +153,18 @@ export const content = {
     hr: {
       title: 'Apartman Sara',
       description:
-        'Mali apartman s privatnim dvorištem. Idealno za parove ili manje obitelji koje žele miran odmor neposredno uz more.',
+        'Mali jednosobni apartman idealan za parove. S privatnim dvorištem, nekoliko koraka od mora. U potpunosti renoviran 2026 sa svim najnovijim sadržajim potrebnima za savršen odmor.',
       features: [
         '1 spavaća soba s bračnim krevetom',
         '1 moderna kupaonica',
-        'Dnevni boravak s kaučem na razvlačenje',
-        'Kuhinja s blagovaonicom',
-        'Terasa s pogledom na more',
-        'Klimatizacija u svim prostorijama',
+        'Dnevni boravak',
+        'Opremljena kuhinja',
+        'Dvorište s pogledom na more',
+        'Klimatizirana soba',
         'Brzi Wi-Fi',
         'Besplatan parking',
       ],
-      image:
-        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/appartment-villa/sara1.jpg',
       imageAlt: 'Apartman 2 Interijer',
       renovation: {
         active: true,
@@ -176,14 +175,14 @@ export const content = {
     en: {
       title: 'Sara Apartment',
       description:
-        'Small apartment with a private yard. Ideal for couples or small families looking for a peaceful seaside getaway.',
+        'Small one-bedroom apartment ideal for couples. With a private yard, just steps from the sea. Fully renovated in 2026 with all the latest amenities for a perfect vacation.',
       features: [
-        '1 bedroom with a double bed',
+        '1 bedroom with double bed',
         '1 modern bathroom',
-        'Living room with a sofa bed',
-        'Kitchen with dining area',
-        'Terrace with sea view',
-        'Air conditioning throughout',
+        'Living room',
+        'Equipped kitchen',
+        'Courtyard with sea view',
+        'Air-conditioned room',
         'Fast Wi-Fi',
         'Free parking',
       ],
@@ -199,14 +198,14 @@ export const content = {
     it: {
       title: 'Appartamento Sara',
       description:
-        'Piccolo appartamento con un cortile privato. Ideale per coppie o piccole famiglie in cerca di tranquillità sul mare.',
+        'Piccolo appartamento con una camera da letto, ideale per coppie. Con un cortile privato, a pochi passi dal mare. Completamente ristrutturato nel 2026 con tutti i comfort moderni per una vacanza perfetta.',
       features: [
         '1 camera da letto con letto matrimoniale',
         '1 bagno moderno',
-        'Soggiorno con divano letto',
-        'Cucina con zona pranzo',
-        'Terrazza con vista mare',
-        'Aria condizionata in tutte le stanze',
+        'Soggiorno',
+        'Cucina attrezzata',
+        'Cortile con vista mare',
+        'Camera climatizzata',
         'Wi-Fi veloce',
         'Parcheggio gratuito',
       ],
@@ -245,7 +244,7 @@ export const content = {
           description: 'Privatni i sigurni parking prostori',
         },
         {
-          name: 'Opremljena Kuhinja',
+          name: 'Kuhinja s Perilicom Posuđa',
           icon: 'ChefHat',
           description: 'Moderna kuhinja sa svim aparatima',
         },
@@ -255,14 +254,14 @@ export const content = {
           description: 'Perilica rublja dostupna tijekom boravka',
         },
         {
-          name: 'TV i Zabava',
+          name: 'Smart TV',
           icon: 'Tv2',
-          description: 'Satelitska TV i streaming usluge',
+          description: 'TV s pristupom internetu',
         },
         {
           name: 'Prilagođeno Životinjama',
           icon: 'Heart',
-          description: 'Vaše kućne ljubimce su dobrodošle',
+          description: 'Vaši kućni ljubimci su dobrodošli',
         },
       ],
     },
@@ -433,7 +432,7 @@ export const content = {
       },
       success: 'Request sent successfully! We will contact you soon.',
       pricing: {
-        title: 'Rates',
+        title: 'Prices',
         lowSeason: 'Low season',
         highSeason: 'High season',
         finalCleaning: 'Final cleaning',
@@ -466,11 +465,11 @@ export const content = {
       },
       success: 'Richiesta inviata con successo! Ti contatteremo presto.',
       pricing: {
-        title: 'Tariffe',
+        title: 'Prezzi',
         lowSeason: 'Bassa stagione',
         highSeason: 'Alta stagione',
         finalCleaning: 'Pulizia finale',
-        touristTax: 'Tassa di soggiorno',
+        touristTax: 'Tassa turistica',
         pricePerNight: '/notte',
         priceCalculation: 'Calcolo del prezzo',
         total: 'Totale',
@@ -617,7 +616,7 @@ export const content = {
   footer: {
     hr: {
       description:
-        'Apartmani Markota nude autentično iskustvo na lijepo Korčuli, u mjestu Prižba. Prvi red do mora, s prekrasnim pogledom. Blizu plaže, dućana i svih ostalih sadržaja.',
+        'Apartmani Markota nude relaksirajuće iskustvo na otoku Korčuli, u mjestu Prižba. Prvi red do mora, s prekrasnim pogledom. Blizu plaže, dućana i svih ostalih sadržaja.',
       quickLinks: 'Brze Veze',
       followUs: 'Kontakt informacije',
       airbnbListing: 'Naš Airbnb listing',
@@ -626,33 +625,33 @@ export const content = {
       privacy: 'Politika Privatnosti',
       cookies: 'Politika Kolačića',
       privacyText:
-        'Apartmani Markota poštuju vašu privatnost. Ne prikupljamo, ne pohranjujemo niti obrađujemo nikakve osobne podatke na ovoj web stranici. Sve informacije koje unesete u obrazac za rezervaciju šaljete izravno putem WhatsAppa. Mi ne pohranjujemo niti pristupamo tim informacijama na našim serverima. Ne koristimo kolačiće, analitiku niti bilo kakve tehnologije praćenja. Ako imate pitanja o privatnosti, kontaktirajte nas na info@apartmanimarkota.com.',
+        'Apartmani Markota poštuju vašu privatnost. Ne prikupljamo, ne pohranjujemo niti obrađujemo nikakve osobne podatke na ovoj web stranici. Sve informacije koje unesete u obrazac za rezervaciju šaljete izravno putem WhatsAppa. Mi ne pohranjujemo niti pristupamo tim informacijama na našim serverima. Ne koristimo kolačiće, analitiku niti bilo kakve tehnologije praćenja. Ako imate pitanja o privatnosti, kontaktirajte nas na sara.separovic@hotmail.com.',
     },
     en: {
       description:
-        'Markota Apartments offer an authentic experience on beautiful Korčula, in the village of Prižba. First row by the sea with a stunning view. Close to the beach, shops, and all other amenities.',
+        'Markota Apartments offer a relaxing experience on the island of Korčula, in the village of Prižba. First row by the sea with a stunning view. Close to the beach, shops, and all other amenities.',
       quickLinks: 'Quick Links',
-      followUs: 'Follow Us',
+      followUs: 'Contact Information',
       airbnbListing: 'Our Airbnb listing',
       tagline: 'Made with ❤️ on Korčula',
       copyright: '© 2026 Markota Apartments. All rights reserved.',
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
       privacyText:
-        'Markota Apartments respect your privacy. We do not collect, store, or process any personal data on this website. Any information you enter in the booking form is sent directly via WhatsApp. We do not store or access that information on our servers. We do not use cookies, analytics, or any tracking technologies. If you have any privacy questions, contact us at info@apartmanimarkota.com.',
+        'Markota Apartments respect your privacy. We do not collect, store, or process any personal data on this website. All information you enter in the booking form is sent directly via WhatsApp. We do not store or access that information on our servers. We do not use cookies, analytics, or any tracking technologies. If you have any privacy questions, contact us at sara.separovic@hotmail.com.',
     },
     it: {
       description:
         "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida Korčula, nel villaggio di Prižba. In prima fila sul mare, con una vista meravigliosa. Vicini alla spiaggia, ai negozi e a tutti gli altri servizi.",
       quickLinks: 'Link rapidi',
-      followUs: 'Seguici',
+      followUs: 'Informazioni di contatto',
       airbnbListing: 'Il nostro annuncio Airbnb',
-      tagline: 'Fatto con ❤️ a Korčula',
+      tagline: 'Fatto con ❤️ su Korčula',
       copyright: '© 2026 Appartamenti Markota. Tutti i diritti riservati.',
       privacy: 'Informativa sulla privacy',
       cookies: 'Informativa sui cookie',
       privacyText:
-        'Gli Appartamenti Markota rispettano la tua privacy. Non raccogliamo, memorizziamo né trattiamo alcun dato personale su questo sito. Le informazioni inserite nel modulo di prenotazione vengono inviate direttamente tramite WhatsApp. Non archiviamo né accediamo a tali informazioni sui nostri server. Non utilizziamo cookie, analisi né tecnologie di tracciamento. Per qualsiasi domanda sulla privacy, contattaci a info@apartmanimarkota.com.',
+        'Gli Appartamenti Markota rispettano la tua privacy. Non raccogliamo, memorizziamo né trattiamo alcun dato personale su questo sito. Tutte le informazioni inserite nel modulo di prenotazione vengono inviate direttamente tramite WhatsApp. Non archiviamo né accediamo a tali informazioni sui nostri server. Non utilizziamo cookie, analisi né tecnologie di tracciamento. Per qualsiasi domanda sulla privacy, contattaci a sara.separovic@hotmail.com.',
     },
   },
   cookieBanner: {
@@ -686,7 +685,7 @@ export const seoPages = {
     hr: {
       title: `${siteConfig.siteName.hr} - Prižba, Korčula`,
       description:
-        'Apartmani Markota: moderno opremljeni apartmani, prvi red do mora u Prižbi. Rezervirajte direktno za najbolje cijene.',
+        'Apartmani Markota na Korčuli - moderno opremljeni apartmani prvi red do mora u Prižbi. Idealno za odmor, par ili obitelj. Rezervirajte direktno za najbolje cijene.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/hr/`,
       jsonLd: {
@@ -694,7 +693,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.hr,
         description:
-          'Apartmani Markota — moderno opremljen apartman sa pogledom na more. Idealno za parove i obitelji.',
+          'Apartmani Markota — moderno opremljeni apartmani sa pogledom na more, prvi red do mora. Idealno za parove i obitelji na Korčuli.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/hr/`,
         telephone: siteConfig.contact.phone,
@@ -711,9 +710,9 @@ export const seoPages = {
       },
     },
     en: {
-      title: `${siteConfig.siteName.en} — Seafront apartment, Korčula`,
+      title: `${siteConfig.siteName.en} — Prižba, Korčula Island`,
       description:
-        'Apartments Markota: modern seafront apartment in Korčula town. Book direct for best rates.',
+        'Markota Apartments on Korčula - modern seafront apartments in Prižba. Perfect for couples and families. Book direct for the best rates.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/`,
       jsonLd: {
@@ -721,7 +720,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.en,
         description:
-          'apartments Markota — modern seafront apartment with sea views. Perfect for couples and families.',
+          'Markota Apartments — modern seafront apartments with sea views in Prižba, Korčula. Perfect for couples and families seeking a peaceful vacation.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/`,
         telephone: siteConfig.contact.phone,
@@ -738,9 +737,9 @@ export const seoPages = {
       },
     },
     it: {
-      title: `${siteConfig.siteName.it} — Appartamento fronte mare, Korčula`,
+      title: `${siteConfig.siteName.it} — Prižba, Isola di Korčula`,
       description:
-        'Appartamenti Markota: moderno appartamento fronte mare a Korčula. Prenota direttamente per le migliori tariffe.',
+        'Appartamenti Markota a Korčula - moderni appartamenti fronte mare a Prižba. Ideale per coppie e famiglie. Prenota direttamente per le migliori tariffe.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/it/`,
       jsonLd: {
@@ -748,7 +747,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.it,
         description:
-          'Appartamenti Markota — moderno appartamento fronte mare con vista sul mare. Perfetto per coppie e famiglie.',
+          'Appartamenti Markota — moderni appartamenti fronte mare con vista sul mare a Prižba, Korčula. Perfetti per coppie e famiglie in cerca di una vacanza tranquilla.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/it/`,
         telephone: siteConfig.contact.phone,
@@ -833,35 +832,35 @@ export const seoPages = {
   galleryImages: {
     1: [
       {
-        src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota2.jpg',
         alt: 'Apartmani Markota Exterior',
       },
       {
-        src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota3.jpg',
         alt: 'Living Room',
       },
       {
-        src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota4.jpg',
         alt: 'Bedroom',
       },
       {
-        src: 'https://images.pexels.com/photos/1428348/pexels-photo-1428348.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota5.jpg',
         alt: 'Kitchen',
       },
       {
-        src: 'https://images.pexels.com/photos/261181/pexels-photo-261181.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota6.jpg',
         alt: 'Swimming Pool',
       },
       {
-        src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota7.jpg',
         alt: 'Garden View',
       },
       {
-        src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota8.jpg',
         alt: 'Terrace',
       },
       {
-        src: 'https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800',
+        src: '/appartment-villa/markota9.jpg',
         alt: 'Bathroom',
       },
     ],
@@ -897,7 +896,7 @@ export const seoPages = {
     hr: {
       title: `${siteConfig.siteName.hr} — Rezervacije`,
       description:
-        'Rezervirajte svoj boravak u Apartmanu Korčula direktno putem WhatsApp-a.',
+        'Rezervirajte svoj boravak u Apartmanu Markota direktno putem WhatsApp-a.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/hr/booking/`,
       jsonLd: {
@@ -909,7 +908,7 @@ export const seoPages = {
     },
     en: {
       title: `${siteConfig.siteName.en} — Bookings`,
-      description: 'Request your stay at Korčula Apartment via WhatsApp.',
+      description: 'Request your stay at Markota Apartment via WhatsApp.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/booking/`,
       jsonLd: {

@@ -33,23 +33,10 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
           </div>
           <div className="relative hidden md:block">
             <img
-              src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/appartment-villa/marko1.jpg"
               alt="Apartmani Markota Interior"
               className="rounded-lg shadow-xl w-full h-96 object-cover"
             />
-            <div className="absolute -bottom-6 -right-6 w-48 h-32 bg-white rounded-lg shadow-lg p-4 hidden md:block">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">4.9/5</div>
-                <div className="text-sm text-gray-600">Guest Rating</div>
-                <div className="flex justify-center mt-2">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-sm">
-                      ★
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

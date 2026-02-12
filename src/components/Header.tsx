@@ -130,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
                     key={lang.code}
                     href={lang.href}
                     aria-label={lang.ariaLabel}
-                    className={`flex items-center space-x-2 px-3 py-1.5 rounded-full border text-sm font-semibold transition-colors ${
+                    className={`flex items-center justify-center p-1.5 md:px-3 md:py-1.5 rounded-full border text-sm font-semibold transition-colors ${
                       currentLanguage === lang.code
                         ? 'border-blue-300 bg-blue-50 text-blue-700'
                         : 'border-gray-200 text-gray-700 hover:text-blue-600 hover:border-blue-200 hover:bg-blue-50'
@@ -142,7 +142,7 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
                       className="w-5 h-3 rounded-sm"
                       aria-hidden="true"
                     />
-                    <span>{lang.label}</span>
+                    <span className="hidden md:inline ml-2">{lang.label}</span>
                   </a>
                 ))}
               </div>

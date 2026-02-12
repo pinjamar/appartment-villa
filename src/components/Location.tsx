@@ -176,7 +176,8 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                         <span className="font-semibold">
                           Dopo lo sbarco a Dominče (Curzola):
                         </span>{' '}
-                        continuate verso Blato, quindi girate verso Prižba.
+                        continuate verso Blato, quindi girate verso Prižba
+                        (circa 30 minuti).
                       </p>
                     </div>
                   ) : (
@@ -189,7 +190,8 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                         <span className="font-semibold">
                           After disembarking in Dominče (Korčula):
                         </span>{' '}
-                        continue towards Blato, then turn for Prižba.
+                        continue towards Blato, then turn for Prižba (around 30
+                        minutes).
                       </p>
                     </div>
                   )}
@@ -212,8 +214,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                     <div className="space-y-3">
                       <p>
                         Iz Splita možete uhvatiti trajekt do Vela Luke (západna
-                        strana Korčule). Put traje oko 2 h 20 min – 3 h 05 min
-                        (ovisno o liniji).{' '}
+                        strana Korčule). Put traje oko 3 sata (ovisno o liniji).{' '}
                         <span className="font-semibold">
                           Nakon iskrcaja u Veloj Luci:
                         </span>{' '}
@@ -225,8 +226,8 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                     <div className="space-y-3">
                       <p>
                         Da Spalato puoi prendere il traghetto per Vela Luka
-                        (lato occidentale di Curzola). Il viaggio dura circa 2 h
-                        20 min – 3 h 05 min (a seconda della linea).{' '}
+                        (lato occidentale di Curzola). Il viaggio dura circa 3
+                        ore (a seconda della linea).{' '}
                         <span className="font-semibold">
                           Dopo lo sbarco a Vela Luka:
                         </span>{' '}
@@ -238,8 +239,8 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                     <div className="space-y-3">
                       <p>
                         From Split you can catch a ferry to Vela Luka (western
-                        side of Korčula). Journey takes about 2 h 20 min – 3 h
-                        05 min (depending on the line).{' '}
+                        side of Korčula). Journey takes about 3 hours (depending
+                        on the line).{' '}
                         <span className="font-semibold">
                           After disembarking in Vela Luka:
                         </span>{' '}

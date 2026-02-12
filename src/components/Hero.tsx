@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          src="/appartment-villa/hero.jpeg"
           alt="Apartmani Markota"
           className="w-full h-full object-cover"
         />
@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
           </p>
           <button
             onClick={scrollToBooking}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500 shadow-lg"
           >
             {currentLanguage === 'hr'
               ? 'Rezerviraj Boravak'
