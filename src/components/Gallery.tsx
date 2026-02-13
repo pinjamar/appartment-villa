@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { content } from '../data/content';
+import { content, seoPages } from '../data/content';
 
 interface GalleryProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -43,8 +43,7 @@ const Gallery: React.FC<GalleryProps> = ({
 
   // Get gallery data based on apartmentId
   const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
-  const seoPages = (content as any).seoPages;
-  const galleryImages = seoPages?.[`${galleryKey}Images`] as
+  const galleryImages = (seoPages as any)?.[`${galleryKey}Images`] as
     | Record<string, Image[]>
     | undefined;
   const images: Image[] = galleryImages?.[apartmentId === 2 ? '2' : '1'] || [

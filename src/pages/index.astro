@@ -57,6 +57,7 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="image" href="/hero.jpeg" />
     
     <title>{homeSeo.title}</title>
     <meta name="description" content={homeSeo.description} />
@@ -76,7 +77,6 @@ const jsonLd = {
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
     <meta name="twitter:title" content={homeSeo.title} />
     <meta name="twitter:description" content={homeSeo.description} />
     <meta name="twitter:image" content={siteConfig.seo.defaultImage} />

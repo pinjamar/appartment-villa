@@ -24,6 +24,8 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
           src="/hero.jpeg"
           alt="Apartmani Markota"
           className="w-full h-full object-cover"
+          fetchPriority="high"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
