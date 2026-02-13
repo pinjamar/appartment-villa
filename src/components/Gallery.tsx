@@ -43,9 +43,10 @@ const Gallery: React.FC<GalleryProps> = ({
 
   // Get gallery data based on apartmentId
   const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
-  const galleryImages = (content as unknown as Record<string, unknown>)[
-    `${galleryKey}Images`
-  ] as Record<string, Image[]> | undefined;
+  const seoPages = (content as any).seoPages;
+  const galleryImages = seoPages?.[`${galleryKey}Images`] as
+    | Record<string, Image[]>
+    | undefined;
   const images: Image[] = galleryImages?.[apartmentId === 2 ? '2' : '1'] || [
     {
       src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',

@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://pinjamar.github.io',
-  base: '/appartment-villa',
+  base: '/',
   integrations: [
     react(),
     tailwind({

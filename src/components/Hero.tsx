@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/appartment-villa/hero.jpeg"
+          src="/hero.jpeg"
           alt="Apartmani Markota"
           className="w-full h-full object-cover"
         />

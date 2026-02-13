@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
             aria-label="Go to top"
           >
             <img
-              src="/appartment-villa/Markota-crop.jpg"
+              src="/Markota-crop.jpg"
               alt="Markota Logo"
               className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300"
             />

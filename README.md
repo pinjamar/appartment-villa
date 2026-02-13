@@ -85,6 +85,37 @@ Modify pricing in [src/components/Booking.tsx](src/components/Booking.tsx):
 
 Update site details in [src/data/content.ts](src/data/content.ts) under `siteConfig.contact`
 
+## Hosting Configuration
+
+### Current Setup
+
+- **Development:** `localhost:4321` (base path: `/`)
+- **Production:** GitHub Pages at `https://pinjamar.github.io/appartment-villa/` (base path: `/appartment-villa`)
+
+The site automatically adjusts image paths based on environment - no manual changes needed!
+
+### Deploying to Custom Domain
+
+When you're ready to use a custom domain (e.g., `https://yourdomain.com`):
+
+1. **Update [astro.config.mjs](astro.config.mjs):**
+
+   ```javascript
+   export default defineConfig({
+     site: 'https://yourdomain.com', // Your custom domain
+     base: '/', // Change this line - remove environment check
+     // ... rest of config
+   });
+   ```
+
+2. **That's it!** All images will automatically work because they use relative paths that Astro resolves correctly.
+
+**Note:** If reverting back to GitHub Pages subdirectory, restore the environment-based base path:
+
+```javascript
+base: process.env.NODE_ENV === 'production' ? '/appartment-villa' : '/',
+```
+
 ## Project Structure
 
 ```

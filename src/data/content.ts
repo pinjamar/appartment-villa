@@ -12,7 +12,7 @@ export const siteConfig = {
   },
   seo: {
     siteUrl: 'https://www.yoursite.com',
-    defaultImage: '/appartment-villa/og-image.jpg',
+    defaultImage: '/og-image.jpg',
     twitterHandle: '@apartmanimarkota',
   },
   contact: {
@@ -164,7 +164,7 @@ export const content = {
         'Brzi Wi-Fi',
         'Besplatan parking',
       ],
-      image: '/appartment-villa/sara1.jpg',
+      image: '/sara1.jpg',
       imageAlt: 'Apartman 2 Interijer',
       renovation: {
         active: true,
@@ -186,8 +186,7 @@ export const content = {
         'Fast Wi-Fi',
         'Free parking',
       ],
-      image:
-        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/sara1.jpg',
       imageAlt: 'Apartment 2 Interior',
       renovation: {
         active: true,
@@ -209,8 +208,7 @@ export const content = {
         'Wi-Fi veloce',
         'Parcheggio gratuito',
       ],
-      image:
-        'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/sara1.jpg',
       imageAlt: 'Interni appartamento 2',
       renovation: {
         active: true,
@@ -832,35 +830,35 @@ export const seoPages = {
   galleryImages: {
     1: [
       {
-        src: '/appartment-villa/markota2.jpg',
+        src: '/marko2.jpg',
         alt: 'Apartmani Markota Exterior',
       },
       {
-        src: '/appartment-villa/markota3.jpg',
+        src: '/marko3.jpg',
         alt: 'Living Room',
       },
       {
-        src: '/appartment-villa/markota4.jpg',
+        src: '/marko4.jpg',
         alt: 'Bedroom',
       },
       {
-        src: '/appartment-villa/markota5.jpg',
+        src: '/marko5.jpg',
         alt: 'Kitchen',
       },
       {
-        src: '/appartment-villa/markota6.jpg',
+        src: '/marko6.jpg',
         alt: 'Swimming Pool',
       },
       {
-        src: '/appartment-villa/markota7.jpg',
+        src: '/marko7.jpg',
         alt: 'Garden View',
       },
       {
-        src: '/appartment-villa/markota8.jpg',
+        src: '/marko8.jpg',
         alt: 'Terrace',
       },
       {
-        src: '/appartment-villa/markota9.jpg',
+        src: '/marko9.jpg',
         alt: 'Bathroom',
       },
     ],
