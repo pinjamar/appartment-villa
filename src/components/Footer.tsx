@@ -9,7 +9,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
   const footerContent = content.footer[currentLanguage];
   const nav = content.navigation[currentLanguage];
-  const businessInfo = siteConfig.businessInfo[currentLanguage];
+  // const businessInfo = siteConfig.businessInfo[currentLanguage];
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });

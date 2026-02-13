@@ -12,8 +12,8 @@ export const siteConfig = {
   },
   seo: {
     siteUrl: 'https://www.yoursite.com',
-    defaultImage: '/og-image.jpg',
-    twitterHandle: '@apartmanimarkota',
+    defaultImage: '/marko1.jpg', // Main apartment exterior - used for social media sharing
+    // twitterHandle: '@apartmanimarkota',
   },
   contact: {
     phone: '+385 92 106 6913',
@@ -22,28 +22,28 @@ export const siteConfig = {
     coordinates: { lat: 42.9639, lng: 17.12 }, // Korčula
   },
   social: {
-    facebook: 'https://facebook.com/apartmankorcula',
-    instagram: 'https://instagram.com/apartmankorcula',
+    // facebook: 'https://facebook.com/apartmankorcula',
+    // instagram: 'https://instagram.com/apartmankorcula',
     airbnb:
       'https://hr.airbnb.com/rooms/809272886038951396?search_mode=regular_search&adults=1&check_in=2026-05-01&check_out=2026-05-06&children=0&infants=0&pets=0&source_impression_id=p3_1770733188_P3U-bicRRiEpNqpr&previous_page_section_name=1000&federated_search_id=db522bce-3144-4394-8b9d-b7aef14b8790',
   },
-  businessInfo: {
-    hr: {
-      companyName: 'Apartman Korčula d.o.o.',
-      vatNumber: 'OIB: 87654321098',
-      registration: 'Registacijski kod: 040261-HR-54321',
-    },
-    en: {
-      companyName: 'Korčula Apartment LLC',
-      vatNumber: 'VAT: 87654321098',
-      registration: 'Registration code: 040261-HR-54321',
-    },
-    it: {
-      companyName: 'Appartamenti Korčula S.r.l.',
-      vatNumber: 'P.IVA: 87654321098',
-      registration: 'Codice di registrazione: 040261-HR-54321',
-    },
-  },
+  // businessInfo: {
+  //   hr: {
+  //     companyName: 'Apartman Korčula d.o.o.',
+  //     vatNumber: 'OIB: 87654321098',
+  //     registration: 'Registacijski kod: 040261-HR-54321',
+  //   },
+  //   en: {
+  //     companyName: 'Korčula Apartment LLC',
+  //     vatNumber: 'VAT: 87654321098',
+  //     registration: 'Registration code: 040261-HR-54321',
+  //   },
+  //   it: {
+  //     companyName: 'Appartamenti Korčula S.r.l.',
+  //     vatNumber: 'P.IVA: 87654321098',
+  //     registration: 'Codice di registrazione: 040261-HR-54321',
+  //   },
+  // },
 };
 
 export const content = {
