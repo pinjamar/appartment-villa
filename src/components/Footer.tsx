@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Home, Phone, Mail, MapPin } from 'lucide-react';
+import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
 
 interface FooterProps {
@@ -100,30 +100,6 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
             <h4 className="text-lg font-semibold mb-4">
               {footerContent.followUs}
             </h4>
-            <div className="space-y-3 mb-6">
-              {/* <a
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200 hover:bg-blue-600/20 transition-colors"
-              >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600/20 text-blue-300">
-                  <Facebook size={16} />
-                </span>
-                <span>Facebook</span>
-              </a>
-              <a
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200 hover:bg-pink-600/20 transition-colors"
-              >
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-pink-600/20 text-pink-300">
-                  <Instagram size={16} />
-                </span>
-                <span>Instagram</span>
-              </a> */}
-            </div>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3 rounded-lg bg-gray-800/70 px-3 py-2 text-gray-200">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600/20 text-blue-300">
