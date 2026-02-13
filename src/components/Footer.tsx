@@ -9,7 +9,6 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
   const footerContent = content.footer[currentLanguage];
   const nav = content.navigation[currentLanguage];
-  // const businessInfo = siteConfig.businessInfo[currentLanguage];
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -45,9 +44,6 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
                 {footerContent.airbnbListing}
               </span>
             </a>
-            {/* <div className="space-y-1 text-sm text-gray-400">
-              <p className="text-xs">{businessInfo.registration}</p>
-            </div> */}
           </div>
 
           {/* Quick Links */}
