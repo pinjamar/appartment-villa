@@ -22,7 +22,7 @@ const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : un
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LodgingBusiness',
+  '@type': 'Apartment',
   name: siteConfig.siteName.hr,
   description: homeSeo.description,
   image: [siteConfig.seo.defaultImage],
@@ -31,7 +31,7 @@ const jsonLd = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: siteConfig.contact.address,
-    addressLocality: 'Korčula',
+    addressLocality: 'Blato',
     addressCountry: 'HR',
   },
   geo: {

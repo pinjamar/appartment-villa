@@ -19,7 +19,7 @@ const canonical = `${siteConfig.seo.siteUrl}/en/`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'LodgingBusiness',
+  '@type': 'Apartment',
   name: siteConfig.siteName.en,
   description: homeEn.description,
   image: [siteConfig.seo.defaultImage],
@@ -28,7 +28,7 @@ const jsonLd = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: siteConfig.contact.address,
-    addressLocality: 'Korčula',
+    addressLocality: 'Blato',
     addressCountry: 'HR',
   },
   geo: {
@@ -74,7 +74,6 @@ const jsonLd = {
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content={siteConfig.seo.twitterHandle} />
     <meta name="twitter:title" content={homeEn.title} />
     <meta name="twitter:description" content={homeEn.description} />
     <meta name="twitter:image" content={siteConfig.seo.defaultImage} />
