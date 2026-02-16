@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { content } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface AboutProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -33,7 +34,7 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
           </div>
           <div className="relative hidden md:block">
             <img
-              src="/marko1.jpg"
+              src={withBaseUrl('marko1.jpg')}
               alt="Apartmani Markota Interior"
               className="rounded-lg shadow-xl w-full h-96 object-cover"
             />

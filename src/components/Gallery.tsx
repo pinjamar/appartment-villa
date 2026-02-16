@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { content, seoPages } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface GalleryProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -81,6 +82,8 @@ const Gallery: React.FC<GalleryProps> = ({
     },
   ];
 
+  const resolveImageSrc = (src: string) => withBaseUrl(src);
+
   const openLightbox = (index: number) => {
     setSelectedImage(index);
     setCurrentSlide(index);
@@ -149,7 +152,7 @@ const Gallery: React.FC<GalleryProps> = ({
           <div className="relative w-full">
             <div className="overflow-hidden rounded-lg aspect-square bg-gray-200">
               <img
-                src={images[carouselIndex].src}
+                src={resolveImageSrc(images[carouselIndex].src)}
                 alt={images[carouselIndex].alt}
                 className="w-full h-full object-cover"
               />
@@ -210,7 +213,7 @@ const Gallery: React.FC<GalleryProps> = ({
               onClick={() => openLightbox(index)}
             >
               <img
-                src={image.src}
+                src={resolveImageSrc(image.src)}
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
@@ -253,7 +256,7 @@ const Gallery: React.FC<GalleryProps> = ({
 
             <div className="max-w-4xl max-h-4xl mx-4">
               <img
-                src={images[currentSlide].src}
+                src={resolveImageSrc(images[currentSlide].src)}
                 alt={images[currentSlide].alt}
                 className="max-w-full max-h-full object-contain"
               />

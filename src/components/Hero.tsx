@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 import { content } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface HeroProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -21,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero.jpeg"
+          src={withBaseUrl('hero.jpeg')}
           alt="Apartmani Markota"
           className="w-full h-full object-cover"
           fetchPriority="high"

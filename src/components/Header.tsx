@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { content } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface HeaderProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -66,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
             aria-label="Go to top"
           >
             <img
-              src="/Markota-crop.jpg"
+              src={withBaseUrl('Markota-crop.jpg')}
               alt="Markota Logo"
               className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300"
             />

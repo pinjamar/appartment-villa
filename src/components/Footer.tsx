@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import { siteConfig, content } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface FooterProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -22,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src="/Markota-crop.jpg"
+                src={withBaseUrl('Markota-crop.jpg')}
                 alt="Markota Logo"
                 className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300 cursor-pointer"
               />

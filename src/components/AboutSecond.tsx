@@ -1,6 +1,7 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { content } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface AboutSecondProps {
   currentLanguage: 'hr' | 'en' | 'it';
@@ -18,7 +19,7 @@ const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
           <div className="relative hidden md:block">
             <img
-              src={aboutContent.image}
+              src={withBaseUrl(aboutContent.image)}
               alt={aboutContent.imageAlt}
               className="rounded-lg shadow-xl w-full h-96 object-cover"
             />
