@@ -19,7 +19,7 @@ const homeSeo = seoPages.home.hr;
 const rawBase = import.meta.env.BASE_URL || '/';
 const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const asset = (path: string) => `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
-const seoImage = asset(siteConfig.seo.defaultImage);
+const seoImage = `https://markota-apartments.com${siteConfig.seo.defaultImage}`;
 const reviews = content.reviews.hr.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
@@ -86,10 +86,10 @@ const jsonLd = {
     <meta name="twitter:image" content={seoImage} />
     
     <link rel="canonical" href={homeSeo.canonical} />
-    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/hr/`} />
+    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/`} />
     <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
     <link rel="alternate" hreflang="it" href={`${siteConfig.seo.siteUrl}/it/`} />
-    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/hr/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 

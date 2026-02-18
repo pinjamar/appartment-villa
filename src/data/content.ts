@@ -11,7 +11,7 @@ export const siteConfig = {
     it: "La tua casa vacanza da sogno sull'isola di Korčula",
   },
   seo: {
-    siteUrl: 'https://www.yoursite.com',
+    siteUrl: 'https://markota-apartments.com',
     defaultImage: '/marko1.jpg', // Main apartment exterior - used for social media sharing
   },
   contact: {
@@ -665,7 +665,7 @@ export const seoPages = {
       description:
         'Apartmani Markota na Korčuli - moderno opremljeni apartmani prvi red do mora u Prižbi. Idealno za odmor, par ili obitelj. Rezervirajte direktno za najbolje cijene.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/hr/`,
+      canonical: `${siteConfig.seo.siteUrl}/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'LodgingBusiness',
@@ -673,7 +673,7 @@ export const seoPages = {
         description:
           'Apartmani Markota — moderno opremljeni apartmani sa pogledom na more, prvi red do mora. Idealno za parove i obitelji na Korčuli.',
         image: [siteConfig.seo.defaultImage],
-        url: `${siteConfig.seo.siteUrl}/hr/`,
+        url: `${siteConfig.seo.siteUrl}/`,
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
@@ -692,7 +692,7 @@ export const seoPages = {
       description:
         'Markota Apartments on Korčula - modern seafront apartments in Prižba. Perfect for couples and families. Book direct for the best rates.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/`,
+      canonical: `${siteConfig.seo.siteUrl}/en/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'LodgingBusiness',
@@ -700,7 +700,7 @@ export const seoPages = {
         description:
           'Markota Apartments — modern seafront apartments with sea views in Prižba, Korčula. Perfect for couples and families seeking a peaceful vacation.',
         image: [siteConfig.seo.defaultImage],
-        url: `${siteConfig.seo.siteUrl}/`,
+        url: `${siteConfig.seo.siteUrl}/en/`,
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
