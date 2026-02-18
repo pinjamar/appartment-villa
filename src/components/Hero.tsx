@@ -28,16 +28,15 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
           fetchPriority="high"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.8)]">
             {heroContent.title}
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed opacity-90 animate-fade-in animation-delay-300">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed opacity-90 animate-fade-in animation-delay-300 [text-shadow:_0_1px_8px_rgba(0,0,0,0.8)]">
             {heroContent.subtitle}
           </p>
           <button
