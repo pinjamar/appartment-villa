@@ -89,6 +89,15 @@ const jsonLd = {
     <link rel="alternate" hreflang="x-default" href={canonical} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QMM4FPFCSV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QMM4FPFCSV');
+    </script>
   </head>
   <body>
     <div class="min-h-screen bg-white">
