@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-  site: 'https://appartment-villa.pages.dev', // update after Cloudflare gives you a domain
+  site: 'https://markota-apartments.com',
 
   integrations: [
     react(),
