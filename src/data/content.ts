@@ -671,7 +671,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.hr,
         description:
-          'Apartmani Markota — moderno opremljeni apartmani sa pogledom na more, prvi red do mora. Idealno za parove i obitelji na Korčuli.',
+          'Apartmani Markota - moderno opremljeni apartmani sa pogledom na more, prvi red do mora. Idealno za parove i obitelji na Korčuli.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/`,
         telephone: siteConfig.contact.phone,
@@ -688,7 +688,7 @@ export const seoPages = {
       },
     },
     en: {
-      title: `${siteConfig.siteName.en} — Prižba, Korčula Island`,
+      title: `${siteConfig.siteName.en} - Prižba, Korčula Island`,
       description:
         'Markota Apartments on Korčula - modern seafront apartments in Prižba. Perfect for couples and families. Book direct for the best rates.',
       image: siteConfig.seo.defaultImage,
@@ -698,7 +698,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.en,
         description:
-          'Markota Apartments — modern seafront apartments with sea views in Prižba, Korčula. Perfect for couples and families seeking a peaceful vacation.',
+          'Markota Apartments - modern seafront apartments with sea views in Prižba, Korčula. Perfect for couples and families seeking a peaceful vacation.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/en/`,
         telephone: siteConfig.contact.phone,
@@ -715,7 +715,7 @@ export const seoPages = {
       },
     },
     it: {
-      title: `${siteConfig.siteName.it} — Prižba, Isola di Korčula`,
+      title: `${siteConfig.siteName.it} - Prižba, Isola di Korčula`,
       description:
         'Appartamenti Markota a Korčula - moderni appartamenti fronte mare a Prižba. Ideale per coppie e famiglie. Prenota direttamente per le migliori tariffe.',
       image: siteConfig.seo.defaultImage,
@@ -725,7 +725,7 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.it,
         description:
-          'Appartamenti Markota — moderni appartamenti fronte mare con vista sul mare a Prižba, Korčula. Perfetti per coppie e famiglie in cerca di una vacanza tranquilla.',
+          'Appartamenti Markota - moderni appartamenti fronte mare con vista sul mare a Prižba, Korčula. Perfetti per coppie e famiglie in cerca di una vacanza tranquilla.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/it/`,
         telephone: siteConfig.contact.phone,
@@ -753,12 +753,12 @@ export const seoPages = {
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
-        name: `${siteConfig.siteName.hr} — Galerija`,
+        name: `${siteConfig.siteName.hr} - Galerija`,
         description: 'Fotografije apartmana i okoline.',
       },
     },
     en: {
-      title: `${siteConfig.siteName.en} — Photo Gallery`,
+      title: `${siteConfig.siteName.en} - Photo Gallery`,
       description:
         'Browse the photo gallery of Korčula Apartment to preview the space.',
       image: siteConfig.seo.defaultImage,
@@ -766,12 +766,12 @@ export const seoPages = {
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
-        name: `${siteConfig.siteName.en} — Gallery`,
+        name: `${siteConfig.siteName.en} - Gallery`,
         description: 'Photos of the apartment and surroundings.',
       },
     },
     it: {
-      title: `${siteConfig.siteName.it} — Galleria fotografica`,
+      title: `${siteConfig.siteName.it} - Galleria fotografica`,
       description:
         "Sfoglia la galleria fotografica per vedere gli appartamenti e l'ambiente.",
       image: siteConfig.seo.defaultImage,
@@ -779,7 +779,7 @@ export const seoPages = {
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
-        name: `${siteConfig.siteName.it} — Galleria`,
+        name: `${siteConfig.siteName.it} - Galleria`,
         description: 'Foto degli appartamenti e dei dintorni.',
       },
     },
@@ -787,19 +787,19 @@ export const seoPages = {
 
   gallery2: {
     hr: {
-      title: `${siteConfig.siteName.hr} — Apartman 2 Galerija`,
+      title: `${siteConfig.siteName.hr} - Apartman 2 Galerija`,
       description: 'Pogledajte fotogaleriju Apartmana 2 i doživite ambijent.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/hr/gallery2/`,
     },
     en: {
-      title: `${siteConfig.siteName.en} — Apartment 2 Gallery`,
+      title: `${siteConfig.siteName.en} - Apartment 2 Gallery`,
       description: 'Browse the gallery of Apartment 2 to preview the space.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/gallery2/`,
     },
     it: {
-      title: `${siteConfig.siteName.it} — Galleria Appartamento 2`,
+      title: `${siteConfig.siteName.it} - Galleria Appartamento 2`,
       description:
         "Sfoglia la galleria dell'Appartamento 2 per vedere lo spazio.",
       image: siteConfig.seo.defaultImage,
@@ -872,7 +872,7 @@ export const seoPages = {
 
   booking: {
     hr: {
-      title: `${siteConfig.siteName.hr} — Rezervacije`,
+      title: `${siteConfig.siteName.hr} - Rezervacije`,
       description:
         'Rezervirajte svoj boravak u Apartmanu Markota direktno putem WhatsApp-a.',
       image: siteConfig.seo.defaultImage,
@@ -880,24 +880,24 @@ export const seoPages = {
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${siteConfig.siteName.hr} — Rezervacije`,
+        name: `${siteConfig.siteName.hr} - Rezervacije`,
         description: 'Stranica za rezervacije i kontakt putem WhatsApp-a.',
       },
     },
     en: {
-      title: `${siteConfig.siteName.en} — Bookings`,
+      title: `${siteConfig.siteName.en} - Bookings`,
       description: 'Request your stay at Markota Apartment via WhatsApp.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/booking/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${siteConfig.siteName.en} — Bookings`,
+        name: `${siteConfig.siteName.en} - Bookings`,
         description: 'Booking request page to contact via WhatsApp.',
       },
     },
     it: {
-      title: `${siteConfig.siteName.it} — Prenotazioni`,
+      title: `${siteConfig.siteName.it} - Prenotazioni`,
       description:
         'Richiedi il tuo soggiorno negli Appartamenti Markota via WhatsApp.',
       image: siteConfig.seo.defaultImage,
@@ -905,7 +905,7 @@ export const seoPages = {
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${siteConfig.siteName.it} — Prenotazioni`,
+        name: `${siteConfig.siteName.it} - Prenotazioni`,
         description: 'Pagina di prenotazione e contatto via WhatsApp.',
       },
     },
