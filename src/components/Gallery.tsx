@@ -29,6 +29,7 @@ const Gallery: React.FC<GalleryProps> = ({
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [showAll, setShowAll] = useState(false);
 
   const aboutMain = content.about[currentLanguage] as { title: string };
   const aboutSecond = content.aboutSecond[currentLanguage] as {
@@ -206,28 +207,60 @@ const Gallery: React.FC<GalleryProps> = ({
 
         {/* Desktop Grid */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {images.map((image: Image, index: number) => (
-            <div
-              key={index}
-              className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square"
-              onClick={() => openLightbox(index)}
-            >
-              <img
-                src={resolveImageSrc(image.src)}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="text-center">
-                    <div className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center mx-auto">
-                      <span className="text-lg">+</span>
+          {images.map((image: Image, index: number) => {
+            // When collapsed: show 2 on md, 3 on lg, 4 on xl (1 row each)
+            const hiddenClass = showAll
+              ? ''
+              : index < 2
+                ? ''
+                : index === 2
+                  ? 'hidden lg:block'
+                  : index === 3
+                    ? 'hidden xl:block'
+                    : 'hidden';
+            return (
+              <div
+                key={index}
+                className={`relative group cursor-pointer overflow-hidden rounded-lg aspect-square ${hiddenClass}`}
+                onClick={() => openLightbox(index)}
+              >
+                <img
+                  src={resolveImageSrc(image.src)}
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="text-center">
+                      <div className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center mx-auto">
+                        <span className="text-lg">+</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Show more / Show less button (desktop only) */}
+        <div className="hidden md:flex justify-center mt-6">
+          <button
+            onClick={() => setShowAll((prev) => !prev)}
+            className="px-6 py-2.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+          >
+            {showAll
+              ? currentLanguage === 'hr'
+                ? 'Prikaži manje'
+                : currentLanguage === 'it'
+                  ? 'Mostra meno'
+                  : 'Show less'
+              : currentLanguage === 'hr'
+                ? 'Prikaži sve slike'
+                : currentLanguage === 'it'
+                  ? 'Mostra tutte le foto'
+                  : 'Show all photos'}
+          </button>
         </div>
 
         {/* Lightbox Modal */}

@@ -39,7 +39,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 loading="lazy"
                 allowFullScreen
                 className="md:h-[520px]"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.1234567890!2d16.8009027!3d42.906447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134a6c1368849825%3A0xfe0fced819adf75d!2sPri%C5%BEba%2054%2C%2020271%2C%20Blato!5e0!3m2!1sen!2shr!4v1644507200000"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840!2d16.8009027!3d42.906447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134a6d2dddcbd5b1%3A0x3462fbbaea372c40!2sAPARTMANI+MARKOTA+-+OTOK+KOR%C4%8CULA!5e0!3m2!1sen!2shr!4v1644507200000"
               />
             </div>
 
@@ -51,7 +51,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
               </h3>
               <p className="text-gray-600 mb-4">{siteConfig.contact.address}</p>
               <a
-                href={`https://www.google.com/maps/place/Pri%C5%BEba+54,+20271,+Blato/@42.9060756,16.8002064,207m/data=!3m1!1e3!4m6!3m5!1s0x134a6c1368849825:0xfe0fced819adf75d!8m2!3d42.906447!4d16.8009027!16s%2Fg%2F11pzx9jlq6!5m1!1e1?entry=ttu`}
+                href="https://www.google.com/maps/place/APARTMANI+MARKOTA+-+OTOK+KOR%C4%8CULA/@42.906448,16.800259,210m/data=!3m2!1e3!4b1!4m15!1m8!3m7!1s0x134a6c1368849825:0xfe0fced819adf75d!2sPri%C5%BEba+54,+20271,+Blato!3b1!8m2!3d42.906447!4d16.8009027!16s%2Fg%2F11pzx9jlq6!3m5!1s0x134a6d2dddcbd5b1:0x3462fbbaea372c40!8m2!3d42.906447!4d16.8009027!16s%2Fg%2F11n459q8zx!5m1!1e1?entry=ttu"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"

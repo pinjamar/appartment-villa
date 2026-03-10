@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check } from 'lucide-react';
 import { content } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
@@ -21,14 +20,11 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
             <p className="text-lg text-gray-600 leading-relaxed">
               {aboutContent.description}
             </p>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="flex flex-wrap justify-center sm:justify-start gap-2">
               {aboutContent.features.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                    <Check size={14} className="text-white" />
-                  </div>
-                  <span className="text-gray-700">{feature}</span>
-                </div>
+                <span key={index} className="px-3 py-1.5 rounded-full bg-white border border-blue-200 text-sm font-medium text-blue-800 shadow-sm">
+                  {feature}
+                </span>
               ))}
             </div>
           </div>

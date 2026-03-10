@@ -387,7 +387,7 @@ export const content = {
         total: 'Ukupno',
         message: 'Zahtjev za Rezervaciju',
         whatsappRedirect:
-          'Klikom na slanje, ovaj obrazac otvorit će WhatsApp s vašim podacima o rezervaciji. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.',
+          'Odaberite željenu aplikaciju za slanje upita — WhatsApp ili Viber. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.',
         submitButton: 'Pošalji putem WhatsApp-a',
       },
     },
@@ -420,7 +420,7 @@ export const content = {
         total: 'Total',
         message: 'Booking Request',
         whatsappRedirect:
-          'By clicking send, this form will open WhatsApp with your booking details. We will reply as soon as possible with availability confirmation and booking information.',
+          'Choose your preferred app to send your enquiry — WhatsApp or Viber. We will reply as soon as possible with availability confirmation and booking information.',
         submitButton: 'Send via WhatsApp',
       },
     },
@@ -453,7 +453,7 @@ export const content = {
         total: 'Totale',
         message: 'Richiesta di prenotazione',
         whatsappRedirect:
-          'Facendo clic su invia, questo modulo aprirà WhatsApp con i dettagli della prenotazione. Risponderemo al più presto con la conferma di disponibilità e le informazioni sulla prenotazione.',
+          'Scegli la tua app preferita per inviare la richiesta — WhatsApp o Viber. Risponderemo al più presto con la conferma di disponibilità e le informazioni sulla prenotazione.',
         submitButton: 'Invia tramite WhatsApp',
       },
     },
@@ -810,8 +810,12 @@ export const seoPages = {
   galleryImages: {
     1: [
       {
+        src: '/marko10.jpg',
+        alt: 'Terrace',
+      },
+      {
         src: '/marko2.jpg',
-        alt: 'Apartmani Markota Exterior',
+        alt: 'Terrace',
       },
       {
         src: '/marko3.jpg',
@@ -819,27 +823,39 @@ export const seoPages = {
       },
       {
         src: '/marko4.jpg',
-        alt: 'Bedroom',
-      },
-      {
-        src: '/marko5.jpg',
         alt: 'Kitchen',
       },
       {
+        src: '/marko12.jpg',
+        alt: 'Hallway',
+      },
+      {
+        src: '/marko5.jpg',
+        alt: 'Bedroom1',
+      },
+      {
         src: '/marko6.jpg',
-        alt: 'Swimming Pool',
+        alt: 'Bedroom2',
+      },
+      {
+        src: '/marko11.jpg',
+        alt: 'Bedroom2',
       },
       {
         src: '/marko7.jpg',
-        alt: 'Garden View',
+        alt: 'Bathroom1',
       },
       {
         src: '/marko8.jpg',
-        alt: 'Terrace',
+        alt: 'WC',
       },
       {
         src: '/marko9.jpg',
-        alt: 'Bathroom',
+        alt: 'Bathroom2',
+      },
+      {
+        src: '/marko13.jpg',
+        alt: 'Apartmani Markota Exterior',
       },
     ],
     2: [

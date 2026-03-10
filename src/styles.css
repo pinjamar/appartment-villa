@@ -32,6 +32,14 @@ html {
   scroll-padding-top: 20px;
 }
 
+/* iOS Safari viewport height fix.
+   100vh includes the address bar on iPhone, cutting off content.
+   100svh = "small viewport height" = safe minimum with browser chrome visible. */
+.min-h-svh {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
 /* Custom theme variables - easily customizable */
 :root {
   --primary-color: #2563eb; /* blue-600 */

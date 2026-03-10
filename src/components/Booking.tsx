@@ -144,10 +144,7 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
     });
   };
 
-  const handleWhatsAppSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Build WhatsApp message
+  const buildMessage = () => {
     const formatDateEuropean = (dateString: string) => {
       if (!dateString) return '';
       const date = new Date(dateString);
@@ -156,12 +153,7 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
       const year = date.getFullYear();
       return `${day}.${month}.${year}`;
     };
-
-    // const priceText = priceCalculation
-    //   ? `\n\n💰 *${bookingContent.pricing.total}: ${formatPrice(priceCalculation.total)}*`
-    //   : '';
-
-    const message = `${bookingContent.pricing.message}
+    return `${bookingContent.pricing.message}
 
 👤 *Name:* ${formData.firstName} ${formData.lastName}
 📧 *Email:* ${formData.email}
@@ -172,13 +164,22 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
 👥 *${bookingContent.form.guests}:* ${formData.guests}
 
 ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.message}` : ''}`;
+  };
 
-    // WhatsApp destination number (no + or spaces)
-    const phoneNumber = '385921066913';
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const encodedMessage = encodeURIComponent(buildMessage());
+    window.open(`https://wa.me/385921066913?text=${encodedMessage}`, '_blank');
+  };
 
-    window.open(whatsappUrl, '_blank');
+  const handleViberClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const form = e.currentTarget.closest('form') as HTMLFormElement;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const encodedMessage = encodeURIComponent(buildMessage());
+    window.open(`viber://chat?number=%2B385921066913&text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -455,13 +456,23 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                 </p>
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-green-500 hover:bg-green-600 text-white py-4 px-6 rounded-lg font-semibold text-lg transition-colors duration-300 flex items-center justify-center space-x-2"
-              >
-                <Send size={20} />
-                <span>{bookingContent.pricing.submitButton}</span>
-              </button>
+              <div className="flex gap-3">
+                <button
+                  type="submit"
+                  className="flex-1 bg-green-500 hover:bg-green-600 text-white py-4 px-4 rounded-lg font-semibold text-base transition-colors duration-300 flex items-center justify-center gap-2"
+                >
+                  <Send size={18} />
+                  <span>WhatsApp</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleViberClick}
+                  className="flex-1 bg-violet-600 hover:bg-violet-700 text-white py-4 px-4 rounded-lg font-semibold text-base transition-colors duration-300 flex items-center justify-center gap-2"
+                >
+                  <Send size={18} />
+                  <span>Viber</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>
