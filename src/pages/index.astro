@@ -26,7 +26,7 @@ const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : un
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Apartment',
+  '@type': 'LodgingBusiness',
   name: siteConfig.siteName.hr,
   description: homeSeo.description,
   image: [seoImage],
@@ -48,6 +48,8 @@ const jsonLd = {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: ratingAvg,
+          bestRating: 5,
+          worstRating: 1,
           reviewCount: reviews.length,
         },
       }
