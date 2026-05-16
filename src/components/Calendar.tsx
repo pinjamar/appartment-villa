@@ -305,14 +305,26 @@ const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 bg-blue-50 border border-blue-200 rounded"></div>
                   <span className="text-gray-600">
-                    {currentLanguage === 'es' ? 'Temporada Alta' : 'High Season'}{' '}
+                    {currentLanguage === 'es'
+                      ? 'Temporada Alta'
+                      : currentLanguage === 'fr'
+                        ? 'Haute Saison'
+                        : currentLanguage === 'cz'
+                          ? 'Hlavní sezóna'
+                          : 'High Season'}{' '}
                     (€250/noć)
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 bg-green-50 border border-green-200 rounded"></div>
                   <span className="text-gray-600">
-                    {currentLanguage === 'es' ? 'Temporada Baja' : 'Low Season'}{' '}
+                    {currentLanguage === 'es'
+                      ? 'Temporada Baja'
+                      : currentLanguage === 'fr'
+                        ? 'Basse Saison'
+                        : currentLanguage === 'cz'
+                          ? 'Mimo sezónu'
+                          : 'Low Season'}{' '}
                     (€180/noć)
                   </span>
                 </div>

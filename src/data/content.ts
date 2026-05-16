@@ -10,7 +10,7 @@ export const siteConfig = {
     es: 'Estancia auténtica en el campo de Viñales, Cuba',
     en: 'Authentic countryside stay in Viñales, Cuba',
     fr: 'Séjour authentique à la campagne de Viñales, Cuba',
-    cz: 'Authentic countryside stay in Viñales, Cuba',
+    cz: 'Autentický pobyt na kubánském venkově ve Viñales',
   },
   seo: {
     siteUrl: 'https://markota-apartments.com',
@@ -63,6 +63,17 @@ export const content = {
       location: 'Emplacement',
       contact: 'Contact',
     },
+    cz: {
+      home: 'Domů',
+      about: 'Hostal Benito',
+      gallery: 'Průvodce aktivitami',
+      services: 'Služby a vybavení',
+      availability: 'Dostupnost',
+      booking: 'Rezervujte pobyt',
+      reviews: 'Recenze',
+      location: 'Poloha',
+      contact: 'Kontakt',
+    },
   },
   hero: {
     es: {
@@ -82,6 +93,12 @@ export const content = {
       subtitle:
         'Situé à seulement 7 minutes du centre de Viñales, Hostal Benito offre des vues imprenables sur les montagnes, une hospitalité cubaine authentique et des expériences inoubliables à la campagne.',
       cta: 'Réservez votre séjour',
+    },
+    cz: {
+      title: 'Hostal Benito',
+      subtitle:
+        'Hostal Benito se nachází pouhých 7 minut od centra Viñales a nabízí úchvatné výhledy na hory, autentickou kubánskou pohostinnost a nezapomenutelné zážitky na venkově.',
+      cta: 'Rezervujte pobyt',
     },
   },
   about: {
@@ -128,6 +145,21 @@ export const content = {
         'Excursions locales',
         'Parking privé',
         'Wi-Fi disponible',
+      ],
+    },
+    cz: {
+      title: 'Hostal Benito',
+      description:
+        'Náš dům se nachází pouhých 7 minut od centra Viñales a je ideálním místem pro ty, kteří hledají klid, přírodu a autentický kubánský zážitek. Nabízíme tři klimatizované pokoje, každý s vlastní nezávislou koupelnou, navržené tak, aby poskytovaly pohodlí a soukromí po celou dobu pobytu.',
+      features: [
+        '3 klimatizované pokoje',
+        'Vlastní koupelna v každém pokoji',
+        'Terasa s výhledem na mogotes',
+        'Útulná zahrada',
+        'Tradiční kubánská kuchyně',
+        'Místní výlety',
+        'Soukromé parkování',
+        'Wi-Fi k dispozici',
       ],
     },
   },
@@ -190,6 +222,27 @@ export const content = {
       ],
       image: '/sara1.jpg',
       imageAlt: 'Activités à Viñales',
+      renovation: {
+        active: false,
+        notice: '',
+      },
+    },
+    cz: {
+      title: 'Průvodce aktivitami ve Viñales',
+      description:
+        'Objevte to nejlepší z Viñales s našimi doporučeními místních aktivit. Od jízdy na koni údolím po návštěvy tabákových plantáží – Viñales nabízí autentické zážitky pro každého cestovatele.',
+      features: [
+        'Jízda na koni',
+        'Tabákové plantáže',
+        'Cueva del Indio',
+        'Vyhlídka Los Jazmines',
+        'Pěší túra do Valle del Silencio',
+        'Lekce salsy',
+        'Cayo Jutías',
+        'Místní gastronomie',
+      ],
+      image: '/sara1.jpg',
+      imageAlt: 'Aktivity ve Viñales',
       renovation: {
         active: false,
         notice: '',
@@ -332,6 +385,51 @@ export const content = {
         },
       ],
     },
+    cz: {
+      title: 'Služby a vybavení',
+      items: [
+        {
+          name: 'Klimatizace',
+          icon: 'Snowflake',
+          description: 'Klimatizace ve všech pokojích',
+        },
+        {
+          name: 'Restaurace',
+          icon: 'ChefHat',
+          description: 'Tradiční kubánská kuchyně připravená doma',
+        },
+        {
+          name: 'Terasa',
+          icon: 'Waves',
+          description: 'Panoramatické výhledy na mogotes a západy slunce',
+        },
+        {
+          name: 'Parkování',
+          icon: 'Car',
+          description: 'Soukromé a bezpečné parkování',
+        },
+        {
+          name: 'Kuchyň',
+          icon: 'ChefHat',
+          description: 'Přístup do kuchyně pro hosty',
+        },
+        {
+          name: 'Prádelna',
+          icon: 'WashingMachine',
+          description: 'Prádelna k dispozici během pobytu',
+        },
+        {
+          name: 'Výlety',
+          icon: 'Heart',
+          description: 'Organizujeme místní aktivity a výlety',
+        },
+        {
+          name: 'Vstup 24h',
+          icon: 'Tv2',
+          description: 'Volný přístup 24 hodin denně',
+        },
+      ],
+    },
   },
   calendar: {
     es: {
@@ -354,6 +452,13 @@ export const content = {
       available: 'Disponible',
       booked: 'Réservé',
       legend: 'Légende',
+    },
+    cz: {
+      title: 'Dostupnost',
+      subtitle: 'Zkontrolujte dostupné termíny a rezervujte si pobyt',
+      available: 'Dostupné',
+      booked: 'Obsazeno',
+      legend: 'Legenda',
     },
   },
   booking: {
@@ -456,6 +561,39 @@ export const content = {
         submitButton: 'Envoyer via WhatsApp',
       },
     },
+    cz: {
+      title: 'Rezervujte si pobyt',
+      subtitle:
+        'Vyplňte formulář pro žádost o rezervaci. Ozveme se vám do 24 hodin.',
+      form: {
+        checkin: 'Datum příjezdu',
+        checkout: 'Datum odjezdu',
+        guests: 'Počet hostů',
+        firstName: 'Jméno',
+        lastName: 'Příjmení',
+        name: 'Celé jméno',
+        email: 'E-mail',
+        phone: 'Telefon',
+        message: 'Speciální požadavky',
+        submit: 'Odeslat žádost',
+        required: 'Povinné pole',
+      },
+      success: 'Žádost byla úspěšně odeslána! Brzy vás budeme kontaktovat.',
+      pricing: {
+        title: 'Ceny',
+        lowSeason: 'Mimo sezónu',
+        highSeason: 'Hlavní sezóna',
+        finalCleaning: 'Závěrečný úklid',
+        touristTax: 'Turistický poplatek',
+        pricePerNight: '/noc',
+        priceCalculation: 'Kalkulace ceny',
+        total: 'Celkem',
+        message: 'Žádost o rezervaci',
+        whatsappRedirect:
+          'Vyberte si preferovanou aplikaci pro odeslání dotazu — WhatsApp nebo Viber. Odpovíme co nejdříve s potvrzením dostupnosti a informacemi o rezervaci.',
+        submitButton: 'Odeslat přes WhatsApp',
+      },
+    },
   },
   reviews: {
     es: {
@@ -527,6 +665,29 @@ export const content = {
         },
       ],
     },
+    cz: {
+      title: 'Recenze hostů',
+      items: [
+        {
+          name: 'Marco & Elena',
+          rating: 5,
+          text: 'Neuvěřitelný zážitek ve Viñales! Výhledy na mogotes z terasy jsou velkolepé. Velmi milí hostitelé. Určitě se vrátíme!',
+          date: 'Září 2024',
+        },
+        {
+          name: 'Familie Schmidt',
+          rating: 5,
+          text: 'Ideální místo k odpočinku od města. Příroda, domácí kubánská kuchyně a západy slunce jsou nezapomenutelné. Velmi doporučujeme!',
+          date: 'Srpen 2024',
+        },
+        {
+          name: 'Sarah & James',
+          rating: 5,
+          text: 'Autentický kubánský zážitek! Hostal předčil naše očekávání. Krásná poloha, vynikající vybavení a skvělí hostitelé.',
+          date: 'Červenec 2024',
+        },
+      ],
+    },
   },
   location: {
     es: {
@@ -595,6 +756,28 @@ export const content = {
       tipText:
         'Nous recommandons de réserver le transport à l\'avance, surtout en haute saison (décembre–mars). Si vous avez besoin d\'aide pour organiser votre arrivée, n\'hésitez pas à nous contacter.',
     },
+    cz: {
+      subtitle:
+        'Villa Benito se nachází v srdci údolí Viñales, obklopená mogotes a přírodou. Ideální pro prozkoumání kubánského venkova.',
+      addressLabel: 'Adresa',
+      openInMaps: 'Otevřít v Mapách',
+      howToGetHere: 'Jak se k nám dostat?',
+      byCar: {
+        label: 'Autem nebo sdíleným taxi:',
+        text: 'Z Havany se vydejte po dálnici směrem na Pinar del Río (asi 2 hodiny). Z Pinar del Río pokračujte po silnici do Viñales (asi 30 minut). Villa Benito je označena na vstupu do vesnice.',
+      },
+      byBus: {
+        label: 'Autobusem (Viazul):',
+        text: 'Viazul provozuje přímé autobusy z Havany do Viñales (denní odjezdy, asi 3,5 hodiny). Zastávka Viazul je v centru Viñales, jen pár minut od Villa Benito.',
+      },
+      byTransfer: {
+        label: 'Soukromý transfer:',
+        text: 'Můžeme zajistit soukromý transfer z Havany, letiště José Martí nebo jakéhokoli jiného místa na Kubě. Kontaktujte nás přes WhatsApp.',
+      },
+      tip: 'Tip:',
+      tipText:
+        'Doporučujeme rezervovat dopravu předem, zejména v hlavní sezóně (prosinec–březen). Pokud potřebujete pomoc s organizací příjezdu, neváhejte nás kontaktovat.',
+    },
   },
   contact: {
     es: {
@@ -657,6 +840,26 @@ export const content = {
           'Nous répondons à toutes les demandes dans les 24 heures. Pour les urgences, appelez-nous directement.',
       },
     },
+    cz: {
+      title: 'Kontaktujte nás',
+      subtitle: 'Jsme tu, abychom vám pomohli naplánovat dokonalou dovolenou',
+      form: {
+        name: 'Jméno',
+        email: 'E-mail',
+        subject: 'Předmět',
+        message: 'Zpráva',
+        submit: 'Odeslat zprávu',
+      },
+      info: {
+        title: 'Kontaktní údaje',
+        phone: 'Telefon',
+        email: 'E-mail',
+        address: 'Adresa',
+        responseTimes: 'Doba odezvy',
+        responseTimesText:
+          'Na všechny dotazy odpovídáme do 24 hodin. V naléhavých případech nám prosím zavolejte přímo.',
+      },
+    },
   },
   footer: {
     es: {
@@ -698,6 +901,19 @@ export const content = {
       privacyText:
         'Villa Benito respecte votre vie privée. Nous ne collectons, stockons ni traitons aucune donnée personnelle sur ce site. Toutes les informations saisies dans le formulaire de réservation sont envoyées directement via WhatsApp. Nous ne stockons ni accédons à ces informations sur nos serveurs. Nous n\'utilisons ni cookies, ni analyses, ni technologies de suivi.',
     },
+    cz: {
+      description:
+        'Villa Benito nabízí autentický zážitek na kubánském venkově ve Viñales. Obklopený horami a mogotes, s úchvatnými výhledy a západy slunce. Blízko centra, přírody a všech aktivit.',
+      quickLinks: 'Rychlé odkazy',
+      followUs: 'Kontaktní údaje',
+      airbnbListing: 'Náš inzerát na Airbnb',
+      tagline: 'Vytvořeno s ❤️ ve Viñales',
+      copyright: '© 2026 Villa Benito. Všechna práva vyhrazena.',
+      privacy: 'Zásady ochrany osobních údajů',
+      cookies: 'Zásady používání cookies',
+      privacyText:
+        'Villa Benito respektuje vaše soukromí. Na těchto webových stránkách neshromažďujeme, neukládáme ani nezpracováváme žádné osobní údaje. Veškeré informace zadané v rezervačním formuláři jsou odeslány přímo přes WhatsApp. Tyto informace neukládáme ani k nim nemáme přístup na našich serverech. Nepoužíváme cookies, analytiku ani žádné sledovací technologie.',
+    },
   },
   cookieBanner: {
     es: {
@@ -720,6 +936,13 @@ export const content = {
       accept: 'Accepter',
       decline: 'Refuser',
       moreInfo: 'Plus d\'Informations',
+    },
+    cz: {
+      message:
+        'Tento web používá cookies ke zlepšení vašeho prohlížení a pro statistické účely.',
+      accept: 'Přijmout',
+      decline: 'Odmítnout',
+      moreInfo: 'Více informací',
     },
   },
 };
@@ -808,6 +1031,33 @@ export const seoPages = {
         },
       },
     },
+    cz: {
+      title: `${siteConfig.siteName.cz} - Viñales, Kuba`,
+      description:
+        'Hostal Benito ve Viñales - autentické ubytování na kubánském venkově s výhledem na mogotes. Ideální pro páry, cestovatele a milovníky přírody. Rezervujte přímo za nejlepší ceny.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/cz/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'LodgingBusiness',
+        name: siteConfig.siteName.cz,
+        description:
+          'Hostal Benito - autentické ubytování s výhledem na mogotes ve Viñales, Kuba. Ideální pro páry a cestovatele hledající autentický kubánský zážitek.',
+        image: [siteConfig.seo.defaultImage],
+        url: `${siteConfig.seo.siteUrl}/cz/`,
+        telephone: siteConfig.contact.phone,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: siteConfig.contact.address,
+          addressCountry: 'CU',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: siteConfig.contact.coordinates.lat,
+          longitude: siteConfig.contact.coordinates.lng,
+        },
+      },
+    },
   },
 
   gallery: {
@@ -850,6 +1100,19 @@ export const seoPages = {
         description: 'Photos de l\'hostal et des environs.',
       },
     },
+    cz: {
+      title: `${siteConfig.siteName.cz} - Fotogalerie`,
+      description:
+        'Objevte náš dům, krajinu, západy slunce a autentické kubánské zážitky, které na vás čekají ve Viñales.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/cz/gallery/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'ImageGallery',
+        name: `${siteConfig.siteName.cz} - Galerie`,
+        description: 'Fotografie hostalu a okolí.',
+      },
+    },
   },
 
   gallery2: {
@@ -871,6 +1134,12 @@ export const seoPages = {
         'Découvrez les activités et expériences que Viñales a à offrir.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/fr/gallery2/`,
+    },
+    cz: {
+      title: `${siteConfig.siteName.cz} - Galerie aktivit`,
+      description: 'Objevte aktivity a zážitky, které Viñales nabízí.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/cz/gallery2/`,
     },
   },
 
@@ -990,6 +1259,18 @@ export const seoPages = {
         '@type': 'WebPage',
         name: `${siteConfig.siteName.fr} - Réservations`,
         description: 'Page de réservation et contact via WhatsApp.',
+      },
+    },
+    cz: {
+      title: `${siteConfig.siteName.cz} - Rezervace`,
+      description: 'Rezervujte si pobyt v Hostal Benito přímo přes WhatsApp.',
+      image: siteConfig.seo.defaultImage,
+      canonical: `${siteConfig.seo.siteUrl}/cz/booking/`,
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: `${siteConfig.siteName.cz} - Rezervace`,
+        description: 'Stránka pro rezervaci a kontakt přes WhatsApp.',
       },
     },
   },

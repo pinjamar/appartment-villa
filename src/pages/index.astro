@@ -14,20 +14,20 @@ import Booking from '../components/Booking';
 // import CookieBanner from '../components/CookieBanner';
 import Footer from '../components/Footer';
 
-const currentLanguage = 'en';
-const homeSeo = seoPages.home.en;
+const currentLanguage = 'es';
+const homeSeo = seoPages.home.es;
 const rawBase = import.meta.env.BASE_URL || '/';
 const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const asset = (path: string) => `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
 const seoImage = `${siteConfig.seo.siteUrl}${siteConfig.seo.defaultImage}`;
-const reviews = content.reviews.en.items || [];
+const reviews = content.reviews.es?.items || content.reviews.en.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
-  name: siteConfig.siteName.en,
+  name: siteConfig.siteName.es,
   description: homeSeo.description,
   image: [seoImage],
   url: `${siteConfig.seo.siteUrl}/`,
@@ -58,7 +58,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -68,17 +68,17 @@ const jsonLd = {
     <title>{homeSeo.title}</title>
     <meta name="description" content={homeSeo.description} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content={siteConfig.siteName.en} />
+    <meta name="author" content={siteConfig.siteName.es} />
     
     <!-- Open Graph -->
-    <meta property="og:site_name" content={siteConfig.siteName.en} />
+    <meta property="og:site_name" content={siteConfig.siteName.es} />
     <meta property="og:title" content={homeSeo.title} />
     <meta property="og:description" content={homeSeo.description} />
     <meta property="og:image" content={seoImage} />
     <meta property="og:image:width" content="3000" />
     <meta property="og:image:height" content="2000" />
     <meta property="og:url" content={homeSeo.canonical} />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     
     <!-- Twitter -->

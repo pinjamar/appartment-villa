@@ -132,12 +132,20 @@ ${data.message}
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {currentLanguage === 'es'
                     ? '¡Mensaje enviado con éxito!'
-                    : 'Message sent successfully!'}
+                    : currentLanguage === 'fr'
+                      ? 'Message envoyé avec succès !'
+                      : currentLanguage === 'cz'
+                        ? 'Zpráva byla úspěšně odeslána!'
+                        : 'Message sent successfully!'}
                 </h3>
                 <p className="text-gray-600">
                   {currentLanguage === 'es'
                     ? 'Nos pondremos en contacto pronto.'
-                    : 'We will contact you soon.'}
+                    : currentLanguage === 'fr'
+                      ? 'Nous vous contacterons bientôt.'
+                      : currentLanguage === 'cz'
+                        ? 'Brzy vás budeme kontaktovat.'
+                        : 'We will contact you soon.'}
                 </p>
               </div>
             ) : (

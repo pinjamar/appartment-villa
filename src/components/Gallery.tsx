@@ -139,12 +139,18 @@ const Gallery: React.FC<GalleryProps> = ({
               ? 'Galería'
               : currentLanguage === 'fr'
                 ? 'Galerie'
-                : 'Gallery'}
+                : currentLanguage === 'cz'
+                  ? 'Galerie'
+                  : 'Gallery'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {currentLanguage === 'es'
               ? `Descubre los elegantes y cómodos espacios de ${apartmentTitle} a través de esta galería.`
-              : `Discover the elegant and comfortable spaces of ${apartmentTitle} through this photo gallery.`}
+              : currentLanguage === 'fr'
+                ? `Découvrez les espaces élégants et confortables de ${apartmentTitle} à travers cette galerie.`
+                : currentLanguage === 'cz'
+                  ? `Objevte elegantní a pohodlné prostory ${apartmentTitle} v této fotogalerii.`
+                  : `Discover the elegant and comfortable spaces of ${apartmentTitle} through this photo gallery.`}
           </p>
         </div>
 
@@ -201,7 +207,9 @@ const Gallery: React.FC<GalleryProps> = ({
               ? 'Ver imagen grande'
               : currentLanguage === 'fr'
                 ? 'Voir en grand'
-                : 'View larger'}
+                : currentLanguage === 'cz'
+                  ? 'Zobrazit větší'
+                  : 'View larger'}
           </button>
         </div>
 
@@ -254,12 +262,16 @@ const Gallery: React.FC<GalleryProps> = ({
                 ? 'Mostrar menos'
                 : currentLanguage === 'fr'
                   ? 'Afficher moins'
-                  : 'Show less'
+                  : currentLanguage === 'cz'
+                    ? 'Zobrazit méně'
+                    : 'Show less'
               : currentLanguage === 'es'
                 ? 'Mostrar todas las fotos'
                 : currentLanguage === 'fr'
                   ? 'Afficher toutes les photos'
-                  : 'Show all photos'}
+                  : currentLanguage === 'cz'
+                    ? 'Zobrazit všechny fotky'
+                    : 'Show all photos'}
           </button>
         </div>
 
