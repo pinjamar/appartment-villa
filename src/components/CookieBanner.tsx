@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { X, Info } from 'lucide-react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 
 interface CookieBannerProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const CookieBanner: React.FC<CookieBannerProps> = ({ currentLanguage }) => {

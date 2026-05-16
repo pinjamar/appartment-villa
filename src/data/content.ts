@@ -1,14 +1,16 @@
 // Easily modifiable content for customization
 export const siteConfig = {
   siteName: {
-    hr: 'Apartmani Markota',
-    en: 'Markota Apartments',
-    it: 'Appartamenti Markota',
+    es: 'Villa Benito',
+    en: 'Villa Benito',
+    fr: 'Villa Benito',
+    cz: 'Villa Benito',
   },
   tagline: {
-    hr: 'Vaš san o kućici za odmor na Korčuli',
-    en: 'Your dream vacation home on Korčula Island',
-    it: "La tua casa vacanza da sogno sull'isola di Korčula",
+    es: 'Estancia auténtica en el campo de Viñales, Cuba',
+    en: 'Authentic countryside stay in Viñales, Cuba',
+    fr: 'Séjour authentique à la campagne de Viñales, Cuba',
+    cz: 'Authentic countryside stay in Viñales, Cuba',
   },
   seo: {
     siteUrl: 'https://markota-apartments.com',
@@ -28,218 +30,215 @@ export const siteConfig = {
 
 export const content = {
   navigation: {
-    hr: {
-      home: 'Početna',
-      about: 'Apartman Marko',
-      gallery: 'Apartman Sara',
-      services: 'Usluge',
-      availability: 'Dostupnost',
-      booking: 'Rezerviraj boravak',
-      reviews: 'Recenzije',
-      location: 'Lokacija',
-      contact: 'Kontakt',
+    es: {
+      home: 'Inicio',
+      about: 'Hostal Benito',
+      gallery: 'Guía de Actividades',
+      services: 'Servicios y Comodidades',
+      availability: 'Disponibilidad',
+      booking: 'Reserva tu Estancia',
+      reviews: 'Reseñas',
+      location: 'Ubicación',
+      contact: 'Contacto',
     },
     en: {
       home: 'Home',
-      about: 'Apartment Marko',
-      gallery: 'Apartment Sara',
-      services: 'Services',
+      about: 'Hostal Benito',
+      gallery: 'Viñales Activities Guide',
+      services: 'Services & Amenities',
       availability: 'Availability',
       booking: 'Book Your Stay',
       reviews: 'Reviews',
       location: 'Location',
       contact: 'Contact',
     },
-    it: {
-      home: 'Home',
-      about: 'Appartamento Marko',
-      gallery: 'Appartamento Sara',
-      services: 'Servizi',
-      availability: 'Disponibilità',
-      booking: 'Prenota il tuo soggiorno',
-      reviews: 'Recensioni',
-      location: 'Posizione',
-      contact: 'Contatto',
+    fr: {
+      home: 'Accueil',
+      about: 'Hostal Benito',
+      gallery: 'Guide des Activités',
+      services: 'Services et Commodités',
+      availability: 'Disponibilité',
+      booking: 'Réservez votre séjour',
+      reviews: 'Avis',
+      location: 'Emplacement',
+      contact: 'Contact',
     },
   },
   hero: {
-    hr: {
-      title: 'Dobrodošli u Apartmane Markota',
+    es: {
+      title: 'Hostal Benito',
       subtitle:
-        'Predivni apartmani prvi red do mora na otoku Korčuli u mjestu Prižba, savršeni za miran odmor daleko od grada. Otkrij autentičan šarm Jadrana u modernom i komfornom okruženju.',
-      cta: 'Saznaj Više',
+        'Ubicado a solo 7 minutos del centro de Viñales, Hostal Benito ofrece impresionantes vistas a las montañas, auténtica hospitalidad cubana y experiencias inolvidables en el campo.',
+      cta: 'Reserva tu Estancia',
     },
     en: {
-      title: 'Welcome to Markota Apartments',
+      title: 'Hostal Benito',
       subtitle:
-        'Beautiful apartments on the first row by the sea on Korčula Island in the village of Prižba, perfect for a peaceful getaway far from the city. Discover the authentic charm of the Adriatic in a modern and comfortable setting.',
-      cta: 'Learn More',
+        'Located only 7 minutes from downtown Viñales, Hostal Benito offers breathtaking mountain views, authentic Cuban hospitality and unforgettable countryside experiences.',
+      cta: 'Book Your Stay',
     },
-    it: {
-      title: 'Benvenuti agli Appartamenti Markota',
+    fr: {
+      title: 'Hostal Benito',
       subtitle:
-        "Bellissimi appartamenti in prima fila sul mare sull'isola di Korčula, nel villaggio di Prižba, perfetti per una vacanza tranquilla lontano dalla città. Scopri il fascino autentico dell'Adriatico in un ambiente moderno e confortevole.",
-      cta: 'Scopri di più',
+        'Situé à seulement 7 minutes du centre de Viñales, Hostal Benito offre des vues imprenables sur les montagnes, une hospitalité cubaine authentique et des expériences inoubliables à la campagne.',
+      cta: 'Réservez votre séjour',
     },
   },
   about: {
-    hr: {
-      title: 'Apartman Marko',
+    es: {
+      title: 'Hostal Benito',
       description:
-        'Apartman Marko je moderan i potpuno opremljen dvosobni apartman s velikom terasom i pogledom na more i otoke. Idealan je za parove ili male obitelji (do 5 osoba) koje žele uživati u miru i prirodnoj ljepoti ovog jedinstvenog otoka.',
+        'Ubicada a solo 7 minutos del centro de Viñales, nuestra casa es el lugar ideal para quienes buscan tranquilidad, naturaleza y una auténtica experiencia cubana. Contamos con tres habitaciones climatizadas, cada una con baño privado e independiente, diseñadas para brindar comodidad y privacidad durante toda la estancia.',
       features: [
-        '2 prostrane spavaće sobe',
-        '2 moderne kupaone + 1 WC',
-        'Dnevni boravak s pogledom na more',
-        'Velika terasa od preko 30m2',
-        'Potpuno opremljena kuhinja',
-        'Klimatizirane sobe',
-        'Besplatan Wi-Fi internet',
-        'Besplatan parking',
+        '3 habitaciones climatizadas',
+        'Baño privado en cada habitación',
+        'Terraza con vistas a los mogotes',
+        'Jardín acogedor',
+        'Comida tradicional cubana',
+        'Excursiones locales',
+        'Parqueo privado',
+        'Wi-Fi disponible',
       ],
     },
     en: {
-      title: 'Marko Apartment',
+      title: 'Hostal Benito',
       description:
-        'Marko Apartment is a modern and fully equipped two-bedroom apartment with a large terrace and impressive views of the Adriatic Sea. It is ideal for couples or small families who want to enjoy the peace and natural beauty of this unique island.',
+        'Located just 7 minutes from downtown Viñales, our home is the ideal place for those seeking tranquility, nature and an authentic Cuban experience. We have three air-conditioned rooms, each with a private and independent bathroom, designed to provide comfort and privacy throughout your stay.',
       features: [
-        '2 spacious bedrooms',
-        '2 modern bathrooms + 1 WC',
-        'Living room with sea view',
-        'Large terrace over 30 m²',
-        'Fully equipped kitchen',
-        'Air-conditioned rooms',
-        'Free Wi‑Fi',
-        'Free parking',
+        '3 air-conditioned rooms',
+        'Private bathroom in each room',
+        'Terrace with mogote views',
+        'Cozy garden',
+        'Traditional Cuban cuisine',
+        'Local excursions',
+        'Private parking',
+        'Wi-Fi available',
       ],
     },
-    it: {
-      title: 'Appartamento Marko',
+    fr: {
+      title: 'Hostal Benito',
       description:
-        "L'appartamento Marko è moderno e completamente arredato con due camere da letto e un'imponente vista sul Mare Adriatico. Situato nel cuore della città di Korčula, è ideale per coppie o piccole famiglie che desiderano godersi la tranquillità e la bellezza naturale di questa isola unica.",
+        'Située à seulement 7 minutes du centre de Viñales, notre maison est l\'écrin idéal pour ceux qui recherchent la tranquillité, la nature et une expérience cubaine authentique. Nous disposons de trois chambres climatisées, chacune avec sa salle de bain privée et indépendante, conçues pour offrir confort et intimité pendant tout le séjour.',
       features: [
-        '2 camere da letto spaziose',
-        '2 bagni moderni + 1 WC',
-        'Soggiorno con vista mare',
-        'Grande terrazza di oltre 30 m²',
-        'Cucina completamente attrezzata',
-        'Camere climatizzate',
-        'Wi‑Fi gratuito',
-        'Parcheggio gratuito',
+        '3 chambres climatisées',
+        'Salle de bain privée dans chaque chambre',
+        'Terrasse avec vue sur les mogotes',
+        'Jardin accueillant',
+        'Cuisine traditionnelle cubaine',
+        'Excursions locales',
+        'Parking privé',
+        'Wi-Fi disponible',
       ],
     },
   },
   aboutSecond: {
-    hr: {
-      title: 'Apartman Sara',
+    es: {
+      title: 'Guía de Actividades de Viñales',
       description:
-        'Mali jednosobni apartman idealan za parove. S privatnim dvorištem, nekoliko koraka od mora. U potpunosti renoviran 2026 sa svim najnovijim sadržajim potrebnima za savršen odmor.',
+        'Descubra lo mejor de Viñales con nuestras recomendaciones de actividades locales. Desde paseos a caballo por el valle hasta visitas a plantaciones de tabaco, Viñales ofrece experiencias auténticas para todos los viajeros.',
       features: [
-        '1 spavaća soba s bračnim krevetom',
-        '1 moderna kupaonica',
-        'Dnevni boravak',
-        'Opremljena kuhinja',
-        'Dvorište s pogledom na more',
-        'Klimatizirana soba',
-        'Brzi Wi-Fi',
-        'Besplatan parking',
+        'Paseos a caballo',
+        'Plantaciones de tabaco',
+        'Cueva del Indio',
+        'Mirador de Los Jazmines',
+        'Senderismo al Valle del Silencio',
+        'Clases de salsa',
+        'Cayo Jutías',
+        'Gastronomía local',
       ],
       image: '/sara1.jpg',
-      imageAlt: 'Apartman 2 Interijer',
+      imageAlt: 'Actividades en Viñales',
       renovation: {
-        active: true,
-        notice:
-          'Napomena: Apartman Sara je trenutno u renovaciji. Fotografije i dostupnost bit će ažurirane uskoro.',
+        active: false,
+        notice: '',
       },
     },
     en: {
-      title: 'Sara Apartment',
+      title: 'Viñales Activities Guide',
       description:
-        'Small one-bedroom apartment ideal for couples. With a private yard, just steps from the sea. Fully renovated in 2026 with all the latest amenities for a perfect vacation.',
+        'Discover the best of Viñales with our local activity recommendations. From horseback riding through the valley to visiting tobacco plantations, Viñales offers authentic experiences for every traveler.',
       features: [
-        '1 bedroom with double bed',
-        '1 modern bathroom',
-        'Living room',
-        'Equipped kitchen',
-        'Courtyard with sea view',
-        'Air-conditioned room',
-        'Fast Wi-Fi',
-        'Free parking',
+        'Horseback riding',
+        'Tobacco plantations',
+        'Cueva del Indio',
+        'Los Jazmines Viewpoint',
+        'Hiking to Valle del Silencio',
+        'Salsa lessons',
+        'Cayo Jutías',
+        'Local gastronomy',
       ],
       image: '/sara1.jpg',
-      imageAlt: 'Apartment 2 Interior',
+      imageAlt: 'Viñales Activities',
       renovation: {
-        active: true,
-        notice:
-          'Notice: Apartment Sara is currently under renovation. Photos and availability will be updated soon.',
+        active: false,
+        notice: '',
       },
     },
-    it: {
-      title: 'Appartamento Sara',
+    fr: {
+      title: 'Guide des Activités de Viñales',
       description:
-        'Piccolo appartamento con una camera da letto, ideale per coppie. Con un cortile privato, a pochi passi dal mare. Completamente ristrutturato nel 2026 con tutti i comfort moderni per una vacanza perfetta.',
+        'Découvrez le meilleur de Viñales avec nos recommandations d\'activités locales. Des promenades à cheval dans la vallée aux visites de plantations de tabac, Viñales offre des expériences authentiques pour tous les voyageurs.',
       features: [
-        '1 camera da letto con letto matrimoniale',
-        '1 bagno moderno',
-        'Soggiorno',
-        'Cucina attrezzata',
-        'Cortile con vista mare',
-        'Camera climatizzata',
-        'Wi-Fi veloce',
-        'Parcheggio gratuito',
+        'Promenades à cheval',
+        'Plantations de tabac',
+        'Cueva del Indio',
+        'Mirador de Los Jazmines',
+        'Randonnée au Valle del Silencio',
+        'Cours de salsa',
+        'Cayo Jutías',
+        'Gastronomie locale',
       ],
       image: '/sara1.jpg',
-      imageAlt: 'Interni appartamento 2',
+      imageAlt: 'Activités à Viñales',
       renovation: {
-        active: true,
-        notice:
-          "Avviso: l'Appartamento Sara è attualmente in ristrutturazione. Foto e disponibilità verranno aggiornate a breve.",
+        active: false,
+        notice: '',
       },
     },
   },
   services: {
-    hr: {
-      title: 'Usluge i Pogodnosti',
+    es: {
+      title: 'Servicios y Comodidades',
       items: [
         {
-          name: 'Besplatan Wi-Fi',
-          icon: 'Wifi',
-          description: 'Brza internetska veza kroz cijeli apartman',
-        },
-        {
-          name: 'Klima Uređaj',
+          name: 'Aire Acondicionado',
           icon: 'Snowflake',
-          description: 'Klimatizacija u svim sobama',
+          description: 'Climatización en todas las habitaciones',
         },
         {
-          name: 'Pogled na More',
-          icon: 'Waves',
-          description: 'Balkon sa predivnim pogledom na Jadran',
-        },
-        {
-          name: 'Parkiranje',
-          icon: 'Car',
-          description: 'Privatni i sigurni parking prostori',
-        },
-        {
-          name: 'Kuhinja s Perilicom Posuđa',
+          name: 'Restaurante',
           icon: 'ChefHat',
-          description: 'Moderna kuhinja sa svim aparatima',
+          description: 'Comida tradicional cubana preparada en casa',
         },
         {
-          name: 'Perilica Rublja',
+          name: 'Terraza',
+          icon: 'Waves',
+          description: 'Vistas panorámicas a los mogotes y atardeceres',
+        },
+        {
+          name: 'Parqueo',
+          icon: 'Car',
+          description: 'Estacionamiento privado y seguro',
+        },
+        {
+          name: 'Cocina',
+          icon: 'ChefHat',
+          description: 'Acceso a cocina para los huéspedes',
+        },
+        {
+          name: 'Servicio de Lavandería',
           icon: 'WashingMachine',
-          description: 'Perilica rublja dostupna tijekom boravka',
+          description: 'Lavandería disponible durante la estancia',
         },
         {
-          name: 'Smart TV',
-          icon: 'Tv2',
-          description: 'TV s pristupom internetu',
-        },
-        {
-          name: 'Prilagođeno Životinjama',
+          name: 'Excursiones',
           icon: 'Heart',
-          description: 'Vaši kućni ljubimci su dobrodošli',
+          description: 'Organizamos actividades y excursiones locales',
+        },
+        {
+          name: 'Entrada 24h',
+          icon: 'Tv2',
+          description: 'Acceso libre las 24 horas del día',
         },
       ],
     },
@@ -247,100 +246,100 @@ export const content = {
       title: 'Services & Amenities',
       items: [
         {
-          name: 'Free Wi-Fi',
-          icon: 'Wifi',
-          description: 'High-speed internet throughout the apartment',
-        },
-        {
           name: 'Air Conditioning',
           icon: 'Snowflake',
           description: 'Climate control in all rooms',
         },
         {
-          name: 'Sea View',
+          name: 'Restaurant',
+          icon: 'ChefHat',
+          description: 'Traditional Cuban cuisine prepared at home',
+        },
+        {
+          name: 'Terrace',
           icon: 'Waves',
-          description: 'Balcony with stunning Adriatic views',
+          description: 'Panoramic views of mogotes and sunsets',
         },
         {
           name: 'Parking',
           icon: 'Car',
-          description: 'Private and secure parking spaces',
+          description: 'Private and secure parking',
         },
         {
-          name: 'Equipped Kitchen',
+          name: 'Kitchen',
           icon: 'ChefHat',
-          description: 'Modern kitchen with all appliances',
+          description: 'Guest access to kitchen facilities',
         },
         {
-          name: 'Washing Machine',
+          name: 'Laundry Service',
           icon: 'WashingMachine',
-          description: 'On-site washing machine available during your stay',
+          description: 'Laundry available during your stay',
         },
         {
-          name: 'TV & Entertainment',
-          icon: 'Tv2',
-          description: 'Satellite TV and streaming services',
-        },
-        {
-          name: 'Pet Friendly',
+          name: 'Excursions',
           icon: 'Heart',
-          description: 'Your pets are welcome',
+          description: 'We organize local activities and excursions',
+        },
+        {
+          name: '24h Entrance',
+          icon: 'Tv2',
+          description: 'Free access 24 hours a day',
         },
       ],
     },
-    it: {
-      title: 'Servizi e Comfort',
+    fr: {
+      title: 'Services et Commodités',
       items: [
         {
-          name: 'Wi-Fi gratuito',
-          icon: 'Wifi',
-          description: "Internet ad alta velocità in tutto l'appartamento",
-        },
-        {
-          name: 'Aria condizionata',
+          name: 'Climatisation',
           icon: 'Snowflake',
-          description: 'Climatizzazione in tutte le stanze',
+          description: 'Climatisation dans toutes les chambres',
         },
         {
-          name: 'Vista mare',
-          icon: 'Waves',
-          description: "Balcone con splendida vista sull'Adriatico",
-        },
-        {
-          name: 'Parcheggio',
-          icon: 'Car',
-          description: 'Posti auto privati e sicuri',
-        },
-        {
-          name: 'Cucina attrezzata',
+          name: 'Restaurant',
           icon: 'ChefHat',
-          description: 'Cucina moderna con tutti gli elettrodomestici',
+          description: 'Cuisine traditionnelle cubaine préparée maison',
         },
         {
-          name: 'Lavatrice',
+          name: 'Terrasse',
+          icon: 'Waves',
+          description: 'Vues panoramiques sur les mogotes et les couchers de soleil',
+        },
+        {
+          name: 'Parking',
+          icon: 'Car',
+          description: 'Stationnement privé et sécurisé',
+        },
+        {
+          name: 'Cuisine',
+          icon: 'ChefHat',
+          description: 'Accès cuisine pour les hôtes',
+        },
+        {
+          name: 'Service de Blanchisserie',
           icon: 'WashingMachine',
-          description: 'Lavatrice disponibile durante il soggiorno',
+          description: 'Blanchisserie disponible pendant le séjour',
         },
         {
-          name: 'TV e intrattenimento',
-          icon: 'Tv2',
-          description: 'TV satellitare e servizi streaming',
-        },
-        {
-          name: 'Animali ammessi',
+          name: 'Excursions',
           icon: 'Heart',
-          description: 'I tuoi animali domestici sono i benvenuti',
+          description: 'Nous organisons des activités et excursions locales',
+        },
+        {
+          name: 'Entrée 24h',
+          icon: 'Tv2',
+          description: 'Accès libre 24 heures sur 24',
         },
       ],
     },
   },
   calendar: {
-    hr: {
-      title: 'Dostupnost',
-      subtitle: 'Provjeri dostupne datume i rezerviraj svoj boravak',
-      available: 'Dostupno',
-      booked: 'Zauzeto',
-      legend: 'Legenda',
+    es: {
+      title: 'Disponibilidad',
+      subtitle: 'Consulta las fechas disponibles y reserva tu estancia',
+      available: 'Disponible',
+      booked: 'Reservado',
+      legend: 'Leyenda',
     },
     en: {
       title: 'Availability',
@@ -349,46 +348,46 @@ export const content = {
       booked: 'Booked',
       legend: 'Legend',
     },
-    it: {
-      title: 'Disponibilità',
-      subtitle: 'Controlla le date disponibili e prenota il tuo soggiorno',
-      available: 'Disponibile',
-      booked: 'Occupato',
-      legend: 'Legenda',
+    fr: {
+      title: 'Disponibilité',
+      subtitle: 'Vérifiez les dates disponibles et réservez votre séjour',
+      available: 'Disponible',
+      booked: 'Réservé',
+      legend: 'Légende',
     },
   },
   booking: {
-    hr: {
-      title: 'Rezerviraj Boravak',
+    es: {
+      title: 'Reserva tu Estancia',
       subtitle:
-        'Ispuni obrazac da bi zatražio rezervaciju. Kontaktirat ćemo te u roku od 24 sata.',
+        'Completa el formulario para solicitar una reserva. Te contactaremos en un plazo de 24 horas.',
       form: {
-        checkin: 'Datum dolaska',
-        checkout: 'Datum odlaska',
-        guests: 'Broj gostiju',
-        firstName: 'Ime',
-        lastName: 'Prezime',
-        name: 'Ime i prezime',
-        email: 'E-mail',
-        phone: 'Telefon',
-        message: 'Posebni zahtjevi',
-        submit: 'Pošalji Zahtjev',
-        required: 'Obavezno polje',
+        checkin: 'Fecha de llegada',
+        checkout: 'Fecha de salida',
+        guests: 'Número de huéspedes',
+        firstName: 'Nombre',
+        lastName: 'Apellido',
+        name: 'Nombre completo',
+        email: 'Correo electrónico',
+        phone: 'Teléfono',
+        message: 'Solicitudes especiales',
+        submit: 'Enviar Solicitud',
+        required: 'Campo obligatorio',
       },
-      success: 'Zahtjev je uspješno poslan! Uskoro ćemo te kontaktirati.',
+      success: '¡Solicitud enviada con éxito! Te contactaremos pronto.',
       pricing: {
-        title: 'Cijene',
-        lowSeason: 'Niska sezona',
-        highSeason: 'Visoka sezona',
-        finalCleaning: 'Puliža finale',
-        touristTax: 'Turističko pristojba',
-        pricePerNight: '/noć',
-        priceCalculation: 'Izračun Cijene',
-        total: 'Ukupno',
-        message: 'Zahtjev za Rezervaciju',
+        title: 'Precios',
+        lowSeason: 'Temporada baja',
+        highSeason: 'Temporada alta',
+        finalCleaning: 'Limpieza final',
+        touristTax: 'Impuesto turístico',
+        pricePerNight: '/noche',
+        priceCalculation: 'Cálculo de Precio',
+        total: 'Total',
+        message: 'Solicitud de Reserva',
         whatsappRedirect:
-          'Odaberite željenu aplikaciju za slanje upita — WhatsApp ili Viber. Odgovorit ćemo vam u najkraćem roku s potvrdom dostupnosti i informacijama o rezervaciji.',
-        submitButton: 'Pošalji putem WhatsApp-a',
+          'Elige tu aplicación preferida para enviar tu consulta — WhatsApp o Viber. Responderemos lo antes posible con la confirmación de disponibilidad e información de reserva.',
+        submitButton: 'Enviar por WhatsApp',
       },
     },
     en: {
@@ -424,61 +423,61 @@ export const content = {
         submitButton: 'Send via WhatsApp',
       },
     },
-    it: {
-      title: 'Prenota il soggiorno',
+    fr: {
+      title: 'Réservez votre Séjour',
       subtitle:
-        'Compila il modulo per richiedere una prenotazione. Ti contatteremo entro 24 ore.',
+        'Remplissez le formulaire pour demander une réservation. Nous vous contacterons dans les 24 heures.',
       form: {
-        checkin: 'Data di arrivo',
-        checkout: 'Data di partenza',
-        guests: 'Numero di ospiti',
-        firstName: 'Nome',
-        lastName: 'Cognome',
-        name: 'Nome e cognome',
+        checkin: 'Date d\'arrivée',
+        checkout: 'Date de départ',
+        guests: 'Nombre d\'hôtes',
+        firstName: 'Prénom',
+        lastName: 'Nom',
+        name: 'Nom complet',
         email: 'Email',
-        phone: 'Telefono',
-        message: 'Richieste speciali',
-        submit: 'Invia richiesta',
-        required: 'Campo obbligatorio',
+        phone: 'Téléphone',
+        message: 'Demandes spéciales',
+        submit: 'Envoyer la demande',
+        required: 'Champ obligatoire',
       },
-      success: 'Richiesta inviata con successo! Ti contatteremo presto.',
+      success: 'Demande envoyée avec succès ! Nous vous contacterons bientôt.',
       pricing: {
-        title: 'Prezzi',
-        lowSeason: 'Bassa stagione',
-        highSeason: 'Alta stagione',
-        finalCleaning: 'Pulizia finale',
-        touristTax: 'Tassa turistica',
-        pricePerNight: '/notte',
-        priceCalculation: 'Calcolo del prezzo',
-        total: 'Totale',
-        message: 'Richiesta di prenotazione',
+        title: 'Tarifs',
+        lowSeason: 'Basse saison',
+        highSeason: 'Haute saison',
+        finalCleaning: 'Nettoyage final',
+        touristTax: 'Taxe touristique',
+        pricePerNight: '/nuit',
+        priceCalculation: 'Calcul du prix',
+        total: 'Total',
+        message: 'Demande de réservation',
         whatsappRedirect:
-          'Scegli la tua app preferita per inviare la richiesta — WhatsApp o Viber. Risponderemo al più presto con la conferma di disponibilità e le informazioni sulla prenotazione.',
-        submitButton: 'Invia tramite WhatsApp',
+          'Choisissez votre application préférée pour envoyer votre demande — WhatsApp ou Viber. Nous répondrons dès que possible avec la confirmation de disponibilité et les informations de réservation.',
+        submitButton: 'Envoyer via WhatsApp',
       },
     },
   },
   reviews: {
-    hr: {
-      title: 'Gostske Recenzije',
+    es: {
+      title: 'Reseñas de Huéspedes',
       items: [
         {
           name: 'Marco & Elena',
           rating: 5,
-          text: 'Divnog apartmana sa spektakularnim pogledima na more! Sve savršeno, od čistoće do usluga. Vrlo ljubazni vlasnici. Sigurno ćemo se vratiti!',
-          date: 'Rujan 2024',
+          text: '¡Una experiencia increíble en Viñales! Las vistas a los mogotes desde la terraza son espectaculares. Anfitriones muy amables. ¡Volveremos seguro!',
+          date: 'Septiembre 2024',
         },
         {
           name: 'Familie Schmidt',
           rating: 5,
-          text: 'Savršeno za obiteljski odmor. Djeci se sviđala plaža blizu, a nama odraslima se sviđala mir i prirodna ljepota otoka. Toplom preporučujem!',
-          date: 'Kolovoz 2024',
+          text: 'Perfecto para desconectar de la ciudad. La naturaleza, la comida cubana casera y los atardeceres son inolvidables. ¡Muy recomendable!',
+          date: 'Agosto 2024',
         },
         {
           name: 'Sarah & James',
           rating: 5,
-          text: 'Autentično jadransko iskustva! Apartman je premašio naša očekivanja. Lijepa lokacija, odličnih pogodnosti i divan domaćin.',
-          date: 'Srpanj 2024',
+          text: '¡Una auténtica experiencia cubana! El hostal superó nuestras expectativas. Hermosa ubicación, excelentes comodidades y anfitriones maravillosos.',
+          date: 'Julio 2024',
         },
       ],
     },
@@ -488,66 +487,134 @@ export const content = {
         {
           name: 'Marco & Elena',
           rating: 5,
-          text: 'Wonderful apartment with spectacular sea views! Everything perfect, from cleanliness to services. Very helpful owners. We will definitely return!',
+          text: 'An incredible experience in Viñales! The views of the mogotes from the terrace are spectacular. Very kind hosts. We will definitely return!',
           date: 'September 2024',
         },
         {
           name: 'Familie Schmidt',
           rating: 5,
-          text: 'Perfect for a family vacation. The kids loved the nearby beach and we adults enjoyed the tranquility and natural beauty of the island. Highly recommended!',
+          text: 'Perfect to disconnect from the city. The nature, homemade Cuban food and sunsets are unforgettable. Highly recommended!',
           date: 'August 2024',
         },
         {
           name: 'Sarah & James',
           rating: 5,
-          text: 'An authentic Adriatic experience! The apartment exceeded our expectations. Beautiful location, excellent amenities, and wonderful hosts.',
+          text: 'An authentic Cuban experience! The hostal exceeded our expectations. Beautiful location, excellent amenities, and wonderful hosts.',
           date: 'July 2024',
         },
       ],
     },
-    it: {
-      title: 'Recensioni degli ospiti',
+    fr: {
+      title: 'Avis des Hôtes',
       items: [
         {
           name: 'Marco & Elena',
           rating: 5,
-          text: 'Appartamento meraviglioso con vista mare spettacolare! Tutto perfetto, dalla pulizia ai servizi. Proprietari gentilissimi. Torneremo sicuramente!',
-          date: 'Settembre 2024',
+          text: 'Une expérience incroyable à Viñales ! Les vues sur les mogotes depuis la terrasse sont spectaculaires. Hôtes très accueillants. Nous reviendrons sans hésiter !',
+          date: 'Septembre 2024',
         },
         {
-          name: 'Famiglia Schmidt',
+          name: 'Famille Schmidt',
           rating: 5,
-          text: "Perfetto per una vacanza in famiglia. I bambini hanno adorato la spiaggia vicina e noi adulti la tranquillità e la bellezza naturale dell'isola. Consigliatissimo!",
-          date: 'Agosto 2024',
+          text: 'Parfait pour se déconnecter de la ville. La nature, la cuisine cubaine maison et les couchers de soleil sont inoubliables. Très recommandé !',
+          date: 'Août 2024',
         },
         {
           name: 'Sarah & James',
           rating: 5,
-          text: "Un'autentica esperienza adriatica! L'appartamento ha superato le nostre aspettative. Posizione splendida, servizi eccellenti e un host fantastico.",
-          date: 'Luglio 2024',
+          text: 'Une authentique expérience cubaine ! L\'hostal a dépassé nos attentes. Magnifique emplacement, excellentes commodités et hôtes merveilleux.',
+          date: 'Juillet 2024',
         },
       ],
     },
   },
+  location: {
+    es: {
+      subtitle:
+        'Villa Benito se encuentra en el corazón del Valle de Viñales, rodeada de mogotes y naturaleza. Ideal para explorar el campo cubano.',
+      addressLabel: 'Dirección',
+      openInMaps: 'Abrir en Mapas',
+      howToGetHere: '¿Cómo llegar?',
+      byCar: {
+        label: 'En coche o taxi colectivo:',
+        text: 'Desde La Habana, toma la autopista hacia Pinar del Río (unas 2 horas). Desde Pinar del Río, sigue la carretera hacia Viñales (unos 30 minutos). Villa Benito está señalizada a la entrada del pueblo.',
+      },
+      byBus: {
+        label: 'En autobús (Viazul):',
+        text: 'Viazul opera autobuses directos desde La Habana a Viñales (salidas diarias, unas 3.5 horas). La parada de Viazul está en el centro de Viñales, a pocos minutos de Villa Benito.',
+      },
+      byTransfer: {
+        label: 'Transfer privado:',
+        text: 'Podemos organizar un transfer privado desde La Habana, el aeropuerto José Martí, o cualquier otro destino en Cuba. Contáctanos por WhatsApp para coordinar.',
+      },
+      tip: 'Consejo:',
+      tipText:
+        'Recomendamos reservar el transporte con anticipación, especialmente en temporada alta (diciembre–marzo). Si necesitas ayuda para organizar tu llegada, no dudes en contactarnos.',
+    },
+    en: {
+      subtitle:
+        'Villa Benito is located in the heart of the Viñales Valley, surrounded by mogotes and nature. Perfect for exploring the Cuban countryside.',
+      addressLabel: 'Address',
+      openInMaps: 'Open in Maps',
+      howToGetHere: 'How to Get Here?',
+      byCar: {
+        label: 'By car or shared taxi:',
+        text: 'From Havana, take the highway towards Pinar del Río (about 2 hours). From Pinar del Río, follow the road to Viñales (about 30 minutes). Villa Benito is signposted at the entrance of the village.',
+      },
+      byBus: {
+        label: 'By bus (Viazul):',
+        text: 'Viazul operates direct buses from Havana to Viñales (daily departures, about 3.5 hours). The Viazul stop is in the center of Viñales, just a few minutes from Villa Benito.',
+      },
+      byTransfer: {
+        label: 'Private transfer:',
+        text: 'We can arrange a private transfer from Havana, José Martí airport, or any other destination in Cuba. Contact us via WhatsApp to coordinate.',
+      },
+      tip: 'Tip:',
+      tipText:
+        'We recommend booking transport in advance, especially during high season (December–March). If you need help organizing your arrival, don\'t hesitate to contact us.',
+    },
+    fr: {
+      subtitle:
+        'Villa Benito est situé au cœur de la Vallée de Viñales, entouré de mogotes et de nature. Idéal pour explorer la campagne cubaine.',
+      addressLabel: 'Adresse',
+      openInMaps: 'Ouvrir dans Maps',
+      howToGetHere: 'Comment arriver ?',
+      byCar: {
+        label: 'En voiture ou taxi collectif :',
+        text: 'Depuis La Havane, prenez l\'autoroute vers Pinar del Río (environ 2 heures). Depuis Pinar del Río, suivez la route vers Viñales (environ 30 minutes). Villa Benito est indiqué à l\'entrée du village.',
+      },
+      byBus: {
+        label: 'En bus (Viazul) :',
+        text: 'Viazul propose des bus directs de La Havane à Viñales (départs quotidiens, environ 3h30). L\'arrêt Viazul se trouve au centre de Viñales, à quelques minutes de Villa Benito.',
+      },
+      byTransfer: {
+        label: 'Transfert privé :',
+        text: 'Nous pouvons organiser un transfert privé depuis La Havane, l\'aéroport José Martí ou toute autre destination à Cuba. Contactez-nous via WhatsApp pour coordonner.',
+      },
+      tip: 'Conseil :',
+      tipText:
+        'Nous recommandons de réserver le transport à l\'avance, surtout en haute saison (décembre–mars). Si vous avez besoin d\'aide pour organiser votre arrivée, n\'hésitez pas à nous contacter.',
+    },
+  },
   contact: {
-    hr: {
-      title: 'Kontaktiraj Nas',
-      subtitle: 'Tu smo da ti pomognemo da planirate savršeni odmor',
+    es: {
+      title: 'Contáctanos',
+      subtitle: 'Estamos aquí para ayudarte a planificar tus vacaciones perfectas',
       form: {
-        name: 'Ime',
-        email: 'E-mail',
-        subject: 'Naziv',
-        message: 'Poruka',
-        submit: 'Pošalji Poruku',
+        name: 'Nombre',
+        email: 'Correo electrónico',
+        subject: 'Asunto',
+        message: 'Mensaje',
+        submit: 'Enviar Mensaje',
       },
       info: {
-        title: 'Informacije za Kontakt',
-        phone: 'Telefon',
-        email: 'E-mail',
-        address: 'Adresa',
-        responseTimes: 'Vremena Odgovora',
+        title: 'Información de Contacto',
+        phone: 'Teléfono',
+        email: 'Correo electrónico',
+        address: 'Dirección',
+        responseTimes: 'Tiempos de Respuesta',
         responseTimesText:
-          'Odgovaramo na sve upite u roku od 24 sata. Za hitne slučajeve, molimo vas da nas pozovete izravno.',
+          'Respondemos a todas las consultas en un plazo de 24 horas. Para asuntos urgentes, llámenos directamente.',
       },
     },
     en: {
@@ -570,75 +637,75 @@ export const content = {
           'We respond to all inquiries within 24 hours. For urgent matters, please call us directly.',
       },
     },
-    it: {
-      title: 'Contattaci',
-      subtitle: 'Siamo qui per aiutarti a pianificare la vacanza perfetta',
+    fr: {
+      title: 'Contactez-nous',
+      subtitle: 'Nous sommes là pour vous aider à planifier vos vacances parfaites',
       form: {
-        name: 'Nome',
+        name: 'Nom',
         email: 'Email',
-        subject: 'Oggetto',
-        message: 'Messaggio',
-        submit: 'Invia messaggio',
+        subject: 'Objet',
+        message: 'Message',
+        submit: 'Envoyer le message',
       },
       info: {
-        title: 'Informazioni di contatto',
-        phone: 'Telefono',
+        title: 'Informations de Contact',
+        phone: 'Téléphone',
         email: 'Email',
-        address: 'Indirizzo',
-        responseTimes: 'Tempi di risposta',
+        address: 'Adresse',
+        responseTimes: 'Délais de Réponse',
         responseTimesText:
-          'Rispondiamo a tutte le richieste entro 24 ore. Per urgenze, chiamaci direttamente.',
+          'Nous répondons à toutes les demandes dans les 24 heures. Pour les urgences, appelez-nous directement.',
       },
     },
   },
   footer: {
-    hr: {
+    es: {
       description:
-        'Apartmani Markota nude relaksirajuće iskustvo na otoku Korčuli, u mjestu Prižba. Prvi red do mora, s prekrasnim pogledom. Blizu plaže, dućana i svih ostalih sadržaja.',
-      quickLinks: 'Brze Veze',
-      followUs: 'Kontakt informacije',
-      airbnbListing: 'Naš Airbnb listing',
-      tagline: 'Napravljeno s ❤️ na Korčuli',
-      copyright: '© 2026 Apartmani Markota. Sva prava su zadržana.',
-      privacy: 'Politika Privatnosti',
-      cookies: 'Politika Kolačića',
+        'Villa Benito ofrece una experiencia auténtica en el campo cubano, en Viñales. Rodeado de montañas y mogotes, con impresionantes vistas y atardeceres. Cerca del centro, naturaleza y todas las actividades.',
+      quickLinks: 'Enlaces Rápidos',
+      followUs: 'Información de Contacto',
+      airbnbListing: 'Nuestro anuncio en Airbnb',
+      tagline: 'Hecho con ❤️ en Viñales',
+      copyright: '© 2026 Villa Benito. Todos los derechos reservados.',
+      privacy: 'Política de Privacidad',
+      cookies: 'Política de Cookies',
       privacyText:
-        'Apartmani Markota poštuju vašu privatnost. Ne prikupljamo, ne pohranjujemo niti obrađujemo nikakve osobne podatke na ovoj web stranici. Sve informacije koje unesete u obrazac za rezervaciju šaljete izravno putem WhatsAppa. Mi ne pohranjujemo niti pristupamo tim informacijama na našim serverima. Ne koristimo kolačiće, analitiku niti bilo kakve tehnologije praćenja. Ako imate pitanja o privatnosti, kontaktirajte nas na sara.separovic@hotmail.com.',
+        'Villa Benito respeta su privacidad. No recopilamos, almacenamos ni procesamos ningún dato personal en este sitio web. Toda la información que ingrese en el formulario de reserva se envía directamente por WhatsApp. No almacenamos ni accedemos a esa información en nuestros servidores. No utilizamos cookies, análisis ni tecnologías de seguimiento.',
     },
     en: {
       description:
-        'Markota Apartments offer a relaxing experience on the island of Korčula, in the village of Prižba. First row by the sea with a stunning view. Close to the beach, shops, and all other amenities.',
+        'Villa Benito offers an authentic countryside experience in Viñales, Cuba. Surrounded by mountains and mogotes, with stunning views and sunsets. Close to downtown, nature and all activities.',
       quickLinks: 'Quick Links',
       followUs: 'Contact Information',
       airbnbListing: 'Our Airbnb listing',
-      tagline: 'Made with ❤️ on Korčula',
-      copyright: '© 2026 Markota Apartments. All rights reserved.',
+      tagline: 'Made with ❤️ in Viñales',
+      copyright: '© 2026 Villa Benito. All rights reserved.',
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
       privacyText:
-        'Markota Apartments respect your privacy. We do not collect, store, or process any personal data on this website. All information you enter in the booking form is sent directly via WhatsApp. We do not store or access that information on our servers. We do not use cookies, analytics, or any tracking technologies. If you have any privacy questions, contact us at sara.separovic@hotmail.com.',
+        'Villa Benito respects your privacy. We do not collect, store, or process any personal data on this website. All information you enter in the booking form is sent directly via WhatsApp. We do not store or access that information on our servers. We do not use cookies, analytics, or any tracking technologies.',
     },
-    it: {
+    fr: {
       description:
-        "Gli Appartamenti Markota offrono un'esperienza autentica nella splendida Korčula, nel villaggio di Prižba. In prima fila sul mare, con una vista meravigliosa. Vicini alla spiaggia, ai negozi e a tutti gli altri servizi.",
-      quickLinks: 'Link rapidi',
-      followUs: 'Informazioni di contatto',
-      airbnbListing: 'Il nostro annuncio Airbnb',
-      tagline: 'Fatto con ❤️ su Korčula',
-      copyright: '© 2026 Appartamenti Markota. Tutti i diritti riservati.',
-      privacy: 'Informativa sulla privacy',
-      cookies: 'Informativa sui cookie',
+        'Villa Benito offre une expérience authentique à la campagne cubaine, à Viñales. Entouré de montagnes et de mogotes, avec des vues imprenables et des couchers de soleil. Proche du centre, de la nature et de toutes les activités.',
+      quickLinks: 'Liens Rapides',
+      followUs: 'Informations de Contact',
+      airbnbListing: 'Notre annonce Airbnb',
+      tagline: 'Fait avec ❤️ à Viñales',
+      copyright: '© 2026 Villa Benito. Tous droits réservés.',
+      privacy: 'Politique de Confidentialité',
+      cookies: 'Politique de Cookies',
       privacyText:
-        'Gli Appartamenti Markota rispettano la tua privacy. Non raccogliamo, memorizziamo né trattiamo alcun dato personale su questo sito. Tutte le informazioni inserite nel modulo di prenotazione vengono inviate direttamente tramite WhatsApp. Non archiviamo né accediamo a tali informazioni sui nostri server. Non utilizziamo cookie, analisi né tecnologie di tracciamento. Per qualsiasi domanda sulla privacy, contattaci a sara.separovic@hotmail.com.',
+        'Villa Benito respecte votre vie privée. Nous ne collectons, stockons ni traitons aucune donnée personnelle sur ce site. Toutes les informations saisies dans le formulaire de réservation sont envoyées directement via WhatsApp. Nous ne stockons ni accédons à ces informations sur nos serveurs. Nous n\'utilisons ni cookies, ni analyses, ni technologies de suivi.',
     },
   },
   cookieBanner: {
-    hr: {
+    es: {
       message:
-        'Ova stranica koristi kolačiće da poboljša vašu iskustvo s pregledavanjem i za statističke svrhe.',
-      accept: 'Prihvati',
-      decline: 'Odbij',
-      moreInfo: 'Više informacija',
+        'Este sitio utiliza cookies para mejorar su experiencia de navegación y con fines estadísticos.',
+      accept: 'Aceptar',
+      decline: 'Rechazar',
+      moreInfo: 'Más Información',
     },
     en: {
       message:
@@ -647,12 +714,12 @@ export const content = {
       decline: 'Decline',
       moreInfo: 'More Information',
     },
-    it: {
+    fr: {
       message:
-        'Questo sito utilizza i cookie per migliorare la tua esperienza di navigazione e per fini statistici.',
-      accept: 'Accetta',
-      decline: 'Rifiuta',
-      moreInfo: 'Maggiori informazioni',
+        'Ce site utilise des cookies pour améliorer votre expérience de navigation et à des fins statistiques.',
+      accept: 'Accepter',
+      decline: 'Refuser',
+      moreInfo: 'Plus d\'Informations',
     },
   },
 };
@@ -660,25 +727,25 @@ export const content = {
 // Top-level SEO pages for use by the runtime SEO component and by sections
 export const seoPages = {
   home: {
-    hr: {
-      title: `${siteConfig.siteName.hr} - Prižba, Korčula`,
+    es: {
+      title: `${siteConfig.siteName.es} - Viñales, Cuba`,
       description:
-        'Apartmani Markota na Korčuli - moderno opremljeni apartmani prvi red do mora u Prižbi. Idealno za odmor, par ili obitelj. Rezervirajte direktno za najbolje cijene.',
+        'Hostal Benito en Viñales - alojamiento auténtico en el campo cubano con vistas a los mogotes. Ideal para parejas, viajeros y amantes de la naturaleza. Reserva directamente para las mejores tarifas.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'LodgingBusiness',
-        name: siteConfig.siteName.hr,
+        name: siteConfig.siteName.es,
         description:
-          'Apartmani Markota - moderno opremljeni apartmani sa pogledom na more, prvi red do mora. Idealno za parove i obitelji na Korčuli.',
+          'Hostal Benito - alojamiento auténtico con vistas a los mogotes en Viñales, Cuba. Ideal para parejas y viajeros que buscan una experiencia cubana auténtica.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/`,
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
           streetAddress: siteConfig.contact.address,
-          addressCountry: 'HR',
+          addressCountry: 'CU',
         },
         geo: {
           '@type': 'GeoCoordinates',
@@ -688,9 +755,9 @@ export const seoPages = {
       },
     },
     en: {
-      title: `${siteConfig.siteName.en} - Prižba, Korčula Island`,
+      title: `${siteConfig.siteName.en} - Viñales, Cuba`,
       description:
-        'Markota Apartments on Korčula - modern seafront apartments in Prižba. Perfect for couples and families. Book direct for the best rates.',
+        'Hostal Benito in Viñales - authentic countryside accommodation with mogote views. Perfect for couples, travelers and nature lovers. Book direct for the best rates.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/en/`,
       jsonLd: {
@@ -698,14 +765,14 @@ export const seoPages = {
         '@type': 'LodgingBusiness',
         name: siteConfig.siteName.en,
         description:
-          'Markota Apartments - modern seafront apartments with sea views in Prižba, Korčula. Perfect for couples and families seeking a peaceful vacation.',
+          'Hostal Benito - authentic accommodation with mogote views in Viñales, Cuba. Perfect for couples and travelers seeking an authentic Cuban experience.',
         image: [siteConfig.seo.defaultImage],
         url: `${siteConfig.seo.siteUrl}/en/`,
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
           streetAddress: siteConfig.contact.address,
-          addressCountry: 'HR',
+          addressCountry: 'CU',
         },
         geo: {
           '@type': 'GeoCoordinates',
@@ -714,25 +781,25 @@ export const seoPages = {
         },
       },
     },
-    it: {
-      title: `${siteConfig.siteName.it} - Prižba, Isola di Korčula`,
+    fr: {
+      title: `${siteConfig.siteName.fr} - Viñales, Cuba`,
       description:
-        'Appartamenti Markota a Korčula - moderni appartamenti fronte mare a Prižba. Ideale per coppie e famiglie. Prenota direttamente per le migliori tariffe.',
+        'Hostal Benito à Viñales - hébergement authentique à la campagne cubaine avec vue sur les mogotes. Idéal pour les couples, voyageurs et amoureux de la nature. Réservez directement pour les meilleurs tarifs.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/it/`,
+      canonical: `${siteConfig.seo.siteUrl}/fr/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'LodgingBusiness',
-        name: siteConfig.siteName.it,
+        name: siteConfig.siteName.fr,
         description:
-          'Appartamenti Markota - moderni appartamenti fronte mare con vista sul mare a Prižba, Korčula. Perfetti per coppie e famiglie in cerca di una vacanza tranquilla.',
+          'Hostal Benito - hébergement authentique avec vue sur les mogotes à Viñales, Cuba. Parfait pour les couples et voyageurs en quête d\'une expérience cubaine authentique.',
         image: [siteConfig.seo.defaultImage],
-        url: `${siteConfig.seo.siteUrl}/it/`,
+        url: `${siteConfig.seo.siteUrl}/fr/`,
         telephone: siteConfig.contact.phone,
         address: {
           '@type': 'PostalAddress',
           streetAddress: siteConfig.contact.address,
-          addressCountry: 'HR',
+          addressCountry: 'CU',
         },
         geo: {
           '@type': 'GeoCoordinates',
@@ -744,66 +811,66 @@ export const seoPages = {
   },
 
   gallery: {
-    hr: {
-      title: `${siteConfig.siteName.hr} — Galerija fotografija`,
+    es: {
+      title: `${siteConfig.siteName.es} — Galería de Fotos`,
       description:
-        'Pogledajte fotogaleriju Apartmana Korčula i doživite ambijent prije dolaska.',
+        'Descubre nuestra casa, los paisajes, atardeceres y experiencias cubanas auténticas que te esperan en Viñales.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/hr/gallery/`,
+      canonical: `${siteConfig.seo.siteUrl}/es/gallery/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
-        name: `${siteConfig.siteName.hr} - Galerija`,
-        description: 'Fotografije apartmana i okoline.',
+        name: `${siteConfig.siteName.es} - Galería`,
+        description: 'Fotos del hostal y los alrededores.',
       },
     },
     en: {
       title: `${siteConfig.siteName.en} - Photo Gallery`,
       description:
-        'Browse the photo gallery of Korčula Apartment to preview the space.',
+        'Discover our home, the landscapes, sunsets and authentic Cuban experiences waiting for you in Viñales.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/gallery/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
         name: `${siteConfig.siteName.en} - Gallery`,
-        description: 'Photos of the apartment and surroundings.',
+        description: 'Photos of the hostal and surroundings.',
       },
     },
-    it: {
-      title: `${siteConfig.siteName.it} - Galleria fotografica`,
+    fr: {
+      title: `${siteConfig.siteName.fr} - Galerie Photo`,
       description:
-        "Sfoglia la galleria fotografica per vedere gli appartamenti e l'ambiente.",
+        'Découvrez notre maison, les paysages, les couchers de soleil et les expériences cubaines authentiques qui vous attendent à Viñales.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/it/gallery/`,
+      canonical: `${siteConfig.seo.siteUrl}/fr/gallery/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'ImageGallery',
-        name: `${siteConfig.siteName.it} - Galleria`,
-        description: 'Foto degli appartamenti e dei dintorni.',
+        name: `${siteConfig.siteName.fr} - Galerie`,
+        description: 'Photos de l\'hostal et des environs.',
       },
     },
   },
 
   gallery2: {
-    hr: {
-      title: `${siteConfig.siteName.hr} - Apartman 2 Galerija`,
-      description: 'Pogledajte fotogaleriju Apartmana 2 i doživite ambijent.',
+    es: {
+      title: `${siteConfig.siteName.es} - Galería de Actividades`,
+      description: 'Descubre las actividades y experiencias que Viñales tiene para ofrecer.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/hr/gallery2/`,
+      canonical: `${siteConfig.seo.siteUrl}/es/gallery2/`,
     },
     en: {
-      title: `${siteConfig.siteName.en} - Apartment 2 Gallery`,
-      description: 'Browse the gallery of Apartment 2 to preview the space.',
+      title: `${siteConfig.siteName.en} - Activities Gallery`,
+      description: 'Discover the activities and experiences Viñales has to offer.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/gallery2/`,
     },
-    it: {
-      title: `${siteConfig.siteName.it} - Galleria Appartamento 2`,
+    fr: {
+      title: `${siteConfig.siteName.fr} - Galerie des Activités`,
       description:
-        "Sfoglia la galleria dell'Appartamento 2 per vedere lo spazio.",
+        'Découvrez les activités et expériences que Viñales a à offrir.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/it/gallery2/`,
+      canonical: `${siteConfig.seo.siteUrl}/fr/gallery2/`,
     },
   },
 
@@ -887,22 +954,22 @@ export const seoPages = {
   },
 
   booking: {
-    hr: {
-      title: `${siteConfig.siteName.hr} - Rezervacije`,
+    es: {
+      title: `${siteConfig.siteName.es} - Reservas`,
       description:
-        'Rezervirajte svoj boravak u Apartmanu Markota direktno putem WhatsApp-a.',
+        'Reserva tu estancia en Hostal Benito directamente por WhatsApp.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/hr/booking/`,
+      canonical: `${siteConfig.seo.siteUrl}/es/booking/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${siteConfig.siteName.hr} - Rezervacije`,
-        description: 'Stranica za rezervacije i kontakt putem WhatsApp-a.',
+        name: `${siteConfig.siteName.es} - Reservas`,
+        description: 'Página de reservas y contacto por WhatsApp.',
       },
     },
     en: {
       title: `${siteConfig.siteName.en} - Bookings`,
-      description: 'Request your stay at Markota Apartment via WhatsApp.',
+      description: 'Request your stay at Hostal Benito via WhatsApp.',
       image: siteConfig.seo.defaultImage,
       canonical: `${siteConfig.seo.siteUrl}/booking/`,
       jsonLd: {
@@ -912,21 +979,42 @@ export const seoPages = {
         description: 'Booking request page to contact via WhatsApp.',
       },
     },
-    it: {
-      title: `${siteConfig.siteName.it} - Prenotazioni`,
+    fr: {
+      title: `${siteConfig.siteName.fr} - Réservations`,
       description:
-        'Richiedi il tuo soggiorno negli Appartamenti Markota via WhatsApp.',
+        'Demandez votre séjour à Hostal Benito via WhatsApp.',
       image: siteConfig.seo.defaultImage,
-      canonical: `${siteConfig.seo.siteUrl}/it/booking/`,
+      canonical: `${siteConfig.seo.siteUrl}/fr/booking/`,
       jsonLd: {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: `${siteConfig.siteName.it} - Prenotazioni`,
-        description: 'Pagina di prenotazione e contatto via WhatsApp.',
+        name: `${siteConfig.siteName.fr} - Réservations`,
+        description: 'Page de réservation et contact via WhatsApp.',
       },
     },
   },
 };
+
+// Add cz fallback (copies en content for sections missing cz)
+for (const section of Object.keys(content) as Array<keyof typeof content>) {
+  const s = content[section] as Record<string, unknown>;
+  if (s?.en && !s?.cz) {
+    s.cz = s.en;
+  }
+}
+
+for (const section of Object.keys(seoPages) as Array<keyof typeof seoPages>) {
+  const s = seoPages[section] as Record<string, unknown>;
+  if (s?.en && !s?.cz) {
+    s.cz = s.en;
+  }
+}
+
+// Type-safe language access helper
+export type Language = 'es' | 'en' | 'fr' | 'cz';
+export function t<T>(section: Record<string, T>, lang: Language): T {
+  return section[lang] ?? section['en'];
+}
 
 // Backwards-compatibility: attach seoPages to the main `content` object
 (content as any).seoPages = seoPages;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import { siteConfig, content } from '../data/content';
+import { siteConfig, content, t } from '../data/content';
 
 interface ContactProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {
@@ -15,7 +15,7 @@ const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const contactContent = content.contact[currentLanguage];
+  const contactContent = t(content.contact, currentLanguage);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -130,13 +130,13 @@ ${data.message}
                   <Send size={24} className="text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {currentLanguage === 'hr'
-                    ? 'Poruka uspješno poslana!'
+                  {currentLanguage === 'es'
+                    ? '¡Mensaje enviado con éxito!'
                     : 'Message sent successfully!'}
                 </h3>
                 <p className="text-gray-600">
-                  {currentLanguage === 'hr'
-                    ? 'Uskoro ćemo vas kontaktirati.'
+                  {currentLanguage === 'es'
+                    ? 'Nos pondremos en contacto pronto.'
                     : 'We will contact you soon.'}
                 </p>
               </div>

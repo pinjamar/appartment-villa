@@ -1,9 +1,9 @@
 import React from 'react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface AboutProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const About: React.FC<AboutProps> = ({ currentLanguage }) => {

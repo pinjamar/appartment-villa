@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Lucide from 'lucide-react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 
 interface ServicesProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 // dynamic lookup will be used at render time; keep fallback if icon not found

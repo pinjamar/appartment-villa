@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface HeaderProps {
-  currentLanguage: 'hr' | 'en' | 'it';
-  setCurrentLanguage: (lang: 'hr' | 'en' | 'it') => void;
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
+  setCurrentLanguage: (lang: 'es' | 'en' | 'fr' | 'cz') => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const nav = content.navigation[currentLanguage];
+  const nav = t(content.navigation, currentLanguage);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -30,11 +30,11 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
   const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
   const languageLinks = [
     {
-      code: 'hr',
-      label: 'HR',
+      code: 'es',
+      label: 'ES',
       href: baseUrl,
-      flag: `${baseUrl}flags/hr.svg`,
-      ariaLabel: 'Prebaci na hrvatski',
+      flag: `${baseUrl}flags/es.svg`,
+      ariaLabel: 'Cambiar a español',
     },
     {
       code: 'en',
@@ -44,11 +44,18 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
       ariaLabel: 'Switch to English',
     },
     {
-      code: 'it',
-      label: 'IT',
-      href: `${baseUrl}it/`,
-      flag: `${baseUrl}flags/it.svg`,
-      ariaLabel: "Passa all'italiano",
+      code: 'fr',
+      label: 'FR',
+      href: `${baseUrl}fr/`,
+      flag: `${baseUrl}flags/fr.svg`,
+      ariaLabel: 'Passer au français',
+    },
+    {
+      code: 'cz',
+      label: 'CZ',
+      href: `${baseUrl}cz/`,
+      flag: `${baseUrl}flags/cz.svg`,
+      ariaLabel: 'Přepnout na češtinu',
     },
   ];
 

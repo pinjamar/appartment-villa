@@ -11,21 +11,21 @@ import Location from '../../components/Location';
 import Booking from '../../components/Booking';
 import Footer from '../../components/Footer';
 
-const homeIt = seoPages.home.it;
+const homeFr = seoPages.home.fr;
 const rawBase = import.meta.env.BASE_URL || '/';
 const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const asset = (path: string) => `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
 const seoImage = `https://markota-apartments.com${siteConfig.seo.defaultImage}`;
-const reviews = content.reviews.it.items || [];
+const reviews = content.reviews.fr.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
-const canonical = `${siteConfig.seo.siteUrl}/it/`;
+const canonical = `${siteConfig.seo.siteUrl}/fr/`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Apartment',
-  name: siteConfig.siteName.it,
-  description: homeIt.description,
+  name: siteConfig.siteName.fr,
+  description: homeFr.description,
   image: [seoImage],
   url: canonical,
   telephone: siteConfig.contact.phone,
@@ -33,7 +33,7 @@ const jsonLd = {
     '@type': 'PostalAddress',
     streetAddress: siteConfig.contact.address,
     addressLocality: 'Blato',
-    addressCountry: 'HR',
+    addressCountry: 'CU',
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -53,39 +53,40 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="it">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" type="image/png" href={asset('favicon.png')} />
     <link rel="preload" as="image" href={asset('hero.jpeg')} />
     
-    <title>{homeIt.title}</title>
-    <meta name="description" content={homeIt.description} />
+    <title>{homeFr.title}</title>
+    <meta name="description" content={homeFr.description} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content={siteConfig.siteName.it} />
+    <meta name="author" content={siteConfig.siteName.fr} />
     
     <!-- Open Graph -->
-    <meta property="og:site_name" content={siteConfig.siteName.it} />
-    <meta property="og:title" content={homeIt.title} />
-    <meta property="og:description" content={homeIt.description} />
+    <meta property="og:site_name" content={siteConfig.siteName.fr} />
+    <meta property="og:title" content={homeFr.title} />
+    <meta property="og:description" content={homeFr.description} />
     <meta property="og:image" content={seoImage} />
     <meta property="og:image:width" content="3000" />
     <meta property="og:image:height" content="2000" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content="it_IT" />
+    <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={homeIt.title} />
-    <meta name="twitter:description" content={homeIt.description} />
+    <meta name="twitter:title" content={homeFr.title} />
+    <meta name="twitter:description" content={homeFr.description} />
     <meta name="twitter:image" content={seoImage} />
     
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteConfig.seo.siteUrl}/`} />
     <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
-    <link rel="alternate" hreflang="it" href={canonical} />
+    <link rel="alternate" hreflang="fr" href={canonical} />
+    <link rel="alternate" hreflang="cs" href={`${siteConfig.seo.siteUrl}/cz/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -101,18 +102,18 @@ const jsonLd = {
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage="it" setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
+      <Header client:load currentLanguage="fr" setCurrentLanguage={(lang: 'es' | 'en' | 'fr' | 'cz') => {}} />
       <main>
-        <Hero client:visible currentLanguage="it" />
-        <About client:visible currentLanguage="it" />
-        <Gallery client:visible currentLanguage="it" apartmentId={1} />
-        <AboutSecond client:visible currentLanguage="it" />
-        <Gallery client:visible currentLanguage="it" apartmentId={2} />
-        <Services client:visible currentLanguage="it" />
-        <Location client:visible currentLanguage="it" />
-        <Booking client:visible currentLanguage="it" />
+        <Hero client:visible currentLanguage="fr" />
+        <About client:visible currentLanguage="fr" />
+        <Gallery client:visible currentLanguage="fr" apartmentId={1} />
+        <AboutSecond client:visible currentLanguage="fr" />
+        <Gallery client:visible currentLanguage="fr" apartmentId={2} />
+        <Services client:visible currentLanguage="fr" />
+        <Location client:visible currentLanguage="fr" />
+        <Booking client:visible currentLanguage="fr" />
       </main>
-      <Footer client:visible currentLanguage="it" />
+      <Footer client:visible currentLanguage="fr" />
     </div>
   </body>
 </html>

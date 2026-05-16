@@ -1,14 +1,14 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface HeroProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
-  const heroContent = content.hero[currentLanguage];
+  const heroContent = t(content.hero, currentLanguage);
 
   const scrollToBooking = () => {
     document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
@@ -43,11 +43,13 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
             onClick={scrollToBooking}
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500 shadow-lg"
           >
-            {currentLanguage === 'hr'
-              ? 'Rezerviraj Boravak'
-              : currentLanguage === 'it'
-                ? 'Prenota il soggiorno'
-                : 'Book a Stay'}
+            {currentLanguage === 'es'
+              ? 'Reserva Tu Estancia'
+              : currentLanguage === 'fr'
+                ? 'Réservez votre séjour'
+                : currentLanguage === 'cz'
+                  ? 'Rezervujte si pobyt'
+                  : 'Book a Stay'}
           </button>
         </div>
       </div>

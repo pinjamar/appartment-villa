@@ -4,7 +4,7 @@ import { content, seoPages } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface GalleryProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
   apartmentId?: number;
   setPageSeo?: (seo: SeoData) => void;
 }
@@ -135,15 +135,15 @@ const Gallery: React.FC<GalleryProps> = ({
         <div className="text-center mb-12 hidden md:block">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             {apartmentTitle}{' '}
-            {currentLanguage === 'hr'
-              ? 'Galerija'
-              : currentLanguage === 'it'
-                ? 'Galleria'
+            {currentLanguage === 'es'
+              ? 'Galería'
+              : currentLanguage === 'fr'
+                ? 'Galerie'
                 : 'Gallery'}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            {currentLanguage === 'hr'
-              ? `Otkrij elegantne i udobne prostore ${apartmentTitle} kroz ovu fototeku.`
+            {currentLanguage === 'es'
+              ? `Descubre los elegantes y cómodos espacios de ${apartmentTitle} a través de esta galería.`
               : `Discover the elegant and comfortable spaces of ${apartmentTitle} through this photo gallery.`}
           </p>
         </div>
@@ -197,10 +197,10 @@ const Gallery: React.FC<GalleryProps> = ({
             onClick={() => openLightbox(carouselIndex)}
             className="mt-3 w-full bg-gray-900 hover:bg-gray-800 text-white py-2 rounded-lg text-sm transition-colors"
           >
-            {currentLanguage === 'hr'
-              ? 'Prikaži veću sliku'
-              : currentLanguage === 'it'
-                ? 'Visualizza immagine grande'
+            {currentLanguage === 'es'
+              ? 'Ver imagen grande'
+              : currentLanguage === 'fr'
+                ? 'Voir en grand'
                 : 'View larger'}
           </button>
         </div>
@@ -250,15 +250,15 @@ const Gallery: React.FC<GalleryProps> = ({
             className="px-6 py-2.5 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:border-blue-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
           >
             {showAll
-              ? currentLanguage === 'hr'
-                ? 'Prikaži manje'
-                : currentLanguage === 'it'
-                  ? 'Mostra meno'
+              ? currentLanguage === 'es'
+                ? 'Mostrar menos'
+                : currentLanguage === 'fr'
+                  ? 'Afficher moins'
                   : 'Show less'
-              : currentLanguage === 'hr'
-                ? 'Prikaži sve slike'
-                : currentLanguage === 'it'
-                  ? 'Mostra tutte le foto'
+              : currentLanguage === 'es'
+                ? 'Mostrar todas las fotos'
+                : currentLanguage === 'fr'
+                  ? 'Afficher toutes les photos'
                   : 'Show all photos'}
           </button>
         </div>

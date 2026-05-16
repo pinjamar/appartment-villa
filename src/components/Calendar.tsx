@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 
 interface CalendarProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 // Pricing configuration
@@ -46,7 +46,7 @@ const formatPrice = (price: number): string => {
 
 const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const calendarContent = content.calendar[currentLanguage];
+  const calendarContent = t(content.calendar, currentLanguage);
 
   // Sample booked dates (in a real app, this would come from a database)
   const bookedDates = [
@@ -80,57 +80,74 @@ const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
   ];
 
   const monthNames =
-    currentLanguage === 'hr'
+    currentLanguage === 'es'
       ? [
-          'Siječanj',
-          'Veljača',
-          'Ožujak',
-          'Travanj',
-          'Svibanj',
-          'Lipanj',
-          'Srpanj',
-          'Kolovoz',
-          'Rujan',
-          'Listopad',
-          'Studeni',
-          'Prosinac',
+          'Enero',
+          'Febrero',
+          'Marzo',
+          'Abril',
+          'Mayo',
+          'Junio',
+          'Julio',
+          'Agosto',
+          'Septiembre',
+          'Octubre',
+          'Noviembre',
+          'Diciembre',
         ]
-      : currentLanguage === 'it'
+      : currentLanguage === 'fr'
         ? [
-            'Gennaio',
-            'Febbraio',
-            'Marzo',
-            'Aprile',
-            'Maggio',
-            'Giugno',
-            'Luglio',
-            'Agosto',
-            'Settembre',
-            'Ottobre',
+            'Janvier',
+            'Février',
+            'Mars',
+            'Avril',
+            'Mai',
+            'Juin',
+            'Juillet',
+            'Août',
+            'Septembre',
+            'Octobre',
             'Novembre',
-            'Dicembre',
+            'Décembre',
           ]
-        : [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December',
-          ];
+        : currentLanguage === 'cz'
+          ? [
+              'Leden',
+              'Únor',
+              'Březen',
+              'Duben',
+              'Květen',
+              'Červen',
+              'Červenec',
+              'Srpen',
+              'Září',
+              'Říjen',
+              'Listopad',
+              'Prosinec',
+            ]
+          : [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December',
+            ];
 
   const dayNames =
-    currentLanguage === 'hr'
-      ? ['Ned', 'Pon', 'Uto', 'Sri', 'Čet', 'Pet', 'Sub']
-      : currentLanguage === 'it'
-        ? ['Dom', 'Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab']
-        : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    currentLanguage === 'es'
+      ? ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']
+      : currentLanguage === 'fr'
+        ? ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam']
+        : currentLanguage === 'cz'
+          ? ['Ne', 'Po', 'Út', 'St', 'Čt', 'Pá', 'So']
+          : ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   const getDaysInMonth = (date: Date) => {
     const year = date.getFullYear();
@@ -288,14 +305,14 @@ const Calendar: React.FC<CalendarProps> = ({ currentLanguage }) => {
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 bg-blue-50 border border-blue-200 rounded"></div>
                   <span className="text-gray-600">
-                    {currentLanguage === 'hr' ? 'Visoka Sezona' : 'High Season'}{' '}
+                    {currentLanguage === 'es' ? 'Temporada Alta' : 'High Season'}{' '}
                     (€250/noć)
                   </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-4 h-4 bg-green-50 border border-green-200 rounded"></div>
                   <span className="text-gray-600">
-                    {currentLanguage === 'hr' ? 'Niska Sezona' : 'Low Season'}{' '}
+                    {currentLanguage === 'es' ? 'Temporada Baja' : 'Low Season'}{' '}
                     (€180/noć)
                   </span>
                 </div>

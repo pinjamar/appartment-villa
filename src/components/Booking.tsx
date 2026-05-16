@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Users, Send, Euro } from 'lucide-react';
-import { siteConfig, content } from '../data/content';
+import { siteConfig, content, t } from '../data/content';
 
 // Inline pricing config and utilities
 const PRICING = {
@@ -76,19 +76,22 @@ const formatPrice = (amount: number): string =>
 
 const getSeasonLabel = (
   season: 'high' | 'low',
-  language: 'hr' | 'en' | 'it' = 'hr',
+  language: 'es' | 'en' | 'fr' | 'cz' = 'es',
 ): string => {
   if (language === 'en') {
     return season === 'high' ? 'High Season' : 'Low Season';
   }
-  if (language === 'it') {
-    return season === 'high' ? 'Alta stagione' : 'Bassa stagione';
+  if (language === 'fr') {
+    return season === 'high' ? 'Haute saison' : 'Basse saison';
   }
-  return season === 'high' ? 'Visoka Sezona' : 'Niska Sezona';
+  if (language === 'cz') {
+    return season === 'high' ? 'Hlavní sezóna' : 'Mimo sezónu';
+  }
+  return season === 'high' ? 'Temporada Alta' : 'Temporada Baja';
 };
 
 interface BookingProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
   setPageSeo?: (seo: any) => void;
 }
 
@@ -105,7 +108,7 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
   });
   const [priceCalculation, setPriceCalculation] = useState<any>(null);
 
-  const bookingContent = content.booking[currentLanguage];
+  const bookingContent = t(content.booking, currentLanguage);
 
   // Allow Booking section to set contextual SEO when mounted or language changes
   React.useEffect(() => {
@@ -369,11 +372,13 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder={
-                      currentLanguage === 'hr'
-                        ? 'Marko'
-                        : currentLanguage === 'it'
-                          ? 'Marco'
-                          : 'John'
+                      currentLanguage === 'es'
+                        ? 'Carlos'
+                        : currentLanguage === 'fr'
+                          ? 'Pierre'
+                          : currentLanguage === 'cz'
+                            ? 'Jan'
+                            : 'John'
                     }
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -389,11 +394,13 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder={
-                      currentLanguage === 'hr'
-                        ? 'Horvat'
-                        : currentLanguage === 'it'
-                          ? 'Rossi'
-                          : 'Smith'
+                      currentLanguage === 'es'
+                        ? 'García'
+                        : currentLanguage === 'fr'
+                          ? 'Dupont'
+                          : currentLanguage === 'cz'
+                            ? 'Novák'
+                            : 'Smith'
                     }
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -439,11 +446,13 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder={
-                    currentLanguage === 'hr'
-                      ? 'Imate li posebne zahtjeve ili pitanja?'
-                      : currentLanguage === 'it'
-                        ? 'Hai richieste o domande speciali?'
-                        : 'Do you have any special requests or questions?'
+                    currentLanguage === 'es'
+                      ? '¿Tiene alguna solicitud o pregunta especial?'
+                      : currentLanguage === 'fr'
+                        ? 'Avez-vous des demandes ou questions spéciales ?'
+                        : currentLanguage === 'cz'
+                          ? 'Máte nějaké speciální požadavky nebo dotazy?'
+                          : 'Do you have any special requests or questions?'
                   }
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"

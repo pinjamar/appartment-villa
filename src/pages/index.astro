@@ -14,20 +14,20 @@ import Booking from '../components/Booking';
 // import CookieBanner from '../components/CookieBanner';
 import Footer from '../components/Footer';
 
-const currentLanguage = 'hr';
-const homeSeo = seoPages.home.hr;
+const currentLanguage = 'en';
+const homeSeo = seoPages.home.en;
 const rawBase = import.meta.env.BASE_URL || '/';
 const baseUrl = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const asset = (path: string) => `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
-const seoImage = `https://markota-apartments.com${siteConfig.seo.defaultImage}`;
-const reviews = content.reviews.hr.items || [];
+const seoImage = `${siteConfig.seo.siteUrl}${siteConfig.seo.defaultImage}`;
+const reviews = content.reviews.en.items || [];
 const ratingSum = reviews.reduce((s, r) => s + (r.rating || 0), 0);
 const ratingAvg = reviews.length ? +(ratingSum / reviews.length).toFixed(1) : undefined;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LodgingBusiness',
-  name: siteConfig.siteName.hr,
+  name: siteConfig.siteName.en,
   description: homeSeo.description,
   image: [seoImage],
   url: `${siteConfig.seo.siteUrl}/`,
@@ -35,8 +35,8 @@ const jsonLd = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: siteConfig.contact.address,
-    addressLocality: 'Blato',
-    addressCountry: 'HR',
+    addressLocality: 'Viñales',
+    addressCountry: 'CU',
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -58,7 +58,7 @@ const jsonLd = {
 ---
 
 <!doctype html>
-<html lang="hr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -68,17 +68,17 @@ const jsonLd = {
     <title>{homeSeo.title}</title>
     <meta name="description" content={homeSeo.description} />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content={siteConfig.siteName.hr} />
+    <meta name="author" content={siteConfig.siteName.en} />
     
     <!-- Open Graph -->
-    <meta property="og:site_name" content={siteConfig.siteName.hr} />
+    <meta property="og:site_name" content={siteConfig.siteName.en} />
     <meta property="og:title" content={homeSeo.title} />
     <meta property="og:description" content={homeSeo.description} />
     <meta property="og:image" content={seoImage} />
     <meta property="og:image:width" content="3000" />
     <meta property="og:image:height" content="2000" />
     <meta property="og:url" content={homeSeo.canonical} />
-    <meta property="og:locale" content="hr_HR" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     
     <!-- Twitter -->
@@ -88,9 +88,10 @@ const jsonLd = {
     <meta name="twitter:image" content={seoImage} />
     
     <link rel="canonical" href={homeSeo.canonical} />
-    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteConfig.seo.siteUrl}/`} />
     <link rel="alternate" hreflang="en" href={`${siteConfig.seo.siteUrl}/en/`} />
-    <link rel="alternate" hreflang="it" href={`${siteConfig.seo.siteUrl}/it/`} />
+    <link rel="alternate" hreflang="fr" href={`${siteConfig.seo.siteUrl}/fr/`} />
+    <link rel="alternate" hreflang="cs" href={`${siteConfig.seo.siteUrl}/cz/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -106,7 +107,7 @@ const jsonLd = {
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage={currentLanguage} setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
+      <Header client:load currentLanguage={currentLanguage} setCurrentLanguage={(lang: 'es' | 'en' | 'fr' | 'cz') => {}} />
       <main>
         <Hero client:visible currentLanguage={currentLanguage} />
         <About client:visible currentLanguage={currentLanguage} />

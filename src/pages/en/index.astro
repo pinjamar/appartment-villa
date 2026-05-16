@@ -33,7 +33,7 @@ const jsonLd = {
     '@type': 'PostalAddress',
     streetAddress: siteConfig.contact.address,
     addressLocality: 'Blato',
-    addressCountry: 'HR',
+    addressCountry: 'CU',
   },
   geo: {
     '@type': 'GeoCoordinates',
@@ -83,9 +83,10 @@ const jsonLd = {
     <meta name="twitter:image" content={seoImage} />
     
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="hr" href={`${siteConfig.seo.siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteConfig.seo.siteUrl}/`} />
     <link rel="alternate" hreflang="en" href={canonical} />
-    <link rel="alternate" hreflang="it" href={`${siteConfig.seo.siteUrl}/it/`} />
+    <link rel="alternate" hreflang="fr" href={`${siteConfig.seo.siteUrl}/fr/`} />
+    <link rel="alternate" hreflang="cs" href={`${siteConfig.seo.siteUrl}/cz/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteConfig.seo.siteUrl}/`} />
     
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -101,7 +102,7 @@ const jsonLd = {
   </head>
   <body>
     <div class="min-h-screen bg-white">
-      <Header client:load currentLanguage="en" setCurrentLanguage={(lang: 'hr' | 'en' | 'it') => {}} />
+      <Header client:load currentLanguage="en" setCurrentLanguage={(lang: 'es' | 'en' | 'fr' | 'cz') => {}} />
       <main>
         <Hero client:visible currentLanguage="en" />
         <About client:visible currentLanguage="en" />

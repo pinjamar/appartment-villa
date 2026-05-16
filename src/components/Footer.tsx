@@ -4,7 +4,7 @@ import { siteConfig, content } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface FooterProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {

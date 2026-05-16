@@ -1,13 +1,13 @@
 import React from 'react';
-import { content } from '../data/content';
+import { content, t } from '../data/content';
 import { withBaseUrl } from '../utils/assetUrl';
 
 interface AboutSecondProps {
-  currentLanguage: 'hr' | 'en' | 'it';
+  currentLanguage: 'es' | 'en' | 'fr' | 'cz';
 }
 
 const AboutSecond: React.FC<AboutSecondProps> = ({ currentLanguage }) => {
-  const aboutContent = content.aboutSecond[currentLanguage];
+  const aboutContent = t(content.aboutSecond, currentLanguage);
   const renovationNotice = (aboutContent as any)?.renovation?.active
     ? (aboutContent as any)?.renovation?.notice
     : null;
