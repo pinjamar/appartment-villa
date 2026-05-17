@@ -24,7 +24,7 @@ const Contact: React.FC<ContactProps> = ({ currentLanguage }) => {
 
   const handleContactSubmission = (data: typeof formData) => {
     // Send email using mailto
-    const subject = encodeURIComponent(`Apartmani Markota - ${data.subject}`);
+    const subject = encodeURIComponent(`Villa Benito - ${data.subject}`);
     const body = encodeURIComponent(`
 Nome: ${data.name}
 Email: ${data.email}

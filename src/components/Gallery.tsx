@@ -51,7 +51,7 @@ const Gallery: React.FC<GalleryProps> = ({
   const images: Image[] = galleryImages?.[apartmentId === 2 ? '2' : '1'] || [
     {
       src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
-      alt: 'Apartmani Markota Exterior',
+      alt: 'Villa Benito Exterior',
     },
     {
       src: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',

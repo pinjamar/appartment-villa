@@ -31,7 +31,7 @@ const About: React.FC<AboutProps> = ({ currentLanguage }) => {
           <div className="relative hidden md:block">
             <img
               src={withBaseUrl('marko1.jpg')}
-              alt="Apartmani Markota Interior"
+              alt="Villa Benito Interior"
               className="rounded-lg shadow-xl w-full h-96 object-cover"
             />
           </div>

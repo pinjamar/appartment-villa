@@ -1191,7 +1191,7 @@ export const seoPages = {
       },
       {
         src: '/marko13.jpg',
-        alt: 'Apartmani Markota Exterior',
+        alt: 'Villa Benito Exterior',
       },
     ],
     2: [

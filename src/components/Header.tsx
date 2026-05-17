@@ -74,12 +74,12 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
             aria-label="Go to top"
           >
             <img
-              src={withBaseUrl('Markota-crop.jpg')}
+              src={withBaseUrl('Benito-crop.jpeg')}
               alt="Markota Logo"
               className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300"
             />
             <h1 className="text-xl font-bold text-gray-900">
-              Apartmani Markota
+              Villa Benito
             </h1>
           </button>
 

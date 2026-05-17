@@ -23,11 +23,11 @@ const Footer: React.FC<FooterProps> = ({ currentLanguage }) => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <img
-                src={withBaseUrl('Markota-crop.jpg')}
+                src={withBaseUrl('Benito-crop.jpeg')}
                 alt="Markota Logo"
                 className="w-10 h-10 object-contain rounded-md hover:scale-110 transition-transform duration-300 cursor-pointer"
               />
-              <h3 className="text-xl font-bold">Apartmani Markota</h3>
+              <h3 className="text-xl font-bold">Villa Benito</h3>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {footerContent.description}
