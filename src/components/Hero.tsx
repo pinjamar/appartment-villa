@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={withBaseUrl('hero.jpeg')}
+          src={withBaseUrl('hero.jpg')}
           alt="Villa Benito"
           className="w-full h-full object-cover"
           fetchPriority="high"
@@ -33,7 +33,12 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.8)]">
+          <img
+            src={withBaseUrl('benito_logo.jpg')}
+            alt="Villa Benito Logo"
+            className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-full mx-auto mb-6 animate-fade-in shadow-lg"
+          />
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in [text-shadow:_0_2px_12px_rgba(0,0,0,0.8)]">
             {heroContent.title}
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed opacity-90 animate-fade-in animation-delay-300 [text-shadow:_0_1px_8px_rgba(0,0,0,0.8)]">
@@ -41,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
           </p>
           <button
             onClick={scrollToBooking}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500 shadow-lg"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:transform hover:scale-105 animate-fade-in animation-delay-500 shadow-lg"
           >
             {currentLanguage === 'es'
               ? 'Reserva Tu Estancia'
