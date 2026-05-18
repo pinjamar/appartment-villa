@@ -1,94 +1,6 @@
 import React, { useState } from 'react';
-import { Calendar, Users, Send, Euro } from 'lucide-react';
-import { siteConfig, content, t } from '../data/content';
-
-// Inline pricing config and utilities
-const PRICING = {
-  lowSeason: 180,
-  highSeason: 250,
-  cleaningFee: 80,
-  touristTax: 2.5,
-};
-
-const getSeasonType = (date: Date): 'high' | 'low' => {
-  const month = date.getMonth() + 1;
-  // High season: April 15 - June 30, September - March
-  if ((month === 4 && date.getDate() >= 15) || (month >= 5 && month <= 6))
-    return 'high';
-  if (month >= 9 || month <= 3) return 'high';
-  return 'low'; // July-August
-};
-
-const calculateStayTotal = (
-  checkinDate: string,
-  checkoutDate: string,
-  guests: number,
-) => {
-  const checkin = new Date(checkinDate);
-  const checkout = new Date(checkoutDate);
-  if (checkin >= checkout) throw new Error('Invalid dates');
-
-  let nights = 0,
-    accommodationTotal = 0;
-  const breakdown: Array<{
-    date: string;
-    price: number;
-    season: 'high' | 'low';
-  }> = [];
-  const currentDate = new Date(checkin);
-
-  while (currentDate < checkout) {
-    const season = getSeasonType(currentDate);
-    const price = season === 'high' ? PRICING.highSeason : PRICING.lowSeason;
-    accommodationTotal += price;
-    nights++;
-    breakdown.push({
-      date: currentDate.toISOString().split('T')[0],
-      price,
-      season,
-    });
-    currentDate.setDate(currentDate.getDate() + 1);
-  }
-
-  const touristTax = guests * nights * PRICING.touristTax;
-  const subtotal = accommodationTotal + PRICING.cleaningFee;
-  const total = subtotal + touristTax;
-
-  return {
-    nights,
-    accommodationTotal,
-    cleaningFee: PRICING.cleaningFee,
-    touristTax,
-    subtotal,
-    total,
-    breakdown,
-    averagePerNight: Math.round(accommodationTotal / nights),
-  };
-};
-
-const formatPrice = (amount: number): string =>
-  new Intl.NumberFormat('hr-HR', {
-    style: 'currency',
-    currency: 'EUR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
-const getSeasonLabel = (
-  season: 'high' | 'low',
-  language: 'es' | 'en' | 'fr' | 'cz' = 'es',
-): string => {
-  if (language === 'en') {
-    return season === 'high' ? 'High Season' : 'Low Season';
-  }
-  if (language === 'fr') {
-    return season === 'high' ? 'Haute saison' : 'Basse saison';
-  }
-  if (language === 'cz') {
-    return season === 'high' ? 'Hlavní sezóna' : 'Mimo sezónu';
-  }
-  return season === 'high' ? 'Temporada Alta' : 'Temporada Baja';
-};
+import { Calendar, Users, Send } from 'lucide-react';
+import { content, t } from '../data/content';
 
 interface BookingProps {
   currentLanguage: 'es' | 'en' | 'fr' | 'cz';
@@ -106,7 +18,6 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
     phone: '',
     message: '',
   });
-  const [priceCalculation, setPriceCalculation] = useState<any>(null);
 
   const bookingContent = t(content.booking, currentLanguage);
 
@@ -117,24 +28,6 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
       if (seo) setPageSeo(seo);
     }
   }, [currentLanguage, setPageSeo]);
-
-  // Calculate price when dates or guests change
-  React.useEffect(() => {
-    if (formData.checkin && formData.checkout && formData.guests) {
-      try {
-        const calculation = calculateStayTotal(
-          formData.checkin,
-          formData.checkout,
-          parseInt(formData.guests),
-        );
-        setPriceCalculation(calculation);
-      } catch (error) {
-        setPriceCalculation(null);
-      }
-    } else {
-      setPriceCalculation(null);
-    }
-  }, [formData.checkin, formData.checkout, formData.guests]);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -175,16 +68,6 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
     window.open(`https://wa.me/385921066913?text=${encodedMessage}`, '_blank');
   };
 
-  const handleViberClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const form = e.currentTarget.closest('form') as HTMLFormElement;
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-    const encodedMessage = encodeURIComponent(buildMessage());
-    window.open(`viber://chat?number=%2B385921066913&text=${encodedMessage}`, '_blank');
-  };
-
   return (
     <section id="booking" className="py-8 md:py-12 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -196,113 +79,6 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
             {bookingContent.subtitle}
           </p>
         </div>
-
-        {/* <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8"> */}
-        {/* Pricing Info */}
-        {/* <div className="lg:col-span-1">
-            <div className="space-y-4 md:space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 sticky top-24">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <Euro size={20} className="mr-2 text-blue-600" />
-                  {bookingContent.pricing.title}
-                </h3>
-                <div className="space-y-3 text-gray-600">
-                  <div className="flex justify-between items-center">
-                    <span>{bookingContent.pricing.lowSeason}:</span>
-                    <span className="font-semibold">
-                      €180{bookingContent.pricing.pricePerNight}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>{bookingContent.pricing.highSeason}:</span>
-                    <span className="font-semibold">
-                      €250{bookingContent.pricing.pricePerNight}
-                    </span>
-                  </div>
-                  <hr className="my-4" />
-                  <div className="flex justify-between items-center text-sm">
-                    <span>{bookingContent.pricing.finalCleaning}:</span>
-                    <span>€80</span>
-                  </div>
-                  <div className="flex justify-between items-center text-sm">
-                    <span>{bookingContent.pricing.touristTax}:</span>
-                    <span>€2.50/persona/noć</span>
-                  </div>
-                </div>
-              </div>
-
-          //     {/* Price Calculation */}
-        {/* //     {priceCalculation && ( */}
-        {/* //       <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl shadow-lg p-6 border border-blue-100">
-          //         <h3 className="text-xl font-semibold text-gray-900 mb-4">
-          //           {bookingContent.pricing.priceCalculation}
-          //         </h3>
-
-          //         <div className="space-y-3">
-          //           <div className="flex justify-between items-center">
-          //             <span className="text-gray-700">
-          //               {priceCalculation.nights}{' '}
-          //               {currentLanguage === 'hr' ? 'noći' : 'nights'}
-          //             </span>
-          //             <span className="font-semibold">
-          //               {formatPrice(priceCalculation.accommodationTotal)}
-          //             </span>
-          //           </div>
-
-          //           <div className="text-xs text-gray-600 ml-4 space-y-1">
-          //             {priceCalculation.breakdown.map( */}
-        {/* //               (night: any, index: number) => (
-          //                 <div key={index} className="flex justify-between">
-          //                   <span>
-          //                     {new Date(night.date).toLocaleDateString('it-IT')}
-          //                   </span>
-          //                   <span>
-          //                     {formatPrice(night.price)}
-          //                     <span className="ml-1 text-xs">
-          //                       ({getSeasonLabel(night.season, currentLanguage)}
-          //                       )
-          //                     </span>
-          //                   </span>
-          //                 </div>
-          //               ),
-          //             )}
-          //           </div>
-
-          //           <div className="flex justify-between items-center">
-          //             <span className="text-gray-700">
-          //               {bookingContent.pricing.finalCleaning}
-          //             </span>
-          //             <span className="font-semibold">
-          //               {formatPrice(priceCalculation.cleaningFee)}
-          //             </span>
-          //           </div> */}
-
-        {/* //           <div className="flex justify-between items-center">
-          //             <span className="text-gray-700">
-          //               {bookingContent.pricing.touristTax}
-          //             </span>
-          //             <span className="font-semibold">
-          //               {formatPrice(priceCalculation.touristTax)}
-          //             </span>
-          //           </div>
-
-          //           <hr className="border-blue-200" />
-
-          //           <div className="flex justify-between items-center text-lg font-bold text-blue-900">
-          //             <span>{bookingContent.pricing.total}</span>
-          //             <span>{formatPrice(priceCalculation.total)}</span>
-          //           </div>
-
-          //           <div className="text-center text-sm text-gray-600 mt-2">
-          //             {currentLanguage === 'hr' */}
-        {/* //               ? `Prosječno: ${formatPrice(priceCalculation.averagePerNight)}/noć`
-          //               : `Average: ${formatPrice(priceCalculation.averagePerNight)}/night`}
-          //           </div>
-          //         </div>
-          //       </div> */}
-        {/* //     )}
-          //   </div>
-          // </div> */}
 
         {/* Booking Form */}
         <div className="w-full lg:w-1/2 mx-auto rounded-2xl p-4">
@@ -459,12 +235,6 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                 />
               </div>
 
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
-                <p className="text-sm text-blue-900">
-                  📱 {bookingContent.pricing.whatsappRedirect}
-                </p>
-              </div>
-
               <div className="flex gap-3">
                 <button
                   type="submit"
@@ -473,20 +243,11 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                   <Send size={18} />
                   <span>WhatsApp</span>
                 </button>
-                <button
-                  type="button"
-                  onClick={handleViberClick}
-                  className="flex-1 bg-violet-600 hover:bg-violet-700 text-white py-4 px-4 rounded-lg font-semibold text-base transition-colors duration-300 flex items-center justify-center gap-2"
-                >
-                  <Send size={18} />
-                  <span>Viber</span>
-                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 };

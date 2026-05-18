@@ -25,7 +25,8 @@ const Hero: React.FC<HeroProps> = ({ currentLanguage }) => {
           src={withBaseUrl('hero.jpg')}
           alt="Villa Benito"
           className="w-full h-full object-cover"
-          fetchPriority="high"
+          // @ts-expect-error -- React 18 doesn't type fetchpriority yet
+          fetchpriority="high"
           loading="eager"
         />
       </div>
