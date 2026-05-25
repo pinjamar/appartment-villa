@@ -19,8 +19,9 @@ export const siteConfig = {
   contact: {
     phone: '+53 5 2446361',
     email: 'sara.separovic@hotmail.com',
-    address: 'Prižba 54, 20271, Blato',
-    coordinates: { lat: 42.9639, lng: 17.12 }, // Korčula
+    address: 'Salvador Cisneros (Este) # 49 e/ 1ra & Arroyo El Duelo, Viñales, Pinar del Rio, Cuba',
+    coordinates: { lat: 22.618767, lng: -83.706365 }, // Viñales
+    mapUrl: 'https://www.google.com/maps/place/Villa+Benito+VI%C3%91ALES/@22.6186393,-83.7062137,21z/data=!4m7!3m6!1s0x88cb511300a32f79:0x7349002c18dad056!8m2!3d22.6187592!4d-83.7063675!16s%2Fg%2F11l20tr0ng!17BQ0FF?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D',
   },
   social: {
     airbnb:

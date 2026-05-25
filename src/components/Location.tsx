@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Navigation, Car, Bus, Phone } from 'lucide-react';
 import { siteConfig, content, t } from '../data/content';
+import { withBaseUrl } from '../utils/assetUrl';
 
 interface LocationProps {
   currentLanguage: 'es' | 'en' | 'fr' | 'cz';
@@ -9,6 +10,7 @@ interface LocationProps {
 const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
   const nav = t(content.navigation, currentLanguage);
   const loc = t(content.location, currentLanguage);
+  const mapPoint = `${siteConfig.contact.coordinates.lat},${siteConfig.contact.coordinates.lng}`;
 
   return (
     <section id="location" className="py-8 md:py-12 bg-gray-50">
@@ -26,7 +28,19 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
           {/* Left Column: Map and Address */}
           <div className="space-y-4 md:space-y-6">
             {/* Map */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div className="relative bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-full">
+                <div className="relative flex flex-col items-center">
+                  <div className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-white/95 border-2 border-blue-500 shadow-lg p-1.5">
+                    <img
+                      src={withBaseUrl('benito_logo.jpg')}
+                      alt="Benito logo"
+                      className="h-full w-full rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="-mt-1 h-3 w-3 rotate-45 bg-blue-500" />
+                </div>
+              </div>
               <iframe
                 width="100%"
                 height="300"
@@ -34,7 +48,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 loading="lazy"
                 allowFullScreen
                 className="md:h-[520px]"
-                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d${siteConfig.contact.coordinates.lng}!3d${siteConfig.contact.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2s!4v1644507200000`}
+                src={`https://www.google.com/maps?q=${mapPoint}&output=embed`}
               />
             </div>
 
@@ -46,7 +60,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
               </h3>
               <p className="text-gray-600 mb-4">{siteConfig.contact.address}</p>
               <a
-                href={`https://www.google.com/maps/search/?api=1&query=${siteConfig.contact.coordinates.lat},${siteConfig.contact.coordinates.lng}`}
+                href={siteConfig.contact.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 transition-colors"
