@@ -258,6 +258,11 @@ export const content = {
       title: 'Servicios y Comodidades',
       items: [
         {
+          name: 'Paneles solares',
+          icon: 'SolarPanel',
+          description: 'Energía limpia y sostenible para la casa',
+        },
+        {
           name: 'Aire Acondicionado',
           icon: 'Snowflake',
           description: 'Climatización en todas las habitaciones',
@@ -271,11 +276,6 @@ export const content = {
           name: 'Terraza',
           icon: 'Waves',
           description: 'Vistas panorámicas a los mogotes y atardeceres',
-        },
-        {
-          name: 'Parqueo',
-          icon: 'Car',
-          description: 'Estacionamiento privado y seguro',
         },
         {
           name: 'Cocina',
@@ -303,6 +303,11 @@ export const content = {
       title: 'Services & Amenities',
       items: [
         {
+          name: 'Solar Panels',
+          icon: 'SolarPanel',
+          description: 'Clean and sustainable energy for the house',
+        },
+        {
           name: 'Air Conditioning',
           icon: 'Snowflake',
           description: 'Climate control in all rooms',
@@ -316,11 +321,6 @@ export const content = {
           name: 'Terrace',
           icon: 'Waves',
           description: 'Panoramic views of mogotes and sunsets',
-        },
-        {
-          name: 'Parking',
-          icon: 'Car',
-          description: 'Private and secure parking',
         },
         {
           name: 'Kitchen',
@@ -348,6 +348,11 @@ export const content = {
       title: 'Services et Commodités',
       items: [
         {
+          name: 'Panneaux solaires',
+          icon: 'SolarPanel',
+          description: 'Énergie propre et durable pour la maison',
+        },
+        {
           name: 'Climatisation',
           icon: 'Snowflake',
           description: 'Climatisation dans toutes les chambres',
@@ -361,11 +366,6 @@ export const content = {
           name: 'Terrasse',
           icon: 'Waves',
           description: 'Vues panoramiques sur les mogotes et les couchers de soleil',
-        },
-        {
-          name: 'Parking',
-          icon: 'Car',
-          description: 'Stationnement privé et sécurisé',
         },
         {
           name: 'Cuisine',
@@ -393,6 +393,11 @@ export const content = {
       title: 'Služby a vybavení',
       items: [
         {
+          name: 'Solární panely',
+          icon: 'SolarPanel',
+          description: 'Čistá a udržitelná energie pro dům',
+        },
+        {
           name: 'Klimatizace',
           icon: 'Snowflake',
           description: 'Klimatizace ve všech pokojích',
@@ -406,11 +411,6 @@ export const content = {
           name: 'Terasa',
           icon: 'Waves',
           description: 'Panoramatické výhledy na mogotes a západy slunce',
-        },
-        {
-          name: 'Parkování',
-          icon: 'Car',
-          description: 'Soukromé a bezpečné parkování',
         },
         {
           name: 'Kuchyň',
