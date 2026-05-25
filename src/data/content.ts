@@ -1150,78 +1150,90 @@ export const seoPages = {
   galleryImages: {
     1: [
       {
-        src: '/marko10.jpg',
-        alt: 'Terrace',
+        src: '/gallery/external_view_0.jpg',
+        alt: 'External View 0',
       },
       {
-        src: '/marko2.jpg',
-        alt: 'Terrace',
+        src: '/gallery/house_view_2.jpeg',
+        alt: 'House View 2',
       },
       {
-        src: '/marko3.jpg',
-        alt: 'Living Room',
+        src: '/gallery/house_view_5.jpeg',
+        alt: 'House View 5',
       },
       {
-        src: '/marko4.jpg',
-        alt: 'Kitchen',
+        src: '/gallery/house_view_7.jpeg',
+        alt: 'House View 7',
       },
       {
-        src: '/marko12.jpg',
-        alt: 'Hallway',
+        src: '/gallery/house_view_8.jpeg',
+        alt: 'House View 8',
       },
       {
-        src: '/marko5.jpg',
-        alt: 'Bedroom1',
+        src: '/gallery/house_view_11.jpeg',
+        alt: 'House View 11',
       },
       {
-        src: '/marko6.jpg',
-        alt: 'Bedroom2',
+        src: '/gallery/house_view_14.jpeg',
+        alt: 'House View 14',
       },
       {
-        src: '/marko11.jpg',
-        alt: 'Bedroom2',
+        src: '/gallery/house_view_15.jpg',
+        alt: 'House View 15',
       },
       {
-        src: '/marko7.jpg',
-        alt: 'Bathroom1',
+        src: '/gallery/house_view_16.jpeg',
+        alt: 'House View 16',
       },
       {
-        src: '/marko8.jpg',
-        alt: 'WC',
+        src: '/gallery/house_view_17.jpeg',
+        alt: 'House View 17',
       },
       {
-        src: '/marko9.jpg',
-        alt: 'Bathroom2',
+        src: '/gallery/house_view_21.jpg',
+        alt: 'House View 21',
       },
       {
-        src: '/marko13.jpg',
-        alt: 'Villa Benito Exterior',
+        src: '/gallery/house_view_23.jpg',
+        alt: 'House View 23',
+      },
+      {
+        src: '/gallery/house_view_24.jpg',
+        alt: 'House View 24',
+      },
+      {
+        src: '/gallery/house_view_25.jpg',
+        alt: 'House View 25',
+      },
+      {
+        src: '/gallery/house_view_26.jpg',
+        alt: 'House View 26',
+      },
+      {
+        src: '/gallery/house_view_27.jpeg',
+        alt: 'House View 27',
       },
     ],
     2: [
       {
-        src: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Apartment 2 Living Area',
+        src: '/gallery/external_view_1.jpeg',
+        alt: 'External View 1',
       },
       {
-        src: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Cozy Bedroom',
+        src: '/gallery/external_view_3.jpeg',
+        alt: 'External View 3',
       },
       {
-        src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Terrace',
+        src: '/gallery/external_view_10.jpeg',
+        alt: 'External View 10',
       },
       {
-        src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Modern Bedroom',
+        src: '/gallery/external_view_12.jpeg',
+        alt: 'External View 12',
       },
       {
-        src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Garden Area',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1398857/pexels-photo-1398857.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Kitchen Area',
+        src: '/gallery/external_view_20.jpg',
+        alt: 'External View 20',
       },
     ],
   },
