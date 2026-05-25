@@ -32,14 +32,14 @@ const Header: React.FC<HeaderProps> = ({ currentLanguage }) => {
     {
       code: 'es',
       label: 'ES',
-      href: baseUrl,
+      href: `${baseUrl}es/`,
       flag: `${baseUrl}flags/es.svg`,
       ariaLabel: 'Cambiar a español',
     },
     {
       code: 'en',
       label: 'EN',
-      href: `${baseUrl}en/`,
+      href: baseUrl,
       flag: `${baseUrl}flags/en.svg`,
       ariaLabel: 'Switch to English',
     },
