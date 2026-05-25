@@ -41,6 +41,8 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
   };
 
   const buildMessage = () => {
+    const bookingContentEs = content.booking.es;
+
     const formatDateEuropean = (dateString: string) => {
       if (!dateString) return '';
       const date = new Date(dateString);
@@ -49,17 +51,23 @@ const Booking: React.FC<BookingProps> = ({ currentLanguage, setPageSeo }) => {
       const year = date.getFullYear();
       return `${day}.${month}.${year}`;
     };
-    return `${bookingContent.pricing.message}
 
-👤 *Name:* ${formData.firstName} ${formData.lastName}
-📧 *Email:* ${formData.email}
-📱 *Phone:* ${formData.phone}
+    const calculateNights = (checkin: string, checkout: string) => {
+      if (!checkin || !checkout) return 'N/A';
+      const start = new Date(checkin);
+      const end = new Date(checkout);
+      const diffMs = end.getTime() - start.getTime();
+      if (Number.isNaN(diffMs) || diffMs <= 0) return 'N/A';
+      return String(Math.round(diffMs / (1000 * 60 * 60 * 24)));
+    };
 
-🗓️ *${bookingContent.form.checkin}:* ${formatDateEuropean(formData.checkin)}
-🗓️ *${bookingContent.form.checkout}:* ${formatDateEuropean(formData.checkout)}
-👥 *${bookingContent.form.guests}:* ${formData.guests}
+    const fullName = `${formData.firstName} ${formData.lastName}`.trim();
+    const checkinFormatted = formatDateEuropean(formData.checkin) || 'N/A';
+    const checkoutFormatted = formatDateEuropean(formData.checkout) || 'N/A';
+    const nights = calculateNights(formData.checkin, formData.checkout);
+    const submittedAt = new Date().toISOString().replace('T', ' ').slice(0, 16);
 
-${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.message}` : ''}`;
+    return `${bookingContentEs.pricing.message}\n\n*Informacion del huesped*\nNombre: ${fullName || 'N/A'}\nCorreo electronico: ${formData.email || 'N/A'}\nTelefono: ${formData.phone || 'N/A'}\n\n*Detalles de la estancia*\n${bookingContentEs.form.checkin}: ${checkinFormatted}\n${bookingContentEs.form.checkout}: ${checkoutFormatted}\nNoches: ${nights}\n${bookingContentEs.form.guests}: ${formData.guests}\nIdioma del sitio: ${currentLanguage.toUpperCase()}\nEnviado: ${submittedAt} UTC\n\n${formData.message ? `*${bookingContentEs.form.message}:*\n${formData.message}` : ''}`;
   };
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
