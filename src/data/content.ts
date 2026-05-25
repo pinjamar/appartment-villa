@@ -17,7 +17,7 @@ export const siteConfig = {
     defaultImage: '/benito_house.jpg', // Main apartment exterior - used for social media sharing
   },
   contact: {
-    phone: '+385 92 106 6913',
+    phone: '+53 5 2446361',
     email: 'sara.separovic@hotmail.com',
     address: 'Prižba 54, 20271, Blato',
     coordinates: { lat: 42.9639, lng: 17.12 }, // Korčula

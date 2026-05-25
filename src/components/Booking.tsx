@@ -65,7 +65,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const encodedMessage = encodeURIComponent(buildMessage());
-    window.open(`https://wa.me/385921066913?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/5352446361?text=${encodedMessage}`, '_blank');
   };
 
   return (
@@ -207,7 +207,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+385 91 234 5678"
+                    placeholder="+53 5 2446361"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
