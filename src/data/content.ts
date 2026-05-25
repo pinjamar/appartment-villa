@@ -201,7 +201,7 @@ export const content = {
         'Visit Cayo Jutias',
         'Canopy (zipline) adventure',
       ],
-      image: '/sara1.jpg',
+      image: '/vinales_activities/vinales_activities_mural_prehistoria_01.jpg',
       imageAlt: 'Viñales Activities',
       renovation: {
         active: false,
@@ -1234,6 +1234,87 @@ export const seoPages = {
       {
         src: '/gallery/external_view_20.jpg',
         alt: 'External View 20',
+      },
+    ],
+  },
+
+  gallery2Images: {
+    2: [
+      {
+        src: '/vinales_activities/vinales_activities_horseback_riding_01.jpg',
+        alt: 'Horseback Riding',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_01.jpg',
+        alt: 'Cigar Farm 1',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_02.jpg',
+        alt: 'Cigar Farm 2',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_03.jpg',
+        alt: 'Cigar Farm 3',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_04.jpg',
+        alt: 'Cigar Farm 4',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_05.jpg',
+        alt: 'Cigar Farm 5',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cigar_farm_06.jpg',
+        alt: 'Cigar Farm 6',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_caves_01.jpg',
+        alt: 'Caves 1',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_caves_02.jpg',
+        alt: 'Caves 2',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_caves_03.jpg',
+        alt: 'Caves 3',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_evening_town_01.webp',
+        alt: 'Evening Town 1',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_evening_town_02.jpg.webp',
+        alt: 'Evening Town 2',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_mural_prehistoria_03.jpg',
+        alt: 'Mural Prehistoria 3',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_los_jazmines_01.jpeg',
+        alt: 'Los Jazmines 1',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_los_jazmines_02.jpg',
+        alt: 'Los Jazmines 2',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_valle_del_silencio_01.jpg',
+        alt: 'Valle del Silencio 1',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_valle_del_silencio_02.jpg',
+        alt: 'Valle del Silencio 2',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_cayo_jutias_01.jpg',
+        alt: 'Cayo Jutias',
+      },
+      {
+        src: '/vinales_activities/vinales_activities_canopy_zipline_01.webp',
+        alt: 'Canopy Zipline',
       },
     ],
   },
