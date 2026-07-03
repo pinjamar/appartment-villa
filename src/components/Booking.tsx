@@ -349,7 +349,7 @@ ${formData.message ? `\n💬 *${bookingContent.form.message}:*\n${formData.messa
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
-                    {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+                    {[1, 2, 3, 4, 5].map((num) => (
                       <option key={num} value={num}>
                         {num}
                       </option>

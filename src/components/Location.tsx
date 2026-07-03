@@ -68,70 +68,8 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
             </div>
           </div>
 
-          {/* Right Column: Attractions and How to Get Here */}
+          {/* Right Column: How to Get Here and Attractions */}
           <div className="space-y-4 md:space-y-6">
-            {/* <div className="bg-white rounded-xl shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {isCroatian
-                  ? 'Obližnje Atrakcije'
-                  : isItalian
-                    ? 'Attrazioni vicine'
-                    : 'Nearby Attractions'}
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    {isCroatian
-                      ? 'Blato - centar'
-                      : isItalian
-                        ? 'Blato - centro'
-                        : 'Blato - town center'}
-                  </span>
-                  <span className="text-sm text-gray-500">5 km</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    {isCroatian
-                      ? 'Korčula - grad'
-                      : isItalian
-                        ? 'Korčula - città'
-                        : 'Korčula - town'}
-                  </span>
-                  <span className="text-sm text-gray-500">30 km</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    {isCroatian
-                      ? 'Plaža Lombarda'
-                      : isItalian
-                        ? 'Spiaggia Lombarda'
-                        : 'Lombarda Beach'}
-                  </span>
-                  <span className="text-sm text-gray-500">2 km</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    {isCroatian
-                      ? 'Luka Neretva'
-                      : isItalian
-                        ? 'Porto Neretva'
-                        : 'Neretva Port'}
-                  </span>
-                  <span className="text-sm text-gray-500">20 km</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700">
-                    {isCroatian
-                      ? 'Nacionalni park Mljet'
-                      : isItalian
-                        ? 'Parco nazionale di Meleda'
-                        : 'Mljet National Park'}
-                  </span>
-                  <span className="text-sm text-gray-500">25 km</span>
-                </div>
-              </div>
-            </div> */}
-
             <div className="bg-white rounded-xl shadow-lg p-4 md:p-6">
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4">
                 {isCroatian
@@ -335,6 +273,7 @@ const Location: React.FC<LocationProps> = ({ currentLanguage }) => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

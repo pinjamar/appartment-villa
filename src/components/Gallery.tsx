@@ -44,11 +44,10 @@ const Gallery: React.FC<GalleryProps> = ({
     apartmentId === 2 && Boolean(aboutSecond.renovation?.active);
 
   // Get gallery data based on apartmentId
-  const galleryKey = apartmentId === 2 ? 'gallery2' : 'gallery';
-  const galleryImages = (seoPages as any)?.[`${galleryKey}Images`] as
+  const galleryImages = (seoPages as any)?.['galleryImages'] as
     | Record<string, Image[]>
     | undefined;
-  const images: Image[] = galleryImages?.[apartmentId === 2 ? '2' : '1'] || [
+  const images: Image[] = galleryImages?.[String(apartmentId)] || [
     {
       src: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Apartmani Markota Exterior',

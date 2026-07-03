@@ -66,19 +66,19 @@ export const content = {
     hr: {
       title: 'Dobrodošli u Apartmane Markota',
       subtitle:
-        'Predivni apartmani prvi red do mora na otoku Korčuli u mjestu Prižba, savršeni za miran odmor daleko od grada. Otkrij autentičan šarm Jadrana u modernom i komfornom okruženju.',
+        'Dva apartmana u Prižbi na otoku Korčuli, prvi red do mora, 10 metara od mora. 5 minuta hoda od pješčane plaže s beach barom. Miran odmor daleko od gradske gužve, s pogledom na more i otočiće prižbanskog akvatorija.',
       cta: 'Saznaj Više',
     },
     en: {
       title: 'Welcome to Markota Apartments',
       subtitle:
-        'Beautiful apartments on the first row by the sea on Korčula Island in the village of Prižba, perfect for a peaceful getaway far from the city. Discover the authentic charm of the Adriatic in a modern and comfortable setting.',
+        'Two apartments in Prižba on Korčula Island, first row by the sea, 10 metres from the water. A 5-minute walk from a sandy beach with a beach bar. A peaceful escape from the crowds, with open views over the sea and the small islands of the Prižba bay.',
       cta: 'Learn More',
     },
     it: {
       title: 'Benvenuti agli Appartamenti Markota',
       subtitle:
-        "Bellissimi appartamenti in prima fila sul mare sull'isola di Korčula, nel villaggio di Prižba, perfetti per una vacanza tranquilla lontano dalla città. Scopri il fascino autentico dell'Adriatico in un ambiente moderno e confortevole.",
+        "Due appartamenti a Prižba sull'isola di Korčula, in prima fila sul mare, a 10 metri dall'acqua. A 5 minuti a piedi da una spiaggia sabbiosa con beach bar. Una fuga tranquilla dalla folla, con vista aperta sul mare e sulle isolette della baia di Prižba.",
       cta: 'Scopri di più',
     },
   },
@@ -147,9 +147,7 @@ export const content = {
       image: '/sara1.jpg',
       imageAlt: 'Apartman 2 Interijer',
       renovation: {
-        active: true,
-        notice:
-          'Napomena: Apartman Sara je trenutno u renovaciji. Fotografije i dostupnost bit će ažurirane uskoro.',
+        active: false,
       },
     },
     en: {
@@ -169,9 +167,7 @@ export const content = {
       image: '/sara1.jpg',
       imageAlt: 'Apartment 2 Interior',
       renovation: {
-        active: true,
-        notice:
-          'Notice: Apartment Sara is currently under renovation. Photos and availability will be updated soon.',
+        active: false,
       },
     },
     it: {
@@ -191,9 +187,7 @@ export const content = {
       image: '/sara1.jpg',
       imageAlt: 'Interni appartamento 2',
       renovation: {
-        active: true,
-        notice:
-          "Avviso: l'Appartamento Sara è attualmente in ristrutturazione. Foto e disponibilità verranno aggiornate a breve.",
+        active: false,
       },
     },
   },
@@ -859,30 +853,19 @@ export const seoPages = {
       },
     ],
     2: [
-      {
-        src: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Apartment 2 Living Area',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Cozy Bedroom',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Terrace',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Modern Bedroom',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Garden Area',
-      },
-      {
-        src: 'https://images.pexels.com/photos/1398857/pexels-photo-1398857.jpeg?auto=compress&cs=tinysrgb&w=800',
-        alt: 'Kitchen Area',
-      },
+      { src: '/sara1.jpg', alt: 'Apartman Sara - eksterijer' },
+      { src: '/sara2.jpg', alt: 'Apartman Sara - dvorište' },
+      { src: '/sara3.jpg', alt: 'Apartman Sara - pogled na more' },
+      { src: '/sara4.jpg', alt: 'Apartman Sara - spavaća soba' },
+      { src: '/sara5.jpg', alt: 'Apartman Sara - dnevni boravak' },
+      { src: '/sara6.jpg', alt: 'Apartman Sara - kuhinja' },
+      { src: '/sara7.jpg', alt: 'Apartman Sara - kupaonica' },
+      { src: '/sara8.jpg', alt: 'Apartman Sara - detalji' },
+      { src: '/sara9.jpg', alt: 'Apartman Sara - detalji' },
+      { src: '/sara10.jpg', alt: 'Apartman Sara - detalji' },
+      { src: '/sara11.jpg', alt: 'Apartman Sara - detalji' },
+      { src: '/sara12.jpg', alt: 'Apartman Sara - detalji' },
+      { src: '/sara13.jpg', alt: 'Apartman Sara - detalji' },
     ],
   },
 
